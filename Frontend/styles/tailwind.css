@@ -1947,3 +1947,94 @@ form > .form-title {
     width: 75px;
   }
 }
+
+/* Compact footer; retain navigation and the animated brand signature. */
+footer {
+  padding: 26px 5% 18px;
+}
+footer .footer-top {
+  gap: 20px;
+}
+footer .footer-top .brand-vector {
+  width: 200px;
+}
+footer .footer-top .brand-header-symbol {
+  width: 48px;
+}
+footer .footer-top .wordmark-name {
+  font-size: 24px;
+}
+footer .footer-top .wordmark-descriptor {
+  font-size: 10px;
+}
+footer .footer-top .wordmark-tagline {
+  font-size: 6px;
+}
+footer .footer-links {
+  margin-top: 18px;
+  gap: 24px;
+}
+footer .footer-brand-line {
+  max-width: 360px;
+  margin: 14px auto 10px;
+}
+footer .footer-brand-line .footer-logo-artwork {
+  padding: 7px 3px;
+}
+footer .brand-wordmark-large .wordmark-name {
+  font-size: 44px;
+}
+footer .brand-wordmark-large .wordmark-descriptor {
+  font-size: 15px;
+  margin-top: 5px;
+  letter-spacing: 0.18em;
+}
+footer .brand-wordmark-large .wordmark-tagline {
+  font-size: 7px;
+  margin-top: 4px;
+  letter-spacing: 0.2em;
+}
+footer .footer-bottom {
+  padding-top: 14px;
+}
+@media (max-width: 700px) {
+  footer {
+    padding: 22px 6% 16px;
+  }
+  footer .footer-top {
+    gap: 14px;
+  }
+  footer .footer-top .brand-vector {
+    width: 155px;
+  }
+  footer .footer-top .brand-header-symbol {
+    width: 40px;
+  }
+  footer .footer-top .wordmark-name {
+    font-size: 20px;
+  }
+  footer .footer-top .wordmark-descriptor {
+    font-size: 9px;
+  }
+  footer .footer-top .wordmark-tagline {
+    font-size: 5px;
+  }
+  footer .footer-links {
+    gap: 14px;
+    margin-top: 16px;
+    font-size: 11px;
+  }
+  footer .footer-brand-line {
+    max-width: 290px;
+    margin: 12px auto 8px;
+  }
+  footer .brand-wordmark-large .wordmark-name {
+    font-size: 34px;
+  }
+  footer .brand-wordmark-large .wordmark-descriptor {
+    font-size: 12px;
+  }
+  footer .brand-wordmark-large .wordmark-tagline {
+    font-size: 6px;
+  }
+}

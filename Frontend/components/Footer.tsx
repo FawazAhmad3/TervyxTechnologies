@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-top">
-        <Brand variant="stacked" />
+        <Brand />
         <p>
           {site.footer.lines.map((line) => (
             <span className="block" key={line}>
