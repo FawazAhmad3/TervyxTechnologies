@@ -1,12 +1,10 @@
 {
   "brand": {
     "name": "TERVYX",
-    "descriptor": "TECHNOLOGIES",
+    "descriptor": "Technologies",
     "fullName": "TERVYX Technologies",
     "tagline": "Code the Future",
-    "icon": "",
-    "home": "/",
-    "artwork": "primary"
+    "home": "/"
   },
   "metadata": {
     "description": "TERVYX Technologies. Future-focused web development, app development, and digital marketing. Code the Future.",

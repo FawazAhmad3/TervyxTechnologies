@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import BrandArtwork from "./BrandArtwork";
+import BrandSymbol from "./BrandSymbol";
+import BrandWordmark from "./BrandWordmark";
 export default function FooterArtwork() {
   const ref = useRef<HTMLDivElement>(null);
   const symbol = useRef<HTMLDivElement>(null);
@@ -32,17 +33,9 @@ export default function FooterArtwork() {
   return (
     <div className="footer-logo-artwork" ref={ref} aria-hidden="true">
       <div className="footer-symbol-scroll" ref={symbol}>
-        <BrandArtwork
-          variant="symbol"
-          className="footer-animated-symbol"
-          decorative
-        />
+        <BrandSymbol className="footer-animated-symbol" />
       </div>
-      <BrandArtwork
-        variant="wordmark"
-        className="footer-wordmark-art"
-        decorative
-      />
+      <BrandWordmark large />
     </div>
   );
 }

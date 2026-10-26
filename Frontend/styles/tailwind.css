@@ -1768,3 +1768,182 @@ form > .form-title {
   overflow: visible;
   filter: drop-shadow(0 12px 14px #00000020);
 }
+
+/* One clean vector symbol and live website typography across every brand placement. */
+.brand.brand-vector {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 230px;
+  flex-shrink: 0;
+  letter-spacing: 0;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+}
+.brand-vector-symbol {
+  display: block;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.brand-header-symbol {
+  width: 63px;
+  height: auto;
+}
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  line-height: 1;
+}
+.wordmark-name {
+  font:
+    700 28px/1 "Space Grotesk",
+    sans-serif;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.wordmark-descriptor {
+  font:
+    500 12px/1.5 "Space Grotesk",
+    sans-serif;
+  letter-spacing: 0.15em;
+  color: var(--ink);
+  margin-top: 3px;
+}
+.wordmark-tagline {
+  font:
+    500 7px/1.5 "DM Sans",
+    sans-serif;
+  letter-spacing: 0.22em;
+  color: var(--lime);
+  margin-top: 2px;
+}
+.brand-vector.brand-stacked {
+  width: 160px;
+  flex-direction: column;
+  gap: 8px;
+}
+.brand-stacked .brand-header-symbol {
+  width: 82px;
+}
+.brand-stacked .brand-wordmark {
+  align-items: center;
+}
+.brand-stacked .wordmark-name {
+  font-size: 29px;
+}
+.footer-logo-artwork .brand-wordmark-large {
+  padding-left: 12px;
+}
+.brand-wordmark-large .wordmark-name {
+  font-size: clamp(36px, 8vw, 110px);
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+.brand-wordmark-large .wordmark-descriptor {
+  font-size: clamp(12px, 2.5vw, 34px);
+  letter-spacing: 0.22em;
+  margin-top: 14px;
+}
+.brand-wordmark-large .wordmark-tagline {
+  font-size: clamp(7px, 1.15vw, 16px);
+  letter-spacing: 0.28em;
+  margin-top: 10px;
+}
+.hero-vector-symbol {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 12px 16px #00000018);
+}
+[data-theme="light"] .brand-vector,
+[data-theme="light"] .footer-brand-line {
+  background: transparent;
+  filter: none;
+  mix-blend-mode: normal;
+  padding: 0;
+  border-radius: 0;
+}
+@media (max-width: 1100px) {
+  .brand.brand-vector {
+    width: 200px;
+  }
+  .brand-header-symbol {
+    width: 53px;
+  }
+  .wordmark-name {
+    font-size: 25px;
+  }
+  .wordmark-descriptor {
+    font-size: 10px;
+  }
+  .wordmark-tagline {
+    font-size: 6px;
+  }
+}
+@media (max-width: 700px) {
+  .brand.brand-vector {
+    width: 155px;
+    gap: 6px;
+  }
+  .brand-header-symbol {
+    width: 43px;
+  }
+  .wordmark-name {
+    font-size: 20px;
+  }
+  .wordmark-descriptor {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .wordmark-tagline {
+    font-size: 5px;
+    letter-spacing: 0.13em;
+  }
+  .brand-vector.brand-stacked {
+    width: 145px;
+  }
+  .brand-stacked .wordmark-name {
+    font-size: 27px;
+  }
+  .brand-stacked .wordmark-descriptor {
+    font-size: 11px;
+  }
+  .brand-stacked .wordmark-tagline {
+    font-size: 6px;
+  }
+  .brand-wordmark-large .wordmark-descriptor {
+    margin-top: 7px;
+  }
+  .brand-wordmark-large .wordmark-tagline {
+    margin-top: 5px;
+  }
+  .footer-logo-artwork .brand-wordmark-large {
+    padding-left: 8px;
+  }
+}
+@media (max-width: 380px) {
+  .brand.brand-vector {
+    width: 128px;
+    gap: 4px;
+  }
+  .brand-header-symbol {
+    width: 34px;
+  }
+  .wordmark-name {
+    font-size: 18px;
+  }
+  .wordmark-descriptor {
+    font-size: 8px;
+  }
+  .wordmark-tagline {
+    font-size: 4.5px;
+  }
+  .brand-vector.brand-stacked {
+    width: 140px;
+  }
+  .brand-stacked .brand-header-symbol {
+    width: 75px;
+  }
+}

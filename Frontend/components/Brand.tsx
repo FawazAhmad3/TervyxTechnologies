@@ -1,17 +1,19 @@
 import site from "../data/site.json";
-import BrandArtwork, { type BrandVariant } from "./BrandArtwork";
+import BrandSymbol from "./BrandSymbol";
+import BrandWordmark from "./BrandWordmark";
 export default function Brand({
   variant = "primary",
 }: {
-  variant?: BrandVariant;
+  variant?: "primary" | "stacked";
 }) {
   return (
     <a
-      className={`brand brand-artwork brand-${variant}`}
+      className={`brand brand-vector brand-${variant}`}
       href={site.brand.home}
       aria-label={`${site.brand.fullName} home`}
     >
-      <BrandArtwork variant={variant} className="brand-logo" decorative />
+      <BrandSymbol className="brand-header-symbol" />
+      <BrandWordmark />
     </a>
   );
 }

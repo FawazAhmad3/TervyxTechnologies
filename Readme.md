@@ -83,14 +83,18 @@ Layouts adapt for small phones, tablets, laptops, and wide displays. Motion resp
 
 The root `LICENSE` reserves the project for TERVYX Technologies. Dependency licenses remain with their respective authors.
 
-## Brand board
+## Vector branding
 
-`Frontend/data/brand.json` records the supplied brand palette, typography, meanings, and original-artwork viewports. `BrandArtwork.tsx` displays the horizontal, stacked, dark app icon, light app icon, monochrome, and symbol variants from the unmodified board in `Frontend/public/brand/brand-board.png`. These are exact raster artwork viewports, not redrawn vector approximations. The favicon is a self-contained SVG viewport of the supplied dark app icon. SVG wrappers preserve the bitmap and its exact silhouette; they do not create additional image resolution. Original lime, white, and metallic logo colors are preserved in both themes. In light mode, native SVG visibility masks remove the dark backdrop while showing the unchanged source pixels. A subtle external shadow supports the white wordmark on the light page. Rebuild the masks with `node scripts/build-brand-masks.mjs` if the source board is replaced.
+All rendered logo placements use `BrandSymbol.tsx`, a shared native SVG with smooth, hand-authored Bézier paths in `Frontend/data/brand-symbol.json`. `BrandWordmark.tsx` renders TERVYX and Technologies as live Space Grotesk text, with DM Sans for the tagline, matching the website fonts. No cropped logo wordmarks, embedded raster images, pixel masks, or automatic contour traces are used in the header, hero, footer, or favicon.
 
-The website uses Space Grotesk for headings and DM Sans for body text, restored at the owner’s request. The supplied board specifies Orbitron and Space Grotesk; the logo artwork remains unchanged. Both load through Google Fonts in every HTML entry. Charcoal `#101413`, deep charcoal `#151A18`, electric lime `#C8FA73`, and sage gray `#929C94` follow the board. Brand colors are mirrored in the CSS tokens. Header and footer use the original horizontal and stacked logos, and the homepage uses native SVG curves traced from the original orbital symbol, with gentle idle animation and scroll-linked rotation. The hero contains no raster image. Regenerate its contour data with `node scripts/trace-hero-symbol.mjs` after replacing the source board. Header, footer, and favicon retain the original supplied artwork.
+The supplied brand board is retained only in `design-references/brand-board.png` for design reference and is not served by the website. Branding copy remains in `Frontend/data/site.json`; brand palette and font documentation are in `Frontend/data/brand.json`.
+
+The homepage and footer animate the same shared vector symbol. The light theme has a naturally transparent logo background and theme-aware live text; lime and metallic symbol colors remain consistent across themes. Charcoal `#101413`, deep charcoal `#151A18`, electric lime `#C8FA73`, and sage gray `#929C94` follow the brand direction.
+
+The favicon at `Frontend/public/brand/favicon-vector.svg` is also native SVG. Run `node scripts/build-vector-favicon.mjs` after editing the symbol geometry to update it.
 
 ## Themes and footer animation
 
 Use the header’s sun/moon button to switch between dark and light mode. `ThemeProvider` applies the theme across all pages and stores the preference under `tervyx-theme`. Each HTML entry applies the saved preference before rendering to avoid a theme flash. Dark mode is the default, and localStorage failures are handled gracefully. Labels live in `Frontend/data/site.json`; light-mode semantic colors and surface overrides live in `Frontend/styles/tailwind.css`.
 
-`FooterArtwork.tsx` composes the original symbol and wordmark artwork separately. The symbol has a gentle idle float and scroll-linked rotation; the wordmark stays steady. Reduced-motion preferences disable the animation.
+`FooterArtwork.tsx` composes the shared SVG symbol and live website-font wordmark separately. The symbol has a gentle idle float and scroll-linked rotation; the wordmark stays steady. Reduced-motion preferences disable the animation.
