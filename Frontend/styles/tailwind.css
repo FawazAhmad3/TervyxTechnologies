@@ -1702,3 +1702,49 @@ form > .form-title {
 [data-theme="light"] .footer-brand-line {
   mix-blend-mode: multiply;
 }
+
+/* Preserve the supplied logo colors in both themes. */
+[data-theme="light"] .brand-source-art {
+  filter: none;
+  mix-blend-mode: normal;
+}
+[data-theme="light"] .art,
+[data-theme="light"] .footer-brand-line {
+  mix-blend-mode: normal;
+}
+[data-theme="light"] .brand-artwork {
+  background: #101413;
+  border-radius: 5px;
+  padding: 5px;
+}
+[data-theme="light"] .footer-brand-line {
+  background: #101413;
+  border-radius: 10px;
+  padding: 18px 14px;
+}
+.pricing-scope-note {
+  margin: 30px 7%;
+  padding: 23px 26px;
+  border: 1px solid var(--lime);
+  border-left-width: 4px;
+  border-radius: 5px;
+  background: #c8fa7308;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.pricing-scope-note strong {
+  display: block;
+  font-weight: 700;
+}
+.pricing-scope-note strong:first-child {
+  color: var(--lime);
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+@media (max-width: 700px) {
+  .pricing-scope-note {
+    margin: 24px 6%;
+    padding: 18px 20px;
+  }
+}

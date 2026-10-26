@@ -197,7 +197,11 @@
         "maintenanceId": "premium-maintenance"
       }
     ],
-    "note": "Website development and monthly maintenance are priced separately. Maintenance plans begin after the website is developed and launched."
+    "note": "Website development and monthly maintenance are priced separately. Maintenance plans begin after the website is developed and launched.",
+    "scopeNotice": {
+      "title": "Pricing depends on your project scope.",
+      "text": "The listed prices apply only to the features, quantities, and scope described in each plan. Adding, removing, or changing requirements may increase or decrease the final price. Your final quote will be based on the agreed project details."
+    }
   },
   "android": {
     "section": {
