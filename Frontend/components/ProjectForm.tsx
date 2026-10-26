@@ -13,6 +13,8 @@ export default function ProjectForm() {
     ...pricing.maintenance.plans,
     ...pricing.android.development,
     ...pricing.android.maintenance,
+    ...pricing.smm.plans,
+    ...pricing.seo.plans,
   ].find((plan) => plan.id === params.get("plan"));
   const [selected, setSelected] = useState<string[]>(
     services.items
@@ -58,13 +60,7 @@ export default function ProjectForm() {
             <p>
               {selectedPlan.price} · {selectedPlan.billing}
             </p>
-            <a
-              href={
-                selectedPlan.serviceSlug === "app-development"
-                  ? pricing.selection.androidChangeHref
-                  : pricing.selection.changeHref
-              }
-            >
+            <a href={selectedPlan.pricingHref}>
               {pricing.selection.changeLabel} ↗
             </a>
           </div>

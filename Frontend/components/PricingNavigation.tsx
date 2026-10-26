@@ -1,6 +1,7 @@
 import { useRef, type KeyboardEvent } from "react";
 import pricing from "../data/pricing.json";
-export type PricingCategory = "website-plans" | "android-plans";
+export type PricingCategory =
+  "website-plans" | "android-plans" | "smm-plans" | "seo-plans";
 export default function PricingNavigation({
   active,
   onChange,

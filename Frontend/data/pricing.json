@@ -27,7 +27,8 @@
           "1 revision round"
         ],
         "originalPrice": "$299",
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       },
       {
         "id": "standard-website",
@@ -47,7 +48,8 @@
           "2 revision rounds"
         ],
         "originalPrice": "$599",
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       },
       {
         "id": "premium-website",
@@ -68,7 +70,8 @@
           "3 revision rounds"
         ],
         "originalPrice": "$999",
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       }
     ]
   },
@@ -98,7 +101,8 @@
           "SSL certificate status check",
           "Email support"
         ],
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       },
       {
         "id": "standard-maintenance",
@@ -115,7 +119,8 @@
           "Backup checks every 15 days",
           "Contact form functionality checks"
         ],
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       },
       {
         "id": "premium-maintenance",
@@ -134,7 +139,8 @@
           "Broken link checks",
           "Priority technical support during business hours"
         ],
-        "serviceSlug": "web-development"
+        "serviceSlug": "web-development",
+        "pricingHref": "/pricing.html#website-plans"
       }
     ]
   },
@@ -160,10 +166,10 @@
   "page": {
     "title": "Pricing",
     "intro": {
-      "label": "WEBSITE & ANDROID APP PLANS",
+      "label": "DEVELOPMENT & DIGITAL MARKETING PLANS",
       "heading": "Build it. Launch it.",
       "accent": "Keep it moving.",
-      "description": "Compare website and Android app development with their matching maintenance plans. One-time projects and monthly subscriptions are clearly separated, so you can find the right starting point."
+      "description": "Explore website development, Android apps, social media marketing, and SEO. Choose a category to compare its plans, with one-time projects and monthly subscriptions clearly separated."
     },
     "label": "WEBSITE DEVELOPMENT & MAINTENANCE",
     "heading": "Your website.",
@@ -246,7 +252,8 @@
           "Testing on selected Android devices",
           "Play Store submission assistance",
           "1 revision round"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       },
       {
         "id": "standard-android",
@@ -268,7 +275,8 @@
           "Testing across selected Android versions",
           "Play Store submission assistance",
           "2 revision rounds"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       },
       {
         "id": "premium-android",
@@ -291,7 +299,8 @@
           "Application testing and bug fixing",
           "Play Store submission assistance",
           "3 revision rounds"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       }
     ],
     "maintenance": [
@@ -310,7 +319,8 @@
           "Monthly backup checks (where supported)",
           "Compatibility checks for supported Android versions",
           "Email support"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       },
       {
         "id": "standard-android-maintenance",
@@ -329,7 +339,8 @@
           "Login and API functionality checks",
           "Google Play update submission assistance",
           "Email technical support"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       },
       {
         "id": "premium-android-maintenance",
@@ -348,7 +359,8 @@
           "Login, API, and database functionality checks",
           "Google Play update submission assistance",
           "Priority technical support during business hours"
-        ]
+        ],
+        "pricingHref": "/pricing.html#android-plans"
       }
     ]
   },
@@ -360,6 +372,158 @@
     {
       "label": "Android app plans",
       "href": "#android-plans"
+    },
+    {
+      "label": "Social media marketing",
+      "href": "#smm-plans"
+    },
+    {
+      "label": "SEO plans",
+      "href": "#seo-plans"
     }
-  ]
+  ],
+  "smm": {
+    "label": "SOCIAL MEDIA MARKETING (SMM) PACKAGES",
+    "heading": "Show up with purpose.",
+    "muted": "Stay part of the conversation.",
+    "description": [
+      "Social content, design, and reporting.",
+      "Choose your monthly SMM plan."
+    ],
+    "button": "Discuss this SMM plan",
+    "plans": [
+      {
+        "id": "basic-smm",
+        "name": "Basic SMM Plan",
+        "audience": "For startups and small businesses",
+        "price": "$200",
+        "originalPrice": "$300",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "1 platform (Facebook or Instagram)",
+          "8 posts per month (2 per week)",
+          "Post Design",
+          "Captions and hashtags",
+          "Basic monthly analytics report"
+        ],
+        "pricingHref": "/pricing.html#smm-plans"
+      },
+      {
+        "id": "standard-smm",
+        "name": "Standard SMM Plan",
+        "audience": "For growing businesses",
+        "price": "$450",
+        "originalPrice": "$599",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "2 platforms (Facebook + Instagram)",
+          "12 unique posts per month (3 per week)",
+          "8 stories per month",
+          "Post Design",
+          "Captions and hashtag research",
+          "Monthly content calendar",
+          "Basic comment monitoring on weekends",
+          "Monthly analytics report"
+        ],
+        "pricingHref": "/pricing.html#smm-plans"
+      },
+      {
+        "id": "premium-smm",
+        "name": "Premium SMM Plan",
+        "audience": "For established businesses and brands",
+        "price": "$699",
+        "originalPrice": "$849",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "3 platforms (Facebook + Instagram + LinkedIn)",
+          "16 unique posts per month (4 per week)",
+          "12 stories per month",
+          "2 reels per month (client-provided footage)",
+          "Post Design",
+          "Captions, hashtags, and content strategy",
+          "Monthly content calendar",
+          "Basic comment monitoring on weekends",
+          "Detailed monthly analytics and growth report"
+        ],
+        "pricingHref": "/pricing.html#smm-plans"
+      }
+    ]
+  },
+  "seo": {
+    "label": "SEARCH ENGINE OPTIMIZATION (SEO) PACKAGES",
+    "heading": "Make your business",
+    "muted": "easier to discover.",
+    "description": [
+      "On-page, technical, and content optimization.",
+      "Choose your monthly SEO plan."
+    ],
+    "button": "Discuss this SEO plan",
+    "plans": [
+      {
+        "id": "basic-seo",
+        "name": "Basic SEO Plan",
+        "audience": "For startups and small websites",
+        "price": "$299",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "Initial basic website SEO audit",
+          "Research up to 10 target keywords",
+          "On-page SEO for up to 2 existing pages per month",
+          "Meta title and description optimization",
+          "Heading structure optimization (H1, H2, H3)",
+          "Image alt-text optimization on selected pages",
+          "Google Search Console setup and checks",
+          "XML sitemap review",
+          "Basic monthly SEO performance report"
+        ],
+        "pricingHref": "/pricing.html#seo-plans"
+      },
+      {
+        "id": "standard-seo",
+        "name": "Standard SEO Plan",
+        "audience": "For growing businesses and websites",
+        "price": "$599",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "Everything included in Basic SEO",
+          "Research up to 25 target keywords",
+          "On-page SEO for up to 5 existing pages per month",
+          "Competitor SEO analysis (up to 2 competitors)",
+          "Internal linking optimization",
+          "Technical SEO issue identification",
+          "Google Business Profile optimization (one eligible location)",
+          "1 SEO-focused blog article per month (up to 800 words)",
+          "Monthly keyword ranking and organic traffic report"
+        ],
+        "pricingHref": "/pricing.html#seo-plans"
+      },
+      {
+        "id": "premium-seo",
+        "name": "Premium SEO Plan",
+        "audience": "For established businesses and competitive websites",
+        "price": "$999",
+        "billing": "per month",
+        "serviceSlug": "digital-marketing",
+        "features": [
+          "Everything included in Standard SEO",
+          "Research up to 50 target keywords",
+          "On-page SEO for up to 10 existing pages per month",
+          "Competitor SEO analysis (up to 5 competitors)",
+          "Detailed technical SEO audit and minor fixes (up to 2 hours monthly)",
+          "Advanced internal linking and content optimization",
+          "2 SEO-focused blog articles per month (up to 800 words each)",
+          "Google Business Profile optimization (one eligible location)",
+          "Structured data review and basic implementation where relevant",
+          "Detailed keyword ranking and organic traffic report",
+          "Monthly SEO strategy recommendations"
+        ],
+        "pricingHref": "/pricing.html#seo-plans"
+      }
+    ]
+  }
 }

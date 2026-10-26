@@ -1150,3 +1150,25 @@ form > .form-title {
     font-size: 11px;
   }
 }
+
+.monthly-pricing {
+  border-bottom: 1px solid var(--line);
+}
+.marketing-plan-card {
+  background: var(--panel);
+}
+.marketing-plan-card .plan-details {
+  flex: 1;
+}
+.marketing-plan-card .plan-kind {
+  font-size: 7px;
+  line-height: 1.8;
+}
+.marketing-plan-card .pricing-audience {
+  min-height: 44px;
+}
+@media (max-width: 767px) {
+  .marketing-plan-card .pricing-audience {
+    min-height: 0;
+  }
+}

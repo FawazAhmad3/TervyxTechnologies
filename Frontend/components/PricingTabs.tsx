@@ -2,8 +2,21 @@ import { useEffect, useState } from "react";
 import PricingNavigation, { type PricingCategory } from "./PricingNavigation";
 import PairedPricing from "./PairedPricing";
 import AndroidPricing from "./AndroidPricing";
-const categoryFromHash = (): PricingCategory =>
-  location.hash === "#android-plans" ? "android-plans" : "website-plans";
+import SmmPricing from "./SmmPricing";
+import SeoPricing from "./SeoPricing";
+import pricing from "../data/pricing.json";
+const panels = {
+  "website-plans": PairedPricing,
+  "android-plans": AndroidPricing,
+  "smm-plans": SmmPricing,
+  "seo-plans": SeoPricing,
+};
+const categoryFromHash = (): PricingCategory => {
+  const category = location.hash.slice(1) as PricingCategory;
+  return pricing.navigation.some((item) => item.href === `#${category}`)
+    ? category
+    : "website-plans";
+};
 export default function PricingTabs() {
   const [active, setActive] = useState<PricingCategory>(categoryFromHash);
   useEffect(() => {
@@ -19,6 +32,7 @@ export default function PricingTabs() {
       `${location.pathname}${location.search}#${category}`,
     );
   }
+  const Panel = panels[active];
   return (
     <>
       <PricingNavigation active={active} onChange={select} />
@@ -28,7 +42,7 @@ export default function PricingTabs() {
         aria-labelledby={`tab-${active}`}
         tabIndex={0}
       >
-        {active === "website-plans" ? <PairedPricing /> : <AndroidPricing />}
+        <Panel />
       </div>
     </>
   );
