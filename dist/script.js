@@ -5,7 +5,7 @@ const ribbon=document.querySelector('.ribbon-scroll');
 const ribbonTrack=ribbon?.querySelector('.ticker>div');
 let ribbonTravel=0,ribbonStart=0,ribbonPosition=0;
 function updateRibbon(){
- if(ribbonTrack)ribbonTrack.style.setProperty('--ticker',`${-ribbonPosition}px`);
+ if(ribbonTrack)ribbon.querySelector('.ticker').scrollLeft=ribbonPosition;
 }
 function measureRibbon(){
  if(!ribbon||reduced)return;
@@ -43,6 +43,7 @@ addEventListener('keydown',event=>{
  const deltas={ArrowDown:60,ArrowUp:-60,PageDown:innerHeight*.8,PageUp:-innerHeight*.8,' ':innerHeight*.8*(event.shiftKey?-1:1)};
  if(deltas[event.key])consumeRibbon(deltas[event.key],event);
 });
+ribbon?.querySelector('.ticker').addEventListener('scroll',event=>{ribbonPosition=event.currentTarget.scrollLeft},{passive:true});
 addEventListener('resize',measureRibbon);
 document.fonts.ready.then(measureRibbon);
 measureRibbon();

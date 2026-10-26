@@ -13,3 +13,10 @@ nav a[aria-current="page"]{color:var(--lime)}.page-intro{padding:90px 7% 70px;bo
 @media(prefers-reduced-motion:reduce){.ribbon-scroll{height:auto}.ribbon-pin{position:relative}.ribbon-scroll .ticker>div{width:auto;white-space:normal;transform:none;line-height:1.6}.ribbon-scroll .ticker span{margin:0 12px}}
 
 .home-services{padding-top:45px}@media(max-width:700px){.home-services{padding-top:32px}}
+
+.ribbon-scroll .ticker{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#526537 #c8fa73;overscroll-behavior-x:contain;touch-action:pan-x pan-y;cursor:ew-resize}
+.ribbon-scroll .ticker>div{transform:none;will-change:auto}
+.ribbon-scroll .ticker:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
+.ribbon-scroll .ticker::-webkit-scrollbar{height:5px}
+.ribbon-scroll .ticker::-webkit-scrollbar-track{background:#c8fa73}
+.ribbon-scroll .ticker::-webkit-scrollbar-thumb{background:#526537;border-radius:4px}
