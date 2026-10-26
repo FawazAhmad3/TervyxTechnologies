@@ -11,10 +11,14 @@ export default function ProjectForm() {
   const selectedPlan = [
     ...pricing.website.plans,
     ...pricing.maintenance.plans,
+    ...pricing.android.development,
+    ...pricing.android.maintenance,
   ].find((plan) => plan.id === params.get("plan"));
   const [selected, setSelected] = useState<string[]>(
     services.items
-      .filter((s) => s.slug === (selectedPlan ? "web-development" : initial))
+      .filter(
+        (s) => s.slug === (selectedPlan ? selectedPlan.serviceSlug : initial),
+      )
       .map((s) => s.title),
   );
   const [status, setStatus] = useState("");
@@ -54,7 +58,13 @@ export default function ProjectForm() {
             <p>
               {selectedPlan.price} · {selectedPlan.billing}
             </p>
-            <a href={pricing.selection.changeHref}>
+            <a
+              href={
+                selectedPlan.serviceSlug === "app-development"
+                  ? pricing.selection.androidChangeHref
+                  : pricing.selection.changeHref
+              }
+            >
               {pricing.selection.changeLabel} ↗
             </a>
           </div>

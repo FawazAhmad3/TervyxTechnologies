@@ -1,5 +1,8 @@
 import pricing from "../data/pricing.json";
-type Plan = Omit<(typeof pricing.website.plans)[number], "originalPrice"> & {
+export type Plan = Omit<
+  (typeof pricing.website.plans)[number],
+  "originalPrice"
+> & {
   originalPrice?: string;
 };
 export default function PlanDetails({
@@ -43,7 +46,7 @@ export default function PlanDetails({
       </ul>
       <a
         className="plan-button"
-        href={`/contact.html?service=web-development&plan=${encodeURIComponent(plan.id)}`}
+        href={`/contact.html?service=${encodeURIComponent(plan.serviceSlug)}&plan=${encodeURIComponent(plan.id)}`}
       >
         {button}
         <span aria-hidden="true">↗</span>

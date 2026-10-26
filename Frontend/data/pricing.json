@@ -26,7 +26,8 @@
           "Website deployment",
           "1 revision round"
         ],
-        "originalPrice": "$299"
+        "originalPrice": "$299",
+        "serviceSlug": "web-development"
       },
       {
         "id": "standard-website",
@@ -45,7 +46,8 @@
           "Website deployment",
           "2 revision rounds"
         ],
-        "originalPrice": "$599"
+        "originalPrice": "$599",
+        "serviceSlug": "web-development"
       },
       {
         "id": "premium-website",
@@ -65,7 +67,8 @@
           "Website deployment",
           "3 revision rounds"
         ],
-        "originalPrice": "$999"
+        "originalPrice": "$999",
+        "serviceSlug": "web-development"
       }
     ]
   },
@@ -94,7 +97,8 @@
           "Monthly backup checks",
           "SSL certificate status check",
           "Email support"
-        ]
+        ],
+        "serviceSlug": "web-development"
       },
       {
         "id": "standard-maintenance",
@@ -110,7 +114,8 @@
           "Dependency updates every 15 days",
           "Backup checks every 15 days",
           "Contact form functionality checks"
-        ]
+        ],
+        "serviceSlug": "web-development"
       },
       {
         "id": "premium-maintenance",
@@ -128,7 +133,8 @@
           "Contact form functionality checks",
           "Broken link checks",
           "Priority technical support during business hours"
-        ]
+        ],
+        "serviceSlug": "web-development"
       }
     ]
   },
@@ -144,7 +150,8 @@
   "selection": {
     "label": "Selected plan",
     "changeLabel": "Change plan",
-    "changeHref": "/pricing.html"
+    "changeHref": "/pricing.html",
+    "androidChangeHref": "/pricing.html#android-plans"
   },
   "priceLabels": {
     "original": "Original price",
@@ -153,14 +160,14 @@
   "page": {
     "title": "Pricing",
     "intro": {
-      "label": "WEBSITE DEVELOPMENT & MAINTENANCE",
+      "label": "WEBSITE & ANDROID APP PLANS",
       "heading": "Build it. Launch it.",
       "accent": "Keep it moving.",
-      "description": "Compare website development and ongoing maintenance side by side. Each tier brings its matching plans into one place, with one-time and monthly prices clearly separated."
+      "description": "Compare website and Android app development with their matching maintenance plans. One-time projects and monthly subscriptions are clearly separated, so you can find the right starting point."
     },
-    "label": "FIND YOUR STARTING POINT",
-    "heading": "One tier.",
-    "muted": "Two clear plans.",
+    "label": "WEBSITE DEVELOPMENT & MAINTENANCE",
+    "heading": "Your website.",
+    "muted": "Built. Launched. Supported.",
     "description": [
       "Website development is a one-time project.",
       "Maintenance begins after launch."
@@ -185,5 +192,174 @@
       }
     ],
     "note": "Website development and monthly maintenance are priced separately. Maintenance plans begin after the website is developed and launched."
-  }
+  },
+  "android": {
+    "section": {
+      "label": "ANDROID APP DEVELOPMENT & MAINTENANCE",
+      "heading": "Your app.",
+      "muted": "Built for the next step.",
+      "description": [
+        "Android development and monthly maintenance.",
+        "Separate plans, paired by tier."
+      ],
+      "developmentLabel": "ANDROID APP DEVELOPMENT",
+      "maintenanceLabel": "MONTHLY ANDROID MAINTENANCE",
+      "developmentButton": "Discuss this Android plan",
+      "maintenanceButton": "Discuss Android maintenance",
+      "note": "Monthly maintenance is a separate subscription after the application is delivered.",
+      "scopeNote": "These are suggested entry-level starting prices for tightly scoped Android projects, not fixed prices for every application. Market estimates vary widely with functionality, backend complexity, and developer hours.",
+      "tiers": [
+        {
+          "name": "Basic",
+          "developmentId": "basic-android",
+          "maintenanceId": "basic-android-maintenance"
+        },
+        {
+          "name": "Standard",
+          "developmentId": "standard-android",
+          "maintenanceId": "standard-android-maintenance"
+        },
+        {
+          "name": "Premium",
+          "developmentId": "premium-android",
+          "maintenanceId": "premium-android-maintenance"
+        }
+      ]
+    },
+    "development": [
+      {
+        "id": "basic-android",
+        "name": "Basic Android App",
+        "audience": "For startups and small businesses",
+        "price": "$899",
+        "originalPrice": "$999",
+        "billing": "starting one-time price",
+        "serviceSlug": "app-development",
+        "features": [
+          "Up to 5 app screens",
+          "Android application development",
+          "Basic UI/UX design",
+          "Splash screen and app navigation",
+          "Static content or simple local data storage",
+          "Contact information and social media links",
+          "Basic form functionality",
+          "Testing on selected Android devices",
+          "Play Store submission assistance",
+          "1 revision round"
+        ]
+      },
+      {
+        "id": "standard-android",
+        "name": "Standard Android App",
+        "audience": "For growing businesses and companies",
+        "price": "$2,299",
+        "originalPrice": "$2,499",
+        "billing": "starting one-time price",
+        "serviceSlug": "app-development",
+        "features": [
+          "Up to 10 app screens",
+          "Custom UI/UX design",
+          "User registration and login",
+          "Database integration with an existing backend service",
+          "One simple third-party API integration",
+          "Basic push notifications",
+          "User profile management",
+          "Form submission and data management",
+          "Testing across selected Android versions",
+          "Play Store submission assistance",
+          "2 revision rounds"
+        ]
+      },
+      {
+        "id": "premium-android",
+        "name": "Premium Android App",
+        "audience": "For established businesses and brands",
+        "price": "$4,499",
+        "originalPrice": "$4,999",
+        "billing": "starting one-time price",
+        "serviceSlug": "app-development",
+        "features": [
+          "Up to 15 app screens",
+          "Advanced custom UI/UX design",
+          "User authentication and role-based access",
+          "Database and backend integration",
+          "Up to 3 standard API integrations",
+          "Push notifications",
+          "Basic administrator dashboard",
+          "Interactive elements and animations",
+          "Data management and file uploads",
+          "Application testing and bug fixing",
+          "Play Store submission assistance",
+          "3 revision rounds"
+        ]
+      }
+    ],
+    "maintenance": [
+      {
+        "id": "basic-android-maintenance",
+        "name": "Basic Maintenance Plan",
+        "audience": "For simple Android applications",
+        "price": "$79",
+        "billing": "per month",
+        "serviceSlug": "app-development",
+        "features": [
+          "2 small content updates per month",
+          "Basic app bug fixes",
+          "Basic security checks",
+          "Basic dependency updates",
+          "Monthly backup checks (where supported)",
+          "Compatibility checks for supported Android versions",
+          "Email support"
+        ]
+      },
+      {
+        "id": "standard-android-maintenance",
+        "name": "Standard Maintenance Plan",
+        "audience": "For growing business applications",
+        "price": "$149",
+        "billing": "per month",
+        "serviceSlug": "app-development",
+        "features": [
+          "Everything included in the Basic Plan",
+          "5 small content updates per month",
+          "Bug fixing and troubleshooting",
+          "Security checks every 15 days",
+          "Dependency checks and applicable updates every 15 days",
+          "Backup checks every 15 days",
+          "Login and API functionality checks",
+          "Google Play update submission assistance",
+          "Email technical support"
+        ]
+      },
+      {
+        "id": "premium-android-maintenance",
+        "name": "Premium Maintenance Plan",
+        "audience": "For advanced and active applications",
+        "price": "$299",
+        "billing": "per month",
+        "serviceSlug": "app-development",
+        "features": [
+          "Everything included in the Standard Plan",
+          "10 small content updates per month",
+          "Advanced bug fixing and troubleshooting within agreed scope",
+          "Security checks every 15 days",
+          "Dependency checks and applicable updates every 15 days",
+          "Weekly backup and restore checks",
+          "Login, API, and database functionality checks",
+          "Google Play update submission assistance",
+          "Priority technical support during business hours"
+        ]
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "label": "Website plans",
+      "href": "#website-plans"
+    },
+    {
+      "label": "Android app plans",
+      "href": "#android-plans"
+    }
+  ]
 }
