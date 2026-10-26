@@ -14,7 +14,7 @@ export default function BrandArtwork({
   const clipId = useId();
   return (
     <svg
-      className={className}
+      className={`brand-source-art ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`${x} ${y} ${width} ${height}`}
       width={width}

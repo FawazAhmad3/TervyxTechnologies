@@ -1663,3 +1663,42 @@ form > .form-title {
     background: var(--panel);
   }
 }
+
+/* One original logo silhouette everywhere, including the animated homepage mark. */
+.original-orbit-motion {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: orbital-float 8s ease-in-out infinite;
+}
+.exact-hero-symbol {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Adapt source-art colors, never geometry, so its original dark canvas becomes light. */
+[data-theme="light"] .brand-artwork {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+[data-theme="light"] .footer-brand-line {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+[data-theme="light"] .brand-source-art {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2);
+  mix-blend-mode: multiply;
+}
+@media (prefers-reduced-motion: reduce) {
+  .original-orbit-motion {
+    animation: none;
+  }
+}
+
+[data-theme="light"] .art,
+[data-theme="light"] .footer-brand-line {
+  mix-blend-mode: multiply;
+}
