@@ -1,0 +1,251 @@
+@import "tailwindcss";
+@import "./design.css";
+@theme {
+  --color-brand-bg: #101413;
+  --color-brand-panel: #151a18;
+  --color-brand-lime: #c8fa73;
+  --color-brand-ink: #f3f5ee;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+@layer components {
+  .ribbon-scroll {
+    @apply relative h-auto w-full;
+  }
+  .ribbon-scroll .ticker {
+    @apply w-full overflow-hidden py-[23px];
+  }
+  .ribbon-scroll .ticker > div {
+    @apply flex w-max items-center px-[42px] text-[23px] leading-[1.2];
+    will-change: transform;
+  }
+  .ribbon-scroll .ticker .ribbon-item {
+    @apply m-0 flex shrink-0 items-center;
+  }
+  .ribbon-scroll .ticker .ribbon-star {
+    @apply mx-[42px];
+  }
+  .home-services {
+    @apply pt-[45px];
+  }
+  .contact-title {
+    @apply text-[clamp(35px,4.1vw,60px)] leading-[1.12] tracking-[-2.5px];
+  }
+  .form-title {
+    @apply font-display text-[22px] leading-normal font-medium tracking-normal;
+  }
+  .form-status {
+    @apply text-brand-lime text-xs;
+  }
+  .preview-card-link {
+    @apply min-w-0;
+  }
+}
+/* Unlayered refinements override the retained design rules at device boundaries. */
+body {
+  min-width: 320px;
+}
+img {
+  max-width: 100%;
+}
+main,
+section,
+form {
+  min-width: 0;
+}
+.hero-copy h1 {
+  overflow-wrap: normal;
+}
+.service-options {
+  padding: 0;
+  border: 0;
+}
+.contact .reveal {
+  min-width: 0;
+}
+.contact-title {
+  margin: 27px 0;
+}
+form > .form-title {
+  margin: 0;
+}
+.preview-card .card-icon {
+  line-height: 1.2;
+}
+.ribbon-scroll .ticker span {
+  margin: 0;
+}
+.ribbon-scroll .ticker .ribbon-star {
+  margin: 0 42px;
+}
+.home-services {
+  padding-top: 45px;
+}
+.ribbon-scroll .ticker > div {
+  transform: none;
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .hero {
+    min-height: 650px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 5.6vw, 64px);
+    letter-spacing: -2.5px;
+  }
+  .hero .art {
+    width: 42%;
+    right: 0;
+    opacity: 0.55;
+  }
+  .hero-copy {
+    max-width: 80%;
+  }
+  .hero-actions {
+    gap: 20px;
+  }
+  .contact {
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-title {
+    font-size: 39px;
+  }
+  .service-art {
+    width: 135px;
+    flex-shrink: 0;
+  }
+  .service-arrow {
+    margin-left: 0;
+  }
+  .nav-cta {
+    padding: 12px 17px;
+  }
+  header nav {
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .section-top {
+    flex-wrap: wrap;
+  }
+  .service-art {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .ribbon-scroll .ticker {
+    padding: 18px 0;
+  }
+  .ribbon-scroll .ticker > div {
+    font-size: 18px;
+    padding: 0 25px;
+  }
+  .ribbon-scroll .ticker .ribbon-star {
+    margin: 0 25px;
+  }
+  .home-services {
+    padding-top: 32px;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+  .hero .art {
+    width: 100%;
+    opacity: 1;
+  }
+  .contact-title {
+    font-size: 39px;
+    letter-spacing: -1.8px;
+  }
+  nav {
+    z-index: 20;
+  }
+  nav a {
+    padding: 8px 0;
+  }
+  .service-arrow {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 380px) {
+  header {
+    padding-inline: 4%;
+  }
+  .brand {
+    font-size: 19px;
+    gap: 6px;
+  }
+  .brand-icon {
+    font-size: 36px;
+  }
+  .brand small {
+    font-size: 6px;
+    letter-spacing: 3.5px;
+  }
+  .nav-cta {
+    padding: 10px;
+    margin-right: 8px;
+  }
+  .nav-cta span {
+    margin-left: 6px;
+  }
+  .hero h1 {
+    font-size: 39px;
+    letter-spacing: -2.3px;
+  }
+  .hero-actions {
+    gap: 20px;
+  }
+  .hero-bottom {
+    font-size: 6px;
+  }
+  .hero-bottom a span {
+    padding-left: 8px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .contact-title {
+    font-size: 34px;
+  }
+  .service h3 {
+    font-size: 22px;
+  }
+  .page-intro h1 {
+    font-size: 39px;
+  }
+  .statement h2 {
+    font-size: 61px;
+  }
+  form {
+    padding: 20px;
+  }
+  .footer-links {
+    gap: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ribbon-scroll .ticker > div {
+    transform: none !important;
+    will-change: auto;
+    flex-wrap: wrap;
+    width: auto;
+    gap: 12px;
+    font-size: 18px;
+  }
+  .ribbon-scroll .ticker .ribbon-star {
+    margin: 0 12px;
+  }
+  .ribbon-scroll .ticker .ribbon-item:nth-child(n + 5) {
+    display: none;
+  }
+}

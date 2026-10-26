@@ -1,0 +1,40 @@
+{
+  "title": "Start a project",
+  "label": "04 / LET’S START SOMETHING",
+  "lines": ["Your next big idea", "deserves a"],
+  "accent": "great beginning.",
+  "description": [
+    "Tell us what you have in mind.",
+    "Let’s turn “what if” into what’s next."
+  ],
+  "signature": ["CODE THE FUTURE.", "TOGETHER."],
+  "form": {
+    "title": "What are we building?",
+    "description": "Select a service to start your project brief.",
+    "name": {
+      "label": "Your name",
+      "placeholder": "Alex Morgan"
+    },
+    "email": {
+      "label": "Email address",
+      "placeholder": "alex@company.com"
+    },
+    "idea": {
+      "label": "A little about your idea",
+      "placeholder": "The idea, the ambition, the possibilities…"
+    },
+    "button": "Create my project brief",
+    "note": "Download your brief to share with TERVYX. This form doesn’t send a message.",
+    "missingService": "Please select at least one service.",
+    "success": "Your brief is ready. Save it and share it with TERVYX to begin the conversation.",
+    "downloadName": "TERVYX-project-brief.txt",
+    "brief": {
+      "title": "PROJECT BRIEF",
+      "name": "Name",
+      "email": "Email",
+      "services": "Services",
+      "idea": "Project idea",
+      "date": "Prepared on"
+    }
+  }
+}

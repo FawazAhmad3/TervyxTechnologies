@@ -1,0 +1,39 @@
+{
+  "title": "About us",
+  "intro": {
+    "label": "THE SOFTWARE HOUSE",
+    "heading": "Technology with purpose.",
+    "accent": "Possibility by design.",
+    "description": "Meet TERVYX Technologies. An innovation-focused software house bringing ideas, engineering, and digital strategy together."
+  },
+  "story": {
+    "label": "01 / THE TERVYX MINDSET",
+    "lines": ["The future doesn’t", "build itself."],
+    "muted": "Let’s code it together.",
+    "paragraphs": [
+      "We’re TERVYX Technologies, a software house built around a simple belief: the right technology can take a great idea further.",
+      "We bring development, design, and digital strategy together to create thoughtful solutions for ambitious businesses. From your first idea to your next big chapter, we build with your future in mind."
+    ]
+  },
+  "values": {
+    "label": "WHAT GUIDES OUR WORK",
+    "items": [
+      {
+        "title": "Purpose first",
+        "description": "Technology should solve a real problem. We start with what matters to your business and your audience."
+      },
+      {
+        "title": "Thoughtful craft",
+        "description": "Clear design and careful development belong together. Every detail contributes to the experience."
+      },
+      {
+        "title": "Open collaboration",
+        "description": "Shared understanding leads to better decisions. Your knowledge of your business shapes our work."
+      },
+      {
+        "title": "Future focused",
+        "description": "We think beyond the first release to help create a practical foundation for what comes next."
+      }
+    ]
+  }
+}

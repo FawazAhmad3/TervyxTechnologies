@@ -1,0 +1,48 @@
+{
+  "title": "Code the Future",
+  "hero": {
+    "label": "BUILT FOR WHAT’S NEXT",
+    "lines": ["Great ideas.", "Powerful code."],
+    "accent": "Endless possibility.",
+    "paragraph": [
+      "We turn your ambition into digital experiences.",
+      "Websites, apps, and marketing that move your business forward."
+    ],
+    "primary": {
+      "label": "Let’s build something",
+      "href": "/contact.html"
+    },
+    "secondary": {
+      "label": "Explore our expertise",
+      "href": "/services.html"
+    },
+    "note": "Your vision. Our expertise. A better digital future.",
+    "industry": "SOFTWARE DEVELOPMENT & IT SERVICES",
+    "scroll": {
+      "label": "SCROLL TO DISCOVER",
+      "href": "/about.html"
+    },
+    "image": {
+      "src": "",
+      "alt": "Abstract orbital technology sculpture"
+    },
+    "orbit": {
+      "top": "IDEAS INTO IMPACT",
+      "bottom": "FUTURE IN THE MAKING",
+      "index": "01 / ∞"
+    }
+  },
+  "ribbon": {
+    "label": "Strategy, design, development, and growth",
+    "items": ["STRATEGY", "DESIGN", "DEVELOPMENT", "GROWTH"]
+  },
+  "services": {
+    "label": "OUR EXPERTISE",
+    "heading": "Your ambition.",
+    "muted": "Our digital expertise.",
+    "link": {
+      "label": "All services ↗",
+      "href": "/services.html"
+    }
+  }
+}

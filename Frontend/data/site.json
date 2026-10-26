@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "name": "TERVYX",
+    "descriptor": "TECHNOLOGIES",
+    "fullName": "TERVYX Technologies",
+    "tagline": "Code the Future",
+    "icon": "↗",
+    "home": "/"
+  },
+  "metadata": {
+    "description": "TERVYX Technologies. Future-focused web development, app development, and digital marketing. Code the Future.",
+    "themeColor": "#101413"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About us",
+      "href": "/about.html"
+    },
+    {
+      "label": "Our expertise",
+      "href": "/services.html"
+    },
+    {
+      "label": "Our process",
+      "href": "/process.html"
+    }
+  ],
+  "contactLink": {
+    "label": "Let’s talk",
+    "href": "/contact.html"
+  },
+  "menu": {
+    "open": "Open navigation",
+    "close": "Close navigation"
+  },
+  "footer": {
+    "lines": ["Innovation in every line.", "Possibility in every idea."],
+    "top": "BACK TO TOP ↑",
+    "copyright": "TERVYX Technologies.",
+    "tagline": "CODE THE FUTURE.",
+    "note": "BUILT WITH PURPOSE. READY FOR TOMORROW.",
+    "links": [
+      {
+        "label": "About",
+        "href": "/about.html"
+      },
+      {
+        "label": "Services",
+        "href": "/services.html"
+      },
+      {
+        "label": "Our process",
+        "href": "/process.html"
+      },
+      {
+        "label": "Start a project ↗",
+        "href": "/contact.html"
+      }
+    ]
+  },
+  "cta": {
+    "label": "YOUR NEXT CHAPTER",
+    "heading": "Have an idea?",
+    "accent": "Let’s bring it to life.",
+    "button": {
+      "label": "Start a conversation",
+      "href": "/contact.html"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Let’s get you back to what’s next.",
+    "label": "Back to home",
+    "href": "/"
+  }
+}

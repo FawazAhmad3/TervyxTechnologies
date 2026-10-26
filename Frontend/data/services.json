@@ -1,0 +1,139 @@
+{
+  "title": "Our services",
+  "intro": {
+    "label": "WHAT WE DO",
+    "heading": "Built for your business.",
+    "accent": "Ready for what’s next.",
+    "description": "Explore our three core services. Each brings a different perspective; together, they create a connected digital presence."
+  },
+  "listing": {
+    "label": "02 / OUR EXPERTISE",
+    "heading": "Three disciplines.",
+    "muted": "One digital partner.",
+    "description": [
+      "From the first click to lasting growth.",
+      "Everything starts with your ambition."
+    ]
+  },
+  "cardLabel": "EXPERTISE",
+  "cardLink": "Explore service ↗",
+  "detail": {
+    "heading": "Where we can",
+    "muted": "make a difference.",
+    "description": [
+      "Shaped around your goals.",
+      "Scoped around what you need."
+    ],
+    "planningLabel": "LET’S FIND THE RIGHT STARTING POINT",
+    "planningHeading": "First, we understand",
+    "planningMuted": "what you want to achieve.",
+    "button": "Discuss your project ↗"
+  },
+  "items": [
+    {
+      "slug": "web-development",
+      "title": "Web Development",
+      "href": "/web-development.html",
+      "short": "Beautifully crafted websites. Purposeful digital experiences.",
+      "icon": "↗",
+      "tags": ["BUSINESS WEBSITES", "WEB APPS", "E-COMMERCE"],
+      "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable.",
+      "intro": {
+        "label": "OUR EXPERTISE / WEB DEVELOPMENT",
+        "heading": "A stronger presence.",
+        "accent": "A better experience.",
+        "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable."
+      },
+      "offers": [
+        {
+          "title": "Business websites",
+          "description": "Introduce your business with a distinctive, responsive website that makes your services easy to understand."
+        },
+        {
+          "title": "Web applications",
+          "description": "Turn a business workflow or product idea into an intuitive browser-based experience."
+        },
+        {
+          "title": "E-commerce",
+          "description": "Create a thoughtful shopping experience that helps people discover products and move toward a purchase."
+        }
+      ],
+      "planning": "We’ll discuss your audience, content, required features, and the role your website should play in your business.",
+      "contactHref": "/contact.html?service=web-development",
+      "image": {
+        "src": "",
+        "alt": "Web Development illustration"
+      }
+    },
+    {
+      "slug": "app-development",
+      "title": "App Development",
+      "href": "/app-development.html",
+      "short": "Your business, in the palm of your customers’ hands.",
+      "icon": "✳",
+      "tags": ["iOS & ANDROID", "CROSS-PLATFORM", "UI / UX"],
+      "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience.",
+      "intro": {
+        "label": "OUR EXPERTISE / APP DEVELOPMENT",
+        "heading": "Big possibilities.",
+        "accent": "Small screen.",
+        "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience."
+      },
+      "offers": [
+        {
+          "title": "iOS & Android",
+          "description": "Plan an experience around your audience and the mobile platforms they use."
+        },
+        {
+          "title": "Cross-platform development",
+          "description": "Explore a shared approach to reaching customers across mobile platforms."
+        },
+        {
+          "title": "User experience & interface",
+          "description": "Shape clear journeys, purposeful screens, and interactions that make everyday tasks easier."
+        }
+      ],
+      "planning": "We’ll discuss your users, the problem you want to solve, core journeys, platform preferences, and your first-release priorities.",
+      "contactHref": "/contact.html?service=app-development",
+      "image": {
+        "src": "",
+        "alt": "App Development illustration"
+      }
+    },
+    {
+      "slug": "digital-marketing",
+      "title": "Digital Marketing",
+      "href": "/digital-marketing.html",
+      "short": "Build visibility. Connect with people. Create opportunity.",
+      "icon": "↗",
+      "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
+      "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy.",
+      "intro": {
+        "label": "OUR EXPERTISE / DIGITAL MARKETING",
+        "heading": "Be seen.",
+        "accent": "Make it matter.",
+        "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy."
+      },
+      "offers": [
+        {
+          "title": "Search engine optimization",
+          "description": "Plan useful content and a discoverable website around the things your audience is looking for."
+        },
+        {
+          "title": "Social media",
+          "description": "Develop a consistent presence and content direction that reflects your brand and speaks to your audience."
+        },
+        {
+          "title": "Campaign strategy",
+          "description": "Connect campaign goals, messaging, channels, and measurement in a purposeful marketing plan."
+        }
+      ],
+      "planning": "We’ll discuss your brand, audience, current channels, business objectives, and the actions you want people to take.",
+      "contactHref": "/contact.html?service=digital-marketing",
+      "image": {
+        "src": "",
+        "alt": "Digital Marketing illustration"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Our process",
+  "intro": {
+    "label": "HOW WE WORK",
+    "heading": "Great work starts",
+    "accent": "with a clear direction.",
+    "description": "A collaborative approach that connects your business goals to the decisions we make at every stage."
+  },
+  "steps": {
+    "label": "03 / HOW WE MAKE IT HAPPEN",
+    "heading": "A clear path.",
+    "muted": "From idea to impact.",
+    "description": [
+      "Good work starts with good collaboration.",
+      "Here’s how we bring your vision to life."
+    ],
+    "items": [
+      {
+        "title": "Discover",
+        "description": "We listen, ask the right questions, and understand your goals, audience, and challenges."
+      },
+      {
+        "title": "Design",
+        "description": "We shape the strategy and experience, turning your vision into a clear, purposeful direction."
+      },
+      {
+        "title": "Develop",
+        "description": "We bring the details together with thoughtful engineering, open communication, and careful testing."
+      },
+      {
+        "title": "Launch & evolve",
+        "description": "We prepare for launch and help you plan the next steps as your business and ambitions grow."
+      }
+    ]
+  },
+  "statement": {
+    "label": "YOUR NEXT CHAPTER STARTS HERE",
+    "lines": ["Think bold.", "Build smart."],
+    "accent": "Move forward.",
+    "description": [
+      "More than a service provider.",
+      "A technology partner for the road ahead."
+    ]
+  }
+}

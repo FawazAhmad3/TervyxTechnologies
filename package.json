@@ -1,0 +1,21 @@
+{
+  "name": "tervyx-technologies",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "Frontend",
+    "Backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace Frontend",
+    "dev:backend": "npm run dev --workspace Backend",
+    "build": "npm run build --workspace Frontend && npm run build --workspace Backend",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run test --workspace Backend",
+    "format": "prettier --write Frontend Backend Readme.md package.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.0"
+  }
+}
