@@ -15,7 +15,9 @@ export default function ProjectPreview({ preview }: { preview: Preview }) {
         </div>
         <div className="preview-window-content">
           <div className="preview-kicker">{preview.label}</div>
-          <div className="preview-orb">✳</div>
+          <div className="preview-symbol-frame">
+            <div className="preview-orb">✳</div>
+          </div>
           <h3>{preview.title}</h3>
           <p>{preview.subtitle}</p>
           <div className="preview-action">

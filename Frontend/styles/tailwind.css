@@ -1323,3 +1323,28 @@ form > .form-title {
     display: none;
   }
 }
+
+/* Keep the rotating preview glyph in its own flow area, clear of the label. */
+.preview-symbol-frame {
+  margin: 12px 0 8px;
+  display: flex;
+  align-items: center;
+  height: 112px;
+  padding-left: 18px;
+  overflow: hidden;
+}
+.preview-symbol-frame .preview-orb {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  line-height: 1;
+  transform-origin: 50% 50%;
+}
+.preview-kicker {
+  position: relative;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
