@@ -37,7 +37,7 @@
   .form-status {
     @apply text-brand-lime text-xs;
   }
-  .preview-card-link {
+  .service-card-shell {
     @apply min-w-0;
   }
 }
@@ -654,5 +654,55 @@ form > .form-title {
   }
   .map-orbit.inner {
     inset: 80px 25px;
+  }
+}
+
+/* Service summaries are non-interactive; contain the animated glyph itself. */
+.service-card-shell {
+  min-width: 0;
+  height: 100%;
+}
+.preview-card.service-summary-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: default;
+}
+.service-icon-frame {
+  display: flex;
+  align-items: center;
+  height: 130px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.preview-card .service-icon-frame .card-icon {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  padding: 0;
+  transform-origin: 50% 50%;
+  line-height: 1;
+  transition: transform 0.5s ease;
+}
+.preview-card .service-card-tags {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.preview-card .service-card-tags span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .service-icon-frame {
+    height: 105px;
+  }
+  .preview-card .service-icon-frame .card-icon {
+    width: 85px;
+    height: 85px;
   }
 }
