@@ -10,7 +10,7 @@ export default function ServiceRow({
 }) {
   return (
     <Reveal>
-      <a className="service" href={service.href}>
+      <article className="service service-summary-row">
         <div className="service-number">
           {String(index + 1).padStart(2, "0")}
         </div>
@@ -24,10 +24,7 @@ export default function ServiceRow({
           </div>
         </div>
         <ServiceIllustration service={service} />
-        <span className="service-arrow" aria-hidden="true">
-          ↗
-        </span>
-      </a>
+      </article>
     </Reveal>
   );
 }

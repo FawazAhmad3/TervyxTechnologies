@@ -706,3 +706,7 @@ form > .form-title {
     height: 85px;
   }
 }
+
+.service-summary-row {
+  cursor: default;
+}
