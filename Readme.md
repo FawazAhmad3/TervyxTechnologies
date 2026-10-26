@@ -82,3 +82,9 @@ The contact form creates a downloadable text brief. It does not send email or sa
 Layouts adapt for small phones, tablets, laptops, and wide displays. Motion respects reduced-motion preferences. Keyboard navigation, labelled fields, visible focus states, and mobile navigation are included.
 
 The root `LICENSE` reserves the project for TERVYX Technologies. Dependency licenses remain with their respective authors.
+
+## Brand board
+
+`Frontend/data/brand.json` records the supplied brand palette, typography, meanings, and original-artwork viewports. `BrandArtwork.tsx` displays the horizontal, stacked, dark app icon, light app icon, monochrome, and symbol variants from the unmodified board in `Frontend/public/brand/brand-board.png`. These are exact raster artwork viewports, not redrawn vector approximations. The favicon is a self-contained SVG viewport of the supplied dark app icon. SVG wrappers preserve the bitmap; they do not create additional image resolution.
+
+Orbitron is the primary heading font; Space Grotesk is the secondary/body font. Both load through Google Fonts in every HTML entry. Charcoal `#101413`, deep charcoal `#151A18`, electric lime `#C8FA73`, and sage gray `#929C94` follow the board. Brand colors are mirrored in the CSS tokens. Header and footer use the original horizontal and stacked logos, and the homepage sculpture uses the original orbital symbol with scroll-linked rotation.

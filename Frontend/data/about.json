@@ -19,20 +19,20 @@
     "label": "WHAT GUIDES OUR WORK",
     "items": [
       {
-        "title": "Purpose first",
-        "description": "Technology should solve a real problem. We start with what matters to your business and your audience."
+        "title": "Connectivity",
+        "description": "Represents a connected world and seamless collaboration."
       },
       {
-        "title": "Thoughtful craft",
-        "description": "Clear design and careful development belong together. Every detail contributes to the experience."
+        "title": "Innovation",
+        "description": "Symbolizes new ideas, modern technology and smart solutions."
       },
       {
-        "title": "Open collaboration",
-        "description": "Shared understanding leads to better decisions. Your knowledge of your business shapes our work."
+        "title": "Forward motion",
+        "description": "Dynamic form conveys movement, growth and progress."
       },
       {
-        "title": "Future focused",
-        "description": "We think beyond the first release to help create a practical foundation for what comes next."
+        "title": "A brighter tomorrow",
+        "description": "Reflects continuous improvement and a future-driven mindset."
       }
     ]
   }

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import BrandArtwork from "./BrandArtwork";
 import home from "../data/home.json";
 export default function OrbitSculpture() {
   const ref = useRef<HTMLDivElement>(null);
@@ -9,7 +10,7 @@ export default function OrbitSculpture() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         if (ref.current)
-          ref.current.style.transform = `rotate(${scrollY * 0.045 - 25}deg) rotateY(${scrollY * 0.035}deg)`;
+          ref.current.style.transform = `rotate(${scrollY * 0.018}deg)`;
       });
     };
     addEventListener("scroll", update, { passive: true });
@@ -35,10 +36,11 @@ export default function OrbitSculpture() {
             <span>+</span>
           </div>
           <div className="sculpture" ref={ref}>
-            {[1, 2, 3, 4, 5].map((n) => (
-              <div key={n} className={`ring r${n}`} />
-            ))}
-            <div className="core">✳</div>
+            <BrandArtwork
+              variant="symbol"
+              className="hero-brand-symbol"
+              decorative
+            />
           </div>
           <div className="art-cross one">+</div>
           <div className="art-cross two">+</div>

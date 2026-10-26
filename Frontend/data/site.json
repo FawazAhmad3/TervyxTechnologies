@@ -4,8 +4,9 @@
     "descriptor": "TECHNOLOGIES",
     "fullName": "TERVYX Technologies",
     "tagline": "Code the Future",
-    "icon": "↗",
-    "home": "/"
+    "icon": "",
+    "home": "/",
+    "artwork": "primary"
   },
   "metadata": {
     "description": "TERVYX Technologies. Future-focused web development, app development, and digital marketing. Code the Future.",

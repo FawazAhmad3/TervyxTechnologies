@@ -1,10 +1,11 @@
+import BrandArtwork from "./BrandArtwork";
 import Brand from "./Brand";
 import site from "../data/site.json";
 export default function Footer() {
   return (
     <footer>
       <div className="footer-top">
-        <Brand />
+        <Brand variant="stacked" />
         <p>
           {site.footer.lines.map((line) => (
             <span className="block" key={line}>
@@ -21,9 +22,8 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <div className="footer-word">
-        {site.brand.name}
-        <span>®</span>
+      <div className="footer-brand-line" aria-hidden="true">
+        <BrandArtwork variant="primary" decorative />
       </div>
       <div className="footer-bottom">
         <span>

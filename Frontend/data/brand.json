@@ -1,0 +1,34 @@
+{
+  "source": "/brand/brand-board.png",
+  "sourceWidth": 1448,
+  "sourceHeight": 1086,
+  "views": {
+    "primary": [405, 108, 960, 280],
+    "stacked": [522, 684, 233, 205],
+    "icon-dark": [817, 699, 167, 167],
+    "icon-light": [1038, 699, 167, 167],
+    "monochrome": [1278, 715, 145, 148],
+    "symbol": [404, 106, 300, 278]
+  },
+  "logoAlt": "TERVYX Technologies — Code the Future",
+  "symbolAlt": "TERVYX orbital technology logo",
+  "favicon": "/brand/favicon.svg",
+  "colors": {
+    "charcoal": "#101413",
+    "deepCharcoal": "#151A18",
+    "electricLime": "#C8FA73",
+    "sageGray": "#929C94",
+    "text": "#F3F5EE"
+  },
+  "fonts": {
+    "primary": "Orbitron",
+    "secondary": "Space Grotesk",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+  },
+  "meaning": {
+    "connectivity": "Represents a connected world and seamless collaboration.",
+    "innovation": "Symbolizes new ideas, modern technology and smart solutions.",
+    "forwardMotion": "Dynamic form conveys movement, growth and progress.",
+    "brighterTomorrow": "Reflects continuous improvement and a future-driven mindset."
+  }
+}
