@@ -1097,7 +1097,7 @@ form > .form-title {
   position: static;
   background: var(--bg);
 }
-.pricing-navigation a {
+.pricing-navigation :is(a, button) {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -1107,11 +1107,11 @@ form > .form-title {
   font-size: 12px;
   color: var(--ink);
 }
-.pricing-navigation a:hover {
+.pricing-navigation :is(a, button):hover {
   border-color: var(--lime);
   color: var(--lime);
 }
-.pricing-navigation a span {
+.pricing-navigation :is(a, button) span {
   color: var(--lime);
 }
 @media (max-width: 700px) {
@@ -1120,12 +1120,33 @@ form > .form-title {
     gap: 10px;
     flex-direction: row;
   }
-  .pricing-navigation a {
+  .pricing-navigation :is(a, button) {
     font-size: 11px;
     gap: 14px;
     padding: 12px;
   }
   .pricing-navigation.open {
     display: flex;
+  }
+}
+
+.pricing-navigation button {
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  font-size: 12px;
+}
+.pricing-navigation button[aria-selected="true"] {
+  background: var(--lime);
+  color: var(--bg);
+  border-color: var(--lime);
+}
+.pricing-navigation button:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .pricing-navigation button {
+    font-size: 11px;
   }
 }
