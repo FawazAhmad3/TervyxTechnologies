@@ -3,20 +3,46 @@ const reveals=document.querySelectorAll('.reveal');
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');else if(entry.boundingClientRect.top>0&&!reduced)entry.target.classList.remove('visible')}),{threshold:.1});reveals.forEach(el=>observer.observe(el));
 const ribbon=document.querySelector('.ribbon-scroll');
 const ribbonTrack=ribbon?.querySelector('.ticker>div');
-let ribbonTravel=0,ribbonStart=0;
+let ribbonTravel=0,ribbonStart=0,ribbonPosition=0;
+function updateRibbon(){
+ if(ribbonTrack)ribbonTrack.style.setProperty('--ticker',`${-ribbonPosition}px`);
+}
 function measureRibbon(){
  if(!ribbon||reduced)return;
  ribbonTravel=Math.max(0,ribbonTrack.scrollWidth-ribbon.querySelector('.ticker').clientWidth);
- ribbon.style.setProperty('--ribbon-travel',`${ribbonTravel}px`);
- ribbon.style.setProperty('--ribbon-height',`${ribbon.querySelector('.ribbon-pin').offsetHeight}px`);
- ribbonStart=ribbon.getBoundingClientRect().top+scrollY;
- updateRibbon(scrollY);
+ ribbonStart=Math.max(0,ribbon.getBoundingClientRect().top+scrollY-innerHeight*.35);
+ ribbonPosition=Math.min(ribbonTravel,ribbonPosition);
+ updateRibbon();
 }
-function updateRibbon(y){
- if(!ribbon||reduced)return;
- const distance=Math.min(ribbonTravel,Math.max(0,y-ribbonStart));
- ribbonTrack.style.setProperty('--ticker',`${-distance}px`);
+function consumeRibbon(delta,event){
+ if(!ribbon||reduced||!delta||!ribbonTravel)return false;
+ const y=scrollY,down=delta>0;
+ const crossing=down?y<=ribbonStart+1&&y+delta>=ribbonStart:y>=ribbonStart-1&&y+delta<=ribbonStart;
+ const available=down?ribbonPosition<ribbonTravel:ribbonPosition>0;
+ if(!crossing||!available)return false;
+ event.preventDefault();
+ const toAnchor=ribbonStart-y;
+ const movement=delta-toAnchor;
+ const next=Math.max(0,Math.min(ribbonTravel,ribbonPosition+movement));
+ const consumed=next-ribbonPosition;
+ ribbonPosition=next;
+ updateRibbon();
+ window.scrollTo({top:ribbonStart+movement-consumed,behavior:'instant'});
+ return true;
 }
+addEventListener('wheel',event=>{
+ if(event.ctrlKey||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;
+ const multiplier=event.deltaMode===1?16:event.deltaMode===2?innerHeight:1;
+ consumeRibbon(event.deltaY*multiplier,event);
+},{passive:false});
+let touchY=null;
+addEventListener('touchstart',event=>{touchY=event.touches.length===1?event.touches[0].clientY:null},{passive:true});
+addEventListener('touchmove',event=>{if(touchY===null||event.touches.length!==1)return;const next=event.touches[0].clientY;consumeRibbon(touchY-next,event);touchY=next},{passive:false});
+addEventListener('keydown',event=>{
+ if(event.target.closest('input,textarea,select,button,a,[contenteditable]')||event.metaKey||event.ctrlKey||event.altKey)return;
+ const deltas={ArrowDown:60,ArrowUp:-60,PageDown:innerHeight*.8,PageUp:-innerHeight*.8,' ':innerHeight*.8*(event.shiftKey?-1:1)};
+ if(deltas[event.key])consumeRibbon(deltas[event.key],event);
+});
 addEventListener('resize',measureRibbon);
 document.fonts.ready.then(measureRibbon);
 measureRibbon();
