@@ -1,8 +1,8 @@
 import pricing from "../data/pricing.json";
 import SectionHeading from "./SectionHeading";
-import PricingCard from "./PricingCard";
+import PricingCard, { type Plan } from "./PricingCard";
 import Reveal from "./Reveal";
-type Content = typeof pricing.website;
+type Content = Omit<typeof pricing.website, "plans"> & { plans: Plan[] };
 export default function PricingSection({
   content,
   id,

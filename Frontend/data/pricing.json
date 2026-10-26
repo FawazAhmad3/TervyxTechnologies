@@ -14,7 +14,7 @@
         "id": "basic-website",
         "name": "Basic Website Plan",
         "audience": "For startups and small businesses",
-        "price": "$299",
+        "price": "$199",
         "billing": "one-time",
         "features": [
           "Up to 3 website pages",
@@ -25,13 +25,14 @@
           "Basic animations and interactive elements",
           "Website deployment",
           "1 revision round"
-        ]
+        ],
+        "originalPrice": "$299"
       },
       {
         "id": "standard-website",
         "name": "Standard Website Plan",
         "audience": "For growing businesses and companies",
-        "price": "$599",
+        "price": "$499",
         "billing": "one-time",
         "features": [
           "Up to 6 website pages",
@@ -43,13 +44,14 @@
           "Google Analytics integration",
           "Website deployment",
           "2 revision rounds"
-        ]
+        ],
+        "originalPrice": "$599"
       },
       {
         "id": "premium-website",
         "name": "Premium Website Plan",
         "audience": "For established businesses and brands",
-        "price": "$999",
+        "price": "$899",
         "billing": "starting one-time price",
         "features": [
           "Up to 10 website pages",
@@ -62,7 +64,8 @@
           "Cross-device and browser testing",
           "Website deployment",
           "3 revision rounds"
-        ]
+        ],
+        "originalPrice": "$999"
       }
     ]
   },
@@ -132,7 +135,7 @@
   "teaser": {
     "label": "WEBSITE PLANS & MAINTENANCE",
     "heading": "A clear starting point.",
-    "description": "Website development from $299 one-time. Monthly maintenance from $49 after launch.",
+    "description": "Website development from $199 one-time. Monthly maintenance from $49 after launch.",
     "link": {
       "label": "Explore website plans",
       "href": "/web-development.html#website-plans"
@@ -142,5 +145,9 @@
     "label": "Selected plan",
     "changeLabel": "Change plan",
     "changeHref": "/web-development.html#website-plans"
+  },
+  "priceLabels": {
+    "original": "Original price",
+    "current": "Discounted price"
   }
 }
