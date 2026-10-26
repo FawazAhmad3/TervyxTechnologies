@@ -20,3 +20,7 @@ nav a[aria-current="page"]{color:var(--lime)}.page-intro{padding:90px 7% 70px;bo
 .ribbon-scroll .ticker::-webkit-scrollbar{height:5px}
 .ribbon-scroll .ticker::-webkit-scrollbar-track{background:#c8fa73}
 .ribbon-scroll .ticker::-webkit-scrollbar-thumb{background:#526537;border-radius:4px}
+
+/* Vertical mouse-wheel input drives the ribbon; keep the original clean strip. */
+.ribbon-scroll .ticker{scrollbar-width:none;cursor:default}
+.ribbon-scroll .ticker::-webkit-scrollbar{display:none}

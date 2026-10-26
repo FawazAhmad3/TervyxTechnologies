@@ -33,7 +33,12 @@ function consumeRibbon(delta,event){
 addEventListener('wheel',event=>{
  if(event.ctrlKey||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;
  const multiplier=event.deltaMode===1?16:event.deltaMode===2?innerHeight:1;
- consumeRibbon(event.deltaY*multiplier,event);
+ const delta=event.deltaY*multiplier;
+ if(ribbon?.contains(event.target)&&!reduced){
+  const next=Math.max(0,Math.min(ribbonTravel,ribbonPosition+delta));
+  if(next!==ribbonPosition){event.preventDefault();ribbonPosition=next;updateRibbon();return;}
+ }
+ consumeRibbon(delta,event);
 },{passive:false});
 let touchY=null;
 addEventListener('touchstart',event=>{touchY=event.touches.length===1?event.touches[0].clientY:null},{passive:true});
