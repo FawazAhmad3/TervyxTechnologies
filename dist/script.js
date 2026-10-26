@@ -1,7 +1,25 @@
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveals=document.querySelectorAll('.reveal');
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');else if(entry.boundingClientRect.top>0&&!reduced)entry.target.classList.remove('visible')}),{threshold:.1});reveals.forEach(el=>observer.observe(el));
-let queued=false;function scrollUpdate(){const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=`${max?y/max*100:0}%`;if(!reduced){if(document.querySelector('.sculpture'))document.querySelector('.sculpture').style.transform=`rotate(${y*.045-25}deg) rotateY(${y*.035}deg)`;document.querySelector('.ticker')?.style.setProperty('--ticker',`${-y*.1}px`);document.querySelector('.statement')?.style.setProperty('--spin',`${y*.045}deg`)}queued=false}addEventListener('scroll',()=>{if(!queued){requestAnimationFrame(scrollUpdate);queued=true}},{passive:true});scrollUpdate();
+const ribbon=document.querySelector('.ribbon-scroll');
+const ribbonTrack=ribbon?.querySelector('.ticker>div');
+let ribbonTravel=0,ribbonStart=0;
+function measureRibbon(){
+ if(!ribbon||reduced)return;
+ ribbonTravel=Math.max(0,ribbonTrack.scrollWidth-ribbon.querySelector('.ticker').clientWidth);
+ ribbon.style.setProperty('--ribbon-travel',`${ribbonTravel}px`);
+ ribbonStart=ribbon.getBoundingClientRect().top+scrollY;
+ updateRibbon(scrollY);
+}
+function updateRibbon(y){
+ if(!ribbon||reduced)return;
+ const distance=Math.min(ribbonTravel,Math.max(0,y-ribbonStart));
+ ribbonTrack.style.setProperty('--ticker',`${-distance}px`);
+}
+addEventListener('resize',measureRibbon);
+document.fonts.ready.then(measureRibbon);
+measureRibbon();
+let queued=false;function scrollUpdate(){const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=`${max?y/max*100:0}%`;if(!reduced){if(document.querySelector('.sculpture'))document.querySelector('.sculpture').style.transform=`rotate(${y*.045-25}deg) rotateY(${y*.035}deg)`;updateRibbon(y);document.querySelector('.statement')?.style.setProperty('--spin',`${y*.045}deg`)}queued=false}addEventListener('scroll',()=>{if(!queued){requestAnimationFrame(scrollUpdate);queued=true}},{passive:true});scrollUpdate();
 const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
 document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('input[name="service"]').forEach(input=>input.checked=input.value===link.dataset.service)}));
 document.querySelector('#year').textContent=new Date().getFullYear();
