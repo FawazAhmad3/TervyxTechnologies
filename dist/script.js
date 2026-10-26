@@ -8,6 +8,7 @@ function measureRibbon(){
  if(!ribbon||reduced)return;
  ribbonTravel=Math.max(0,ribbonTrack.scrollWidth-ribbon.querySelector('.ticker').clientWidth);
  ribbon.style.setProperty('--ribbon-travel',`${ribbonTravel}px`);
+ ribbon.style.setProperty('--ribbon-height',`${ribbon.querySelector('.ribbon-pin').offsetHeight}px`);
  ribbonStart=ribbon.getBoundingClientRect().top+scrollY;
  updateRibbon(scrollY);
 }

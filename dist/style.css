@@ -2,13 +2,12 @@
 
 nav a[aria-current="page"]{color:var(--lime)}.page-intro{padding:90px 7% 70px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 100% 0%,#c8fa7310,transparent 65%)}.page-intro h1{max-width:1000px}.page-intro>p{max-width:640px;font-size:16px}.preview-cards,.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.preview-card,.detail-card{padding:32px;border:1px solid var(--line);background:var(--panel);border-radius:5px}.preview-card:hover{border-color:var(--lime)}.preview-card h3,.detail-card h3{font-size:25px;font-weight:500;margin:20px 0 15px}.preview-card p,.detail-card p{font-size:14px}.preview-card .text-link{margin-top:28px;color:var(--lime)}.card-icon{font-size:70px;color:var(--lime);padding:22px 0;transition:transform .5s}.preview-card:hover .card-icon{transform:rotate(30deg)}.home-services .section-top{margin-top:22px}.page-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;background:#1c251c}.page-cta h2{margin-top:20px}.footer-links{display:flex;gap:30px;margin-top:35px;font-size:12px;color:var(--muted)}.detail-planning{background:var(--panel)}.detail-planning h2{margin:25px 0}.detail-planning>p{max-width:680px;margin-bottom:30px}.values .steps{margin-top:30px}body:has(.page-intro) .services .section-top{display:none}body:has(#contact):not(:has(.hero)) .contact{min-height:80vh;padding-top:75px}@media(max-width:700px){.page-intro{padding:55px 6%}.preview-cards,.detail-grid{grid-template-columns:1fr}.page-cta{align-items:flex-start;flex-direction:column}.footer-links{gap:20px;flex-wrap:wrap}.preview-card{padding:25px}.card-icon{padding:10px 0;font-size:50px}}
 
-/* Native scroll-driven ribbon: complete horizontal travel before releasing the next section. */
-.ribbon-scroll{position:relative;height:calc(100svh + var(--ribbon-travel,0px));background:var(--bg)}
-.ribbon-pin{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.ribbon-scroll .ticker{flex-shrink:0;width:100%;padding:42px 0}
-.ribbon-scroll .ticker>div{font-size:clamp(48px,7vw,112px);padding:0 7vw;line-height:1.15;will-change:transform}
-.ribbon-scroll .ticker span{margin:0 5vw}
-.ribbon-caption{padding:25px 7%;display:flex;justify-content:space-between;gap:20px;font-size:9px;letter-spacing:2px;color:var(--muted)}
-.ribbon-caption>span:last-child{color:var(--lime)}
-@media(max-width:700px){.ribbon-scroll .ticker{padding:32px 0}.ribbon-scroll .ticker>div{font-size:58px}.ribbon-caption{font-size:7px;letter-spacing:1px;padding:20px 6%}.ribbon-bottom>span:first-child{max-width:180px}}
-@media(prefers-reduced-motion:reduce){.ribbon-scroll{height:auto}.ribbon-pin{position:relative;height:auto;padding:30px 0}.ribbon-scroll .ticker>div{width:auto;white-space:normal;transform:none;font-size:clamp(24px,5vw,60px);line-height:1.6}.ribbon-scroll .ticker span{margin:0 12px}}
+/* Keep the original slim ribbon while reserving only its horizontal scroll distance. */
+.ribbon-scroll{position:relative;height:calc(var(--ribbon-height,76px) + var(--ribbon-travel,0px));background:var(--bg)}
+.ribbon-pin{position:sticky;top:0;overflow:hidden}
+.ribbon-scroll .ticker{width:100%;padding:23px 0}
+.ribbon-scroll .ticker>div{font-size:23px;line-height:1.2;padding:0 42px;will-change:transform}
+.ribbon-scroll .ticker span{margin:0 42px}
+.ribbon-caption{display:none}
+@media(max-width:700px){.ribbon-scroll .ticker{padding:18px 0}.ribbon-scroll .ticker>div{font-size:18px;padding:0 25px}.ribbon-scroll .ticker span{margin:0 25px}}
+@media(prefers-reduced-motion:reduce){.ribbon-scroll{height:auto}.ribbon-pin{position:relative}.ribbon-scroll .ticker>div{width:auto;white-space:normal;transform:none;line-height:1.6}.ribbon-scroll .ticker span{margin:0 12px}}
