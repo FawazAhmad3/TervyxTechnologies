@@ -50,7 +50,7 @@ Backend: http://127.0.0.1:4000. `GET /api/health` returns status; `GET /api/serv
 Edit `Frontend/data/*.json`. All website headings, paragraphs, button labels, navigation links, service information, and form copy live there. JSON must remain valid: double quotes and no trailing commas. Changes appear during development; run a new build and deploy to update a hosted site.
 
 - `site.json`: branding, navigation, footer, shared call to action, metadata.
-- `home.json`: hero, animated ribbon items, homepage service headings.
+- `home.json`: hero, animated ribbon, service headings, introduction, project explorer, collaboration section, and FAQs.
 - `about.json`: About intro, story, values.
 - `services.json`: all three services, offerings, links, detail-page copy, and images.
 - `process.json`: process intro, steps, statement.

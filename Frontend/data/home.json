@@ -44,5 +44,178 @@
       "label": "All services ↗",
       "href": "/services.html"
     }
+  },
+  "introduction": {
+    "label": "THE PEOPLE BEHIND YOUR NEXT CHAPTER",
+    "heading": "Ideas need ambition.",
+    "muted": "Progress needs a partner.",
+    "paragraphs": [
+      "TERVYX Technologies brings web development, app development, and digital marketing together around your business goals. We help connect what you want to achieve with what your customers need to experience.",
+      "Launching something new? Taking an existing business online? Reworking an experience that no longer fits? We start by understanding the challenge, then shape a practical way forward."
+    ],
+    "link": {
+      "label": "Get to know TERVYX",
+      "href": "/about.html"
+    },
+    "principles": [
+      {
+        "label": "Understand the goal",
+        "detail": "Start with the problem, not a list of features."
+      },
+      {
+        "label": "Connect the experience",
+        "detail": "Bring design, development, and marketing into the same conversation."
+      },
+      {
+        "label": "Build for the next step",
+        "detail": "Make purposeful choices today with tomorrow in mind."
+      }
+    ]
+  },
+  "projects": {
+    "label": "POSSIBILITIES, MADE CONCRETE",
+    "heading": "What could we",
+    "muted": "build for you?",
+    "description": [
+      "Explore a few starting points.",
+      "Every project begins with your goals."
+    ],
+    "note": "ILLUSTRATIVE PROJECT DIRECTIONS — NOT CLIENT CASE STUDIES",
+    "button": "Explore this service",
+    "items": [
+      {
+        "id": "website",
+        "tab": "A standout website",
+        "type": "WEB DEVELOPMENT",
+        "title": "Turn a first impression into a next step.",
+        "description": "Give visitors a clear understanding of your business, a reason to explore, and a simple way to take action.",
+        "features": [
+          "Clear service pages and purposeful navigation",
+          "Responsive layouts for phones, tablets, and desktops",
+          "Enquiry journeys designed around your business"
+        ],
+        "href": "/web-development.html",
+        "preview": {
+          "label": "YOUR BUSINESS, ONLINE",
+          "title": "Make your next move.",
+          "subtitle": "A clearer story. A stronger digital presence.",
+          "button": "Discover what’s possible",
+          "tags": ["Responsive design", "Clear journeys"],
+          "kind": "web"
+        }
+      },
+      {
+        "id": "application",
+        "tab": "An intuitive app",
+        "type": "APP DEVELOPMENT",
+        "title": "Make the everyday feel effortless.",
+        "description": "Turn a useful idea into a mobile experience that helps people get things done, wherever they are.",
+        "features": [
+          "Focused user journeys and easy-to-use screens",
+          "Platform decisions guided by your audience",
+          "A first release built around the features that matter"
+        ],
+        "href": "/app-development.html",
+        "preview": {
+          "label": "YOUR IDEA, IN HAND",
+          "title": "Everything in reach.",
+          "subtitle": "One clear place for the next thing to do.",
+          "button": "Let’s get started",
+          "tags": ["Thoughtful interactions", "Mobile first"],
+          "kind": "app"
+        }
+      },
+      {
+        "id": "growth",
+        "tab": "A stronger presence",
+        "type": "DIGITAL MARKETING",
+        "title": "Give the right people a reason to notice.",
+        "description": "Connect your message, content, and channels so your business shows up with a consistent purpose.",
+        "features": [
+          "A content direction grounded in your brand",
+          "Search and social planning for your audience",
+          "Campaign goals that help guide the next decision"
+        ],
+        "href": "/digital-marketing.html",
+        "preview": {
+          "label": "YOUR BRAND, CONNECTED",
+          "title": "Start a conversation.",
+          "subtitle": "A message that belongs wherever your audience is.",
+          "button": "Find your direction",
+          "tags": ["Search & social", "Brand consistency"],
+          "kind": "marketing"
+        }
+      }
+    ]
+  },
+  "collaboration": {
+    "label": "HOW WE WORK WITH YOU",
+    "heading": "Clear thinking.",
+    "muted": "Better collaboration.",
+    "description": "A successful digital project needs more than good code. It needs shared understanding, thoughtful priorities, and a clear view of what happens next.",
+    "items": [
+      {
+        "title": "Business goals before features",
+        "description": "We discuss what success should mean for your project before deciding what to build."
+      },
+      {
+        "title": "A shared direction",
+        "description": "We work through the scope, design direction, and priorities together so decisions have a clear purpose."
+      },
+      {
+        "title": "Feedback at the right moments",
+        "description": "Your perspective helps shape the work as ideas move from early direction to finished experience."
+      },
+      {
+        "title": "A useful foundation",
+        "description": "We consider usability, responsive behavior, and the next stage of your business as part of the conversation."
+      }
+    ],
+    "link": {
+      "label": "See our full process",
+      "href": "/process.html"
+    },
+    "visual": {
+      "label": "YOUR VISION AT THE CENTER",
+      "center": "YOUR IDEA",
+      "nodes": ["STRATEGY", "DESIGN", "DEVELOPMENT"],
+      "bottom": "ONE CONNECTED DIRECTION"
+    }
+  },
+  "faq": {
+    "label": "BEFORE WE BEGIN",
+    "heading": "A few things",
+    "muted": "you might be wondering.",
+    "description": "A little clarity for your next step.",
+    "link": {
+      "label": "Have another question? Let’s talk",
+      "href": "/contact.html"
+    },
+    "items": [
+      {
+        "question": "What can TERVYX help me with?",
+        "answer": "Our core services are web development, app development, and digital marketing. We can discuss one focused project or how those disciplines could work together for your business."
+      },
+      {
+        "question": "Can I start with just an idea?",
+        "answer": "Yes. Share the problem you want to solve, who you want to reach, and what you hope to achieve. You do not need a finished specification to begin the conversation."
+      },
+      {
+        "question": "Can you work on an existing website or app?",
+        "answer": "We can review your current experience and discuss improvements. The scope will depend on the existing technology, the access available, and the changes you want to make."
+      },
+      {
+        "question": "How are project cost and timing decided?",
+        "answer": "They depend on the scope, complexity, content, integrations, and priorities of your project. We discuss those details before agreeing on an approach; there is no one-size-fits-all estimate."
+      },
+      {
+        "question": "Will my website work on mobile devices?",
+        "answer": "Responsive behavior is part of our web development approach. Layouts should adapt to different screen sizes, with readable content, usable navigation, and clear actions on phones, tablets, and desktops."
+      },
+      {
+        "question": "What should I include in my project brief?",
+        "answer": "Tell us about your business, the service you need, your audience, the problem you want to solve, and any timing or budget constraints. The Contact page lets you create a brief to save and share; it does not send an enquiry automatically."
+      }
+    ]
   }
 }
