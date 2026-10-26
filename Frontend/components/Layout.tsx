@@ -15,9 +15,6 @@ export default function Layout({
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute("content", site.metadata.description);
-    document
-      .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", site.metadata.themeColor);
     const id = location.hash.slice(1);
     const frame = id
       ? requestAnimationFrame(() =>

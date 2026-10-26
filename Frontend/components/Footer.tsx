@@ -1,4 +1,4 @@
-import BrandArtwork from "./BrandArtwork";
+import FooterArtwork from "./FooterArtwork";
 import Brand from "./Brand";
 import site from "../data/site.json";
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
         ))}
       </div>
       <div className="footer-brand-line" aria-hidden="true">
-        <BrandArtwork variant="primary" decorative />
+        <FooterArtwork />
       </div>
       <div className="footer-bottom">
         <span>

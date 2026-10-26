@@ -85,5 +85,13 @@
     "description": "Let’s get you back to what’s next.",
     "label": "Back to home",
     "href": "/"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "storageKey": "tervyx-theme",
+    "lightColor": "#F6F8F1"
   }
 }
