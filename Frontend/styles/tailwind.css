@@ -5,8 +5,8 @@
   --color-brand-panel: #151a18;
   --color-brand-lime: #c8fa73;
   --color-brand-ink: #f3f5ee;
-  --font-sans: "Space Grotesk", sans-serif;
-  --font-display: "Orbitron", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
 }
 @layer components {
   .ribbon-scroll {
@@ -1173,7 +1173,7 @@ form > .form-title {
   }
 }
 
-/* Brand board: exact original artwork, Orbitron primary, Space Grotesk secondary. */
+/* Original brand artwork with the restored Space Grotesk / DM Sans website fonts. */
 :root {
   --bg: #101413;
   --panel: #151a18;
@@ -1181,12 +1181,12 @@ form > .form-title {
   --muted: #929c94;
 }
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 h1,
 h2,
 h3 {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 h1,
 h2 {
@@ -1282,7 +1282,7 @@ header nav {
   letter-spacing: -0.055em;
 }
 .form-title {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   line-height: 1.5;
 }
