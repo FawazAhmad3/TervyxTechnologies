@@ -1,6 +1,7 @@
 import home from "../data/home.json";
 import services from "../data/services.json";
 import Reveal from "./Reveal";
+import WebsitePlanLink from "./WebsitePlanLink";
 import ServiceCard from "./ServiceCard";
 export default function ServicePreview() {
   const c = home.services;
@@ -22,6 +23,7 @@ export default function ServicePreview() {
           <ServiceCard key={service.slug} service={service} index={index} />
         ))}
       </div>
+      <WebsitePlanLink />
     </section>
   );
 }

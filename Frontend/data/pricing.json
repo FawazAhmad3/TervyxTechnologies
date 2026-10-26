@@ -1,0 +1,146 @@
+{
+  "website": {
+    "label": "WEBSITE DEVELOPMENT PLANS",
+    "heading": "Your website.",
+    "muted": "A plan that fits.",
+    "description": [
+      "Website development packages",
+      "for your next stage of business."
+    ],
+    "button": "Discuss this website plan",
+    "note": "These are suggested introductory prices for informational and business websites. E-commerce functionality, custom dashboards, login systems, databases, and other advanced features require separate quotations. SEO is not included in any package.",
+    "plans": [
+      {
+        "id": "basic-website",
+        "name": "Basic Website Plan",
+        "audience": "For startups and small businesses",
+        "price": "$299",
+        "billing": "one-time",
+        "features": [
+          "Up to 3 website pages",
+          "Responsive website design",
+          "Home, About, and Contact pages",
+          "Contact form",
+          "Social media integration",
+          "Basic animations and interactive elements",
+          "Website deployment",
+          "1 revision round"
+        ]
+      },
+      {
+        "id": "standard-website",
+        "name": "Standard Website Plan",
+        "audience": "For growing businesses and companies",
+        "price": "$599",
+        "billing": "one-time",
+        "features": [
+          "Up to 6 website pages",
+          "Custom responsive website design",
+          "Services and portfolio sections",
+          "Contact form and WhatsApp integration",
+          "Social media integration",
+          "Interactive UI elements and animations",
+          "Google Analytics integration",
+          "Website deployment",
+          "2 revision rounds"
+        ]
+      },
+      {
+        "id": "premium-website",
+        "name": "Premium Website Plan",
+        "audience": "For established businesses and brands",
+        "price": "$999",
+        "billing": "starting one-time price",
+        "features": [
+          "Up to 10 website pages",
+          "Advanced custom responsive website design",
+          "Portfolio, blog layout, or service sections",
+          "Advanced animations and interactive elements",
+          "Contact forms and WhatsApp integration",
+          "Social media integration",
+          "Google Analytics integration",
+          "Cross-device and browser testing",
+          "Website deployment",
+          "3 revision rounds"
+        ]
+      }
+    ]
+  },
+  "maintenance": {
+    "label": "MONTHLY WEBSITE MAINTENANCE PLANS",
+    "heading": "After launch.",
+    "muted": "Keep moving forward.",
+    "description": [
+      "These plans begin after the website",
+      "is developed and launched."
+    ],
+    "button": "Discuss this maintenance plan",
+    "note": "",
+    "plans": [
+      {
+        "id": "basic-maintenance",
+        "name": "Basic Maintenance",
+        "audience": "",
+        "price": "$49",
+        "billing": "per month",
+        "features": [
+          "2 small content updates per month",
+          "Basic bug fixes",
+          "Basic security checks",
+          "Basic dependency updates",
+          "Monthly backup checks",
+          "SSL certificate status check",
+          "Email support"
+        ]
+      },
+      {
+        "id": "standard-maintenance",
+        "name": "Standard Maintenance",
+        "audience": "",
+        "price": "$99",
+        "billing": "per month",
+        "features": [
+          "Everything in Basic Maintenance",
+          "5 small content updates per month",
+          "Bug fixing and troubleshooting",
+          "Security checks every 15 days",
+          "Dependency updates every 15 days",
+          "Backup checks every 15 days",
+          "Contact form functionality checks"
+        ]
+      },
+      {
+        "id": "premium-maintenance",
+        "name": "Premium Maintenance",
+        "audience": "",
+        "price": "$199",
+        "billing": "per month",
+        "features": [
+          "Everything in Standard Maintenance",
+          "10 small content updates per month",
+          "Advanced bug fixing and troubleshooting",
+          "Security checks every 15 days",
+          "Dependency updates every 15 days",
+          "Weekly backup and restore checks",
+          "Contact form functionality checks",
+          "Broken link checks",
+          "Priority technical support during business hours"
+        ]
+      }
+    ]
+  },
+  "teaser": {
+    "label": "WEBSITE PLANS & MAINTENANCE",
+    "heading": "A clear starting point.",
+    "description": "Website development from $299 one-time. Monthly maintenance from $49 after launch.",
+    "link": {
+      "label": "Explore website plans",
+      "href": "/web-development.html#website-plans"
+    }
+  },
+  "selection": {
+    "label": "Selected plan",
+    "changeLabel": "Change plan",
+    "changeHref": "/web-development.html#website-plans"
+  }
+}

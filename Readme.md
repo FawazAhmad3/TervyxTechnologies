@@ -55,6 +55,7 @@ Edit `Frontend/data/*.json`. All website headings, paragraphs, button labels, na
 - `services.json`: all three services, offerings, links, detail-page copy, and images.
 - `process.json`: process intro, steps, statement.
 - `contact.json`: contact intro, form labels, validation and download messages.
+- `pricing.json`: website plans, monthly maintenance, pricing notes, and plan-selection labels.
 
 To use a custom image, place it in `Frontend/public/images/`, then set its JSON `image.src` to `/images/your-file.webp` and update `image.alt`. Empty image sources use the existing code-based illustrations. Image URLs may also be HTTPS URLs.
 

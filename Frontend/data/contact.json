@@ -34,7 +34,8 @@
       "email": "Email",
       "services": "Services",
       "idea": "Project idea",
-      "date": "Prepared on"
+      "date": "Prepared on",
+      "plan": "Selected plan"
     }
   }
 }

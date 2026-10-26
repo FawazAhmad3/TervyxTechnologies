@@ -1,13 +1,21 @@
 import { useState, type FormEvent } from "react";
 import services from "../data/services.json";
 import contact from "../data/contact.json";
+import pricing from "../data/pricing.json";
 import site from "../data/site.json";
 import Reveal from "./Reveal";
 export default function ProjectForm() {
   const c = contact.form;
-  const initial = new URLSearchParams(location.search).get("service");
+  const params = new URLSearchParams(location.search);
+  const initial = params.get("service");
+  const selectedPlan = [
+    ...pricing.website.plans,
+    ...pricing.maintenance.plans,
+  ].find((plan) => plan.id === params.get("plan"));
   const [selected, setSelected] = useState<string[]>(
-    services.items.filter((s) => s.slug === initial).map((s) => s.title),
+    services.items
+      .filter((s) => s.slug === (selectedPlan ? "web-development" : initial))
+      .map((s) => s.title),
   );
   const [status, setStatus] = useState("");
   function submit(event: FormEvent<HTMLFormElement>) {
@@ -20,7 +28,10 @@ export default function ProjectForm() {
       return;
     }
     const data = new FormData(event.currentTarget);
-    const text = `${site.brand.fullName.toUpperCase()} — ${c.brief.title}\n${site.brand.tagline}\n\n${c.brief.name}: ${data.get("name")}\n${c.brief.email}: ${data.get("email")}\n${c.brief.services}: ${selected.join(", ")}\n\n${c.brief.idea}\n${data.get("idea")}\n\n${c.brief.date} ${new Date().toLocaleDateString()}\n`;
+    const planLine = selectedPlan
+      ? `\n${c.brief.plan}: ${selectedPlan.name} — ${selectedPlan.price} ${selectedPlan.billing}`
+      : "";
+    const text = `${site.brand.fullName.toUpperCase()} — ${c.brief.title}\n${site.brand.tagline}\n\n${c.brief.name}: ${data.get("name")}\n${c.brief.email}: ${data.get("email")}\n${c.brief.services}: ${selected.join(", ")}${planLine}\n\n${c.brief.idea}\n${data.get("idea")}\n\n${c.brief.date} ${new Date().toLocaleDateString()}\n`;
     const url = URL.createObjectURL(
       new Blob([text], { type: "text/plain;charset=utf-8" }),
     );
@@ -36,6 +47,18 @@ export default function ProjectForm() {
       <form onSubmit={submit}>
         <h2 className="form-title">{c.title}</h2>
         <p>{c.description}</p>
+        {selectedPlan && (
+          <div className="selected-plan">
+            <span>{pricing.selection.label}</span>
+            <strong>{selectedPlan.name}</strong>
+            <p>
+              {selectedPlan.price} · {selectedPlan.billing}
+            </p>
+            <a href={pricing.selection.changeHref}>
+              {pricing.selection.changeLabel} ↗
+            </a>
+          </div>
+        )}
         <fieldset className="service-options" aria-label={c.title}>
           {services.items.map((service) => (
             <label key={service.slug}>

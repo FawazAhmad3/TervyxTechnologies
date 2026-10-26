@@ -1,4 +1,5 @@
 import services from "../data/services.json";
+import WebsitePlanLink from "./WebsitePlanLink";
 import ServiceRow from "./ServiceRow";
 export default function ServiceList() {
   return (
@@ -6,6 +7,7 @@ export default function ServiceList() {
       {services.items.map((service, index) => (
         <ServiceRow key={service.slug} service={service} index={index} />
       ))}
+      <WebsitePlanLink />
     </section>
   );
 }

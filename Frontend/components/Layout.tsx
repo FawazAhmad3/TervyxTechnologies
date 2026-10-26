@@ -18,6 +18,13 @@ export default function Layout({
     document
       .querySelector('meta[name="theme-color"]')
       ?.setAttribute("content", site.metadata.themeColor);
+    const id = location.hash.slice(1);
+    const frame = id
+      ? requestAnimationFrame(() =>
+          document.getElementById(id)?.scrollIntoView({ behavior: "instant" }),
+        )
+      : 0;
+    return () => cancelAnimationFrame(frame);
   }, [title]);
   return (
     <>
