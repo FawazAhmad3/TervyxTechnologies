@@ -2,16 +2,16 @@ import Layout from "../components/Layout";
 import PageIntro from "../components/PageIntro";
 import ServiceDetails from "../components/ServiceDetails";
 import CallToAction from "../components/CallToAction";
-import WebsitePricing from "../components/WebsitePricing";
-import MaintenancePricing from "../components/MaintenancePricing";
+import WebsitePlanLink from "../components/WebsitePlanLink";
 import services from "../data/services.json";
 const service = services.items.find((item) => item.slug === "web-development")!;
 export default function WebDevelopment() {
   return (
     <Layout title={service.title}>
       <PageIntro content={service.intro} />
-      <WebsitePricing />
-      <MaintenancePricing />
+      <section className="section web-pricing-link" id="website-plans">
+        <WebsitePlanLink />
+      </section>
       <ServiceDetails service={service} />
       <CallToAction />
     </Layout>

@@ -27,6 +27,10 @@
     {
       "label": "Our process",
       "href": "/process.html"
+    },
+    {
+      "label": "Pricing",
+      "href": "/pricing.html"
     }
   ],
   "contactLink": {
@@ -51,6 +55,10 @@
       {
         "label": "Services",
         "href": "/services.html"
+      },
+      {
+        "label": "Pricing",
+        "href": "/pricing.html"
       },
       {
         "label": "Our process",

@@ -138,16 +138,52 @@
     "description": "Website development from $199 one-time. Monthly maintenance from $49 after launch.",
     "link": {
       "label": "Explore website plans",
-      "href": "/web-development.html#website-plans"
+      "href": "/pricing.html"
     }
   },
   "selection": {
     "label": "Selected plan",
     "changeLabel": "Change plan",
-    "changeHref": "/web-development.html#website-plans"
+    "changeHref": "/pricing.html"
   },
   "priceLabels": {
     "original": "Original price",
     "current": "Discounted price"
+  },
+  "page": {
+    "title": "Pricing",
+    "intro": {
+      "label": "WEBSITE DEVELOPMENT & MAINTENANCE",
+      "heading": "Build it. Launch it.",
+      "accent": "Keep it moving.",
+      "description": "Compare website development and ongoing maintenance side by side. Each tier brings its matching plans into one place, with one-time and monthly prices clearly separated."
+    },
+    "label": "FIND YOUR STARTING POINT",
+    "heading": "One tier.",
+    "muted": "Two clear plans.",
+    "description": [
+      "Website development is a one-time project.",
+      "Maintenance begins after launch."
+    ],
+    "websiteLabel": "WEBSITE DEVELOPMENT",
+    "maintenanceLabel": "MONTHLY MAINTENANCE",
+    "tiers": [
+      {
+        "name": "Basic",
+        "websiteId": "basic-website",
+        "maintenanceId": "basic-maintenance"
+      },
+      {
+        "name": "Standard",
+        "websiteId": "standard-website",
+        "maintenanceId": "standard-maintenance"
+      },
+      {
+        "name": "Premium",
+        "websiteId": "premium-website",
+        "maintenanceId": "premium-maintenance"
+      }
+    ],
+    "note": "Website development and monthly maintenance are priced separately. Maintenance plans begin after the website is developed and launched."
   }
 }

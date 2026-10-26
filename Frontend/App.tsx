@@ -1,3 +1,4 @@
+import Pricing from "./pages/Pricing";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -7,7 +8,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import AppDevelopment from "./pages/AppDevelopment";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import NotFound from "./pages/NotFound";
-// Physical HTML entrypoints keep all eight pages independently addressable.
+// Physical HTML entrypoints keep every page independently addressable.
 const pages = {
   "/": Home,
   "/index": Home,
@@ -15,6 +16,7 @@ const pages = {
   "/services": Services,
   "/process": Process,
   "/contact": Contact,
+  "/pricing": Pricing,
   "/web-development": WebDevelopment,
   "/app-development": AppDevelopment,
   "/digital-marketing": DigitalMarketing,

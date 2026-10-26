@@ -7,6 +7,7 @@ import home from "./data/home.json";
 import about from "./data/about.json";
 import services from "./data/services.json";
 import processPage from "./data/process.json";
+import pricing from "./data/pricing.json";
 import contact from "./data/contact.json";
 const titles: Record<string, string> = {
   index: home.title,
@@ -14,6 +15,7 @@ const titles: Record<string, string> = {
   services: services.title,
   process: processPage.title,
   contact: contact.title,
+  pricing: pricing.page.title,
   ...Object.fromEntries(
     services.items.map((service) => [service.slug, service.title]),
   ),
@@ -32,6 +34,7 @@ const pages = [
   "services",
   "process",
   "contact",
+  "pricing",
   "web-development",
   "app-development",
   "digital-marketing",

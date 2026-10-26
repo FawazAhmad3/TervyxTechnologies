@@ -1,6 +1,6 @@
 # TERVYX Technologies — Code the Future
 
-A responsive, eight-page software house website built with React, TypeScript (TSX), Tailwind CSS, and Vite. Includes the original charcoal/lime design and the homepage ribbon animation linked to normal page scrolling.
+A responsive, nine-page software house website built with React, TypeScript (TSX), Tailwind CSS, and Vite. Includes the original charcoal/lime design and the homepage ribbon animation linked to normal page scrolling.
 
 ## Folder structure
 
@@ -13,7 +13,7 @@ Frontend/
   public/images/  Local images referenced by JSON
   App.tsx         Page selection for both .html and extensionless paths
   main.tsx        React entry
-  *.html          Physical entrypoints for all eight pages
+  *.html          Physical entrypoints for all nine pages
   vite.config.ts  Tailwind + React build and local API proxy
 Backend/
   controllers/    Health and services handlers
@@ -55,7 +55,7 @@ Edit `Frontend/data/*.json`. All website headings, paragraphs, button labels, na
 - `services.json`: all three services, offerings, links, detail-page copy, and images.
 - `process.json`: process intro, steps, statement.
 - `contact.json`: contact intro, form labels, validation and download messages.
-- `pricing.json`: website plans, monthly maintenance, pricing notes, and plan-selection labels.
+- `pricing.json`: website plans, monthly maintenance, pricing notes, paired Basic/Standard/Premium containers, and plan-selection labels.
 
 To use a custom image, place it in `Frontend/public/images/`, then set its JSON `image.src` to `/images/your-file.webp` and update `image.alt`. Empty image sources use the existing code-based illustrations. Image URLs may also be HTTPS URLs.
 
@@ -75,7 +75,7 @@ The frontend builds into root `dist/`; the backend builds into `Backend/build/`.
 
 ## Deployment and current scope
 
-The existing private Sites deployment hosts the compiled frontend from `dist/`, with the Site ID retained in `.openai/hosting.json`. The backend is supplied and tested locally; it needs a separate Node hosting environment to run publicly. No backend deployment or public access change is configured. All eight physical HTML pages are built; existing `.html` links continue to work.
+The existing private Sites deployment hosts the compiled frontend from `dist/`, with the Site ID retained in `.openai/hosting.json`. The backend is supplied and tested locally; it needs a separate Node hosting environment to run publicly. No backend deployment or public access change is configured. All nine physical HTML pages are built; existing `.html` links continue to work.
 
 The contact form creates a downloadable text brief. It does not send email or save enquiries. Adding storage or email delivery requires selecting and configuring those services.
 
