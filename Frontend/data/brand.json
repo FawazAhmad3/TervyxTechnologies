@@ -20,5 +20,29 @@
     "forwardMotion": "Dynamic form conveys movement, growth and progress.",
     "brighterTomorrow": "Reflects continuous improvement and a future-driven mindset."
   },
-  "rendering": "Native SVG paths with live Space Grotesk wordmark text"
+  "rendering": "Native SVG paths with live Space Grotesk wordmark text",
+  "lightSymbolPalette": {
+    "--logo-metal-1": "#647367",
+    "--logo-metal-2": "#34473b",
+    "--logo-metal-3": "#192c22",
+    "--logo-green-1": "#9ccf4f",
+    "--logo-green-2": "#71aa2e",
+    "--logo-green-3": "#436f1d",
+    "--logo-lower-1": "#90c745",
+    "--logo-lower-2": "#74a738",
+    "--logo-lower-3": "#3c5a35",
+    "--logo-lower-4": "#334c39",
+    "--logo-rear-1": "#6b7f6b",
+    "--logo-rear-2": "#465c4a",
+    "--logo-rear-3": "#223b2a",
+    "--logo-rear-4": "#526b53",
+    "--logo-orbit-1": "#568a22",
+    "--logo-orbit-2": "#7bb535",
+    "--logo-orbit-3": "#a4d75c",
+    "--logo-sphere-1": "#b8e579",
+    "--logo-sphere-2": "#8bc447",
+    "--logo-sphere-3": "#4e8220",
+    "--logo-highlight": "#d4f29d",
+    "--logo-edge": "#536d4e"
+  }
 }
