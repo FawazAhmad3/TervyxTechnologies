@@ -24,3 +24,8 @@ nav a[aria-current="page"]{color:var(--lime)}.page-intro{padding:90px 7% 70px;bo
 /* Vertical mouse-wheel input drives the ribbon; keep the original clean strip. */
 .ribbon-scroll .ticker{scrollbar-width:none;cursor:default}
 .ribbon-scroll .ticker::-webkit-scrollbar{display:none}
+
+/* The ribbon follows normal page scrolling in both directions. */
+.ribbon-scroll .ticker{overflow:hidden;cursor:default}
+.ribbon-scroll .ticker>div{will-change:transform}
+@media(prefers-reduced-motion:reduce){.ribbon-scroll .ticker>div{transform:none!important;will-change:auto}}
