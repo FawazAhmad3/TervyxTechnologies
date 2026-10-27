@@ -98,3 +98,7 @@ The favicon at `Frontend/public/brand/favicon-vector.svg` is also native SVG. Ru
 Use the header’s sun/moon button to switch between dark and light mode. `ThemeProvider` applies the theme across all pages and stores the preference under `tervyx-theme`. Each HTML entry applies the saved preference before rendering to avoid a theme flash. Dark mode is the default, and localStorage failures are handled gracefully. Labels live in `Frontend/data/site.json`; light-mode semantic colors and surface overrides live in `Frontend/styles/tailwind.css`.
 
 `FooterArtwork.tsx` composes the shared SVG symbol and live website-font wordmark separately. The symbol has a gentle idle float and scroll-linked rotation; the wordmark stays steady. Reduced-motion preferences disable the animation.
+
+## Email configuration
+
+Edit `Backend/config/email.json` for the sender email, email app password, receiving inbox, and SMTP settings. See `Backend/config/Readme.md`. The private JSON is ignored by Git; `email.example.json` is the blank template. Email delivery is not connected yet.

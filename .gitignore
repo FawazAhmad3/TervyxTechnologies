@@ -6,3 +6,6 @@ Backend/build/
 !.env.example
 *.log
 .DS_Store
+
+# Private SMTP credentials (never include in frontend or deployment archives)
+Backend/config/email.json
