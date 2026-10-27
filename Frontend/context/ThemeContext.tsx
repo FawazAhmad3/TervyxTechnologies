@@ -7,21 +7,24 @@ import {
   type ReactNode,
 } from "react";
 import site from "../data/site.json";
-type Theme = "light" | "dark";
+import { resolveTheme, type Theme } from "./theme";
 const ThemeContext = createContext<{ theme: Theme; toggle: () => void } | null>(
   null,
 );
-function readTheme(): Theme {
+function preference(): Theme | null {
   try {
-    return localStorage.getItem(site.theme.storageKey) === "light"
-      ? "light"
-      : "dark";
+    const value = localStorage.getItem(site.theme.storageKey);
+    return value === "light" || value === "dark" ? value : null;
   } catch {
-    return "dark";
+    return null;
   }
 }
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(readTheme);
+  const [choice, setChoice] = useState<Theme | null>(preference);
+  const [systemDark, setSystemDark] = useState(
+    () => matchMedia("(prefers-color-scheme: dark)").matches,
+  );
+  const theme = resolveTheme(choice, systemDark);
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
     document.documentElement.style.colorScheme = theme;
@@ -31,26 +34,35 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         "content",
         theme === "light" ? site.theme.lightColor : site.metadata.themeColor,
       );
-    try {
-      localStorage.setItem(site.theme.storageKey, theme);
-    } catch {
-      /* Preference remains active for this page when browser storage is unavailable. */
-    }
   }, [theme]);
   useEffect(() => {
+    const media = matchMedia("(prefers-color-scheme: dark)");
+    const changed = () => setSystemDark(media.matches);
     const sync = (event: StorageEvent) => {
-      if (event.key === site.theme.storageKey)
-        setTheme(event.newValue === "light" ? "light" : "dark");
+      if (event.key === site.theme.storageKey || event.key === null)
+        setChoice(preference());
     };
+    changed();
+    media.addEventListener("change", changed);
     addEventListener("storage", sync);
-    return () => removeEventListener("storage", sync);
+    return () => {
+      media.removeEventListener("change", changed);
+      removeEventListener("storage", sync);
+    };
   }, []);
   return (
     <ThemeContext.Provider
       value={{
         theme,
-        toggle: () =>
-          setTheme((current) => (current === "dark" ? "light" : "dark")),
+        toggle: () => {
+          const next = theme === "dark" ? "light" : "dark";
+          setChoice(next);
+          try {
+            localStorage.setItem(site.theme.storageKey, next);
+          } catch {
+            /* Apply on this page even if storage is unavailable. */
+          }
+        },
       }}
     >
       {children}

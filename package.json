@@ -11,11 +11,12 @@
     "dev": "npm run dev --workspace Frontend",
     "dev:backend": "npm run dev --workspace Backend",
     "build": "npm run build --workspace Frontend && npm run build --workspace Backend",
-    "typecheck": "npm run typecheck --workspaces",
-    "test": "npm run test --workspace Backend",
+    "typecheck": "npm run typecheck --workspaces && tsc -p netlify/tsconfig.json",
+    "test": "npm run test --workspace Backend && tsx --test Frontend/context/theme.test.ts",
     "format": "prettier --write Frontend Backend Readme.md package.json"
   },
   "devDependencies": {
+    "@netlify/functions": "^6.0.3",
     "prettier": "^3.6.0"
   }
 }

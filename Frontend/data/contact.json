@@ -23,10 +23,10 @@
       "label": "Project requirements",
       "placeholder": "What do you need? Share your goals, features, scope, and timeline\u2026"
     },
-    "button": "Prepare my quote request",
-    "note": "Download your quote request to share with TERVYX. Your quote will depend on the agreed project scope. This form doesn\u2019t send a message.",
+    "button": "Send quote request",
+    "note": "Your request will be sent securely to TERVYX Technologies. We\u2019ll use your details to respond about your project.",
     "missingService": "Please select at least one service.",
-    "success": "Your quote request is ready. Save it and share it with TERVYX to discuss your project.",
+    "success": "Thank you. Your quote request has been sent to TERVYX Technologies.",
     "downloadName": "TERVYX-project-brief.txt",
     "brief": {
       "title": "QUOTE REQUEST",
@@ -36,6 +36,10 @@
       "idea": "Project idea",
       "date": "Prepared on",
       "plan": "Selected plan"
-    }
+    },
+    "sending": "Sending your request\u2026",
+    "error": "We couldn\u2019t send your request. Your details are still here\u2014please try again shortly.",
+    "rateLimited": "You\u2019ve sent several requests. Please wait a minute before trying again.",
+    "referenceLabel": "Reference"
   }
 }

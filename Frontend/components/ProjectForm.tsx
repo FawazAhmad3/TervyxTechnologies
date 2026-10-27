@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from "react";
 import services from "../data/services.json";
 import contact from "../data/contact.json";
-import site from "../data/site.json";
 import Reveal from "./Reveal";
 export default function ProjectForm() {
   const c = contact.form;
@@ -11,8 +10,10 @@ export default function ProjectForm() {
     services.items.filter((s) => s.slug === initial).map((s) => s.title),
   );
   const [status, setStatus] = useState("");
-  function submit(event: FormEvent<HTMLFormElement>) {
+  const [sending, setSending] = useState(false);
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (sending) return;
     if (!selected.length) {
       setStatus(c.missingService);
       event.currentTarget
@@ -21,20 +22,53 @@ export default function ProjectForm() {
       return;
     }
     const data = new FormData(event.currentTarget);
-    const text = `${site.brand.fullName.toUpperCase()} — ${c.brief.title}\n${site.brand.tagline}\n\n${c.brief.name}: ${data.get("name")}\n${c.brief.email}: ${data.get("email")}\n${c.brief.services}: ${selected.join(", ")}\n\n${c.brief.idea}\n${data.get("idea")}\n\n${c.brief.date} ${new Date().toLocaleDateString()}\n`;
-    const url = URL.createObjectURL(
-      new Blob([text], { type: "text/plain;charset=utf-8" }),
-    );
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = c.downloadName;
-    anchor.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    setStatus(c.success);
+    setSending(true);
+    setStatus("");
+    const form = event.currentTarget;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 45000);
+    try {
+      const response = await fetch("/api/quotation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          services: selected,
+          idea: data.get("idea"),
+          website: data.get("website"),
+        }),
+        signal: controller.signal,
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok || result?.success !== true) {
+        setStatus(response.status === 429 ? c.rateLimited : c.error);
+        return;
+      }
+      setStatus(`${c.success} ${c.referenceLabel}: ${result.reference}`);
+      form.reset();
+      setSelected([]);
+    } catch {
+      setStatus(c.error);
+    } finally {
+      clearTimeout(timeout);
+      setSending(false);
+    }
   }
   return (
     <Reveal>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} aria-busy={sending}>
+        <div className="quote-honeypot" aria-hidden="true">
+          <label>
+            Leave this field empty
+            <input
+              name="website"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </label>
+        </div>
         <h2 className="form-title">{c.title}</h2>
         <p>{c.description}</p>
         <fieldset className="service-options" aria-label={c.title}>
@@ -89,8 +123,8 @@ export default function ProjectForm() {
             maxLength={5000}
           />
         </label>
-        <button className="button lime" type="submit">
-          {c.button}
+        <button className="button lime" type="submit" disabled={sending}>
+          {sending ? c.sending : c.button}
           <span aria-hidden="true">↗</span>
         </button>
         <p className="form-note">{c.note}</p>

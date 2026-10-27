@@ -2038,3 +2038,87 @@ footer .footer-bottom {
     font-size: 6px;
   }
 }
+
+/* Accessible controls without increasing the compact footer artwork. */
+header .theme-toggle,
+header .nav-cta,
+header .menu {
+  min-width: 44px;
+  min-height: 44px;
+}
+header .menu {
+  padding: 8px;
+  line-height: 1;
+}
+footer .footer-bottom {
+  font-size: 12px;
+  line-height: 1.7;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+footer .footer-links {
+  font-size: 14px;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+}
+footer .footer-links a,
+footer .footer-top > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+footer .footer-top > a {
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  header {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  header .header-actions {
+    gap: 6px;
+  }
+  header .theme-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+  header .nav-cta {
+    padding: 8px 10px;
+  }
+  footer .footer-bottom {
+    font-size: 12px;
+  }
+  footer .footer-links {
+    font-size: 14px;
+  }
+}
+@media (max-width: 380px) {
+  header .brand.brand-vector {
+    width: 105px;
+    gap: 5px;
+  }
+  header .brand-header-symbol {
+    width: 29px;
+  }
+  header .wordmark-name {
+    font-size: 17px;
+  }
+  header .wordmark-descriptor {
+    font-size: 7px;
+  }
+  header .wordmark-tagline {
+    font-size: 4px;
+  }
+}
+.quote-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}

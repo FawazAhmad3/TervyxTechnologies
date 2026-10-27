@@ -8,11 +8,15 @@
     "build": "tsc",
     "start": "node build/server.js",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test routes/api.test.ts"
+    "test": "tsx --test routes/api.test.ts handlers/quotation.test.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "typescript": "^5.9.0",
-    "tsx": "^4.20.0"
+    "@types/nodemailer": "^8.0.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "nodemailer": "^10.2.1"
   }
 }

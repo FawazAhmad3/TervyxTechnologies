@@ -75,9 +75,9 @@ The frontend builds into root `dist/`; the backend builds into `Backend/build/`.
 
 ## Deployment and current scope
 
-The existing private Sites deployment hosts the compiled frontend from `dist/`, with the Site ID retained in `.openai/hosting.json`. The backend is supplied and tested locally; it needs a separate Node hosting environment to run publicly. No backend deployment or public access change is configured. All nine physical HTML pages are built; existing `.html` links continue to work.
+The existing private Sites deployment hosts the compiled frontend from `dist/`, with the Site ID retained in `.openai/hosting.json`. The standalone backend supports local development. Netlify runs quotation delivery using the included serverless function, with SMTP credentials supplied as a backend environment secret. All nine physical HTML pages are built; existing `.html` links continue to work.
 
-The contact form creates a downloadable text brief. It does not send email or save enquiries. Adding storage or email delivery requires selecting and configuring those services.
+The contact form sends quotation notifications through `/api/quotation`. Netlify runs this endpoint as a serverless function; local development uses the standalone backend. Configure the private email settings before using delivery; see `Backend/config/Readme.md`. No enquiries are stored in a database.
 
 Layouts adapt for small phones, tablets, laptops, and wide displays. Motion respects reduced-motion preferences. Keyboard navigation, labelled fields, visible focus states, and mobile navigation are included.
 
@@ -95,16 +95,16 @@ The favicon at `Frontend/public/brand/favicon-vector.svg` is also native SVG. Ru
 
 ## Themes and footer animation
 
-Use the header’s sun/moon button to switch between dark and light mode. `ThemeProvider` applies the theme across all pages and stores the preference under `tervyx-theme`. Each HTML entry applies the saved preference before rendering to avoid a theme flash. Dark mode is the default, and localStorage failures are handled gracefully. Labels live in `Frontend/data/site.json`; light-mode semantic colors and surface overrides live in `Frontend/styles/tailwind.css`.
+Use the header’s sun/moon button to switch between dark and light mode. `ThemeProvider` applies the theme across all pages and stores explicit preferences under `tervyx-theme-preference`. Each HTML entry applies the saved preference before rendering to avoid a theme flash. The system color scheme is the default and follows system changes until a visitor explicitly selects a theme. Explicit choices are remembered under `tervyx-theme-preference`. This new key replaces the old auto-saved preference so first visits use the system theme. Storage failures are handled gracefully. Labels live in `Frontend/data/site.json`; light-mode semantic colors and surface overrides live in `Frontend/styles/tailwind.css`.
 
 `FooterArtwork.tsx` composes the shared SVG symbol and live website-font wordmark separately. The symbol has a gentle idle float and scroll-linked rotation; the wordmark stays steady. Reduced-motion preferences disable the animation.
 
 ## Email configuration
 
-Edit `Backend/config/email.json` for the sender email, email app password, receiving inbox, and SMTP settings. See `Backend/config/Readme.md`. The private JSON is ignored by Git; `email.example.json` is the blank template. Email delivery is not connected yet.
+Edit `Backend/config/email.json` for the sender email, email app password, receiving inbox, and SMTP settings. See `Backend/config/Readme.md`. The private JSON is ignored by Git; `email.example.json` is the blank template. The local backend reads this file; Netlify requires the same JSON in the secret `EMAIL_CONFIG_JSON` environment variable with Functions scope.
 
 ## Netlify deployment
 
 The root `netlify.toml` sets the base directory to the repository root, runs `npm --workspace @tervyx/frontend run build`, and publishes `dist`. Vite deliberately outputs to root `dist`, not `Frontend/dist`. Node 22 is selected for Vite 7. Repository configuration overrides matching Netlify UI settings.
 
-Connect the repository’s `main` branch and retry the deployment after pulling these settings. This deploys the static frontend only; the standalone Node backend is not started by Netlify.
+Connect the repository’s `main` branch and retry the deployment after pulling these settings. Netlify deploys the frontend and the quotation function. The standalone Node server is only needed for local development or separate Node hosting.

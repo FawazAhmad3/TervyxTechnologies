@@ -14,7 +14,28 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-  <link rel="icon" type="image/svg+xml" href="/brand/favicon-vector.svg"/><link rel="manifest" href="/brand/site.webmanifest"/><script>try{var t=localStorage.getItem("tervyx-theme")==="light"?"light":"dark";document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;document.querySelector('meta[name="theme-color"]').setAttribute('content',t==='light'?'#F6F8F1':'#101413')}catch(e){document.documentElement.dataset.theme='dark'}</script></head>
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon-vector.svg" />
+    <link rel="manifest" href="/brand/site.webmanifest" />
+    <script>
+      (function () {
+        var p = null;
+        try {
+          p = localStorage.getItem("tervyx-theme-preference");
+        } catch (e) {}
+        var t =
+          p === "light" || p === "dark"
+            ? p
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = t;
+        document.documentElement.style.colorScheme = t;
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", t === "light" ? "#F6F8F1" : "#101413");
+      })();
+    </script>
+  </head>
   <body id="top">
     <div id="root"></div>
     <script type="module" src="/main.tsx"></script>
