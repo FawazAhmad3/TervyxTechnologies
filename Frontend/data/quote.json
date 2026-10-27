@@ -1,0 +1,14 @@
+{
+  "title": "Request a Quote",
+  "intro": {
+    "label": "LET\u2019S PLAN YOUR PROJECT",
+    "heading": "Your vision.",
+    "accent": "A quote built around you.",
+    "description": "Every project is different. Tell us your goals, required features, and timeline, and we\u2019ll prepare a tailored quote."
+  },
+  "label": "BUILT AROUND YOUR NEEDS",
+  "heading": "The right scope. The right solution.",
+  "description": "Quotes depend on your project\u2019s features, complexity, and requirements. Adding or removing work may change the final quote.",
+  "button": "Request a Quote",
+  "href": "/contact.html"
+}

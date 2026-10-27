@@ -1,7 +1,7 @@
-import pricing from "../data/pricing.json";
+import quote from "../data/quote.json";
 import Reveal from "./Reveal";
 export default function WebsitePlanLink() {
-  const c = pricing.teaser;
+  const c = { ...quote, link: { href: quote.href, label: quote.button } };
   return (
     <Reveal className="website-plan-link">
       <div>

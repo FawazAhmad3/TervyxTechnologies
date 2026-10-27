@@ -1,16 +1,19 @@
 import Layout from "../components/Layout";
 import PageIntro from "../components/PageIntro";
-import PricingScopeNote from "../components/PricingScopeNote";
-import PricingTabs from "../components/PricingTabs";
-import CallToAction from "../components/CallToAction";
-import pricing from "../data/pricing.json";
+import WebsitePlanLink from "../components/WebsitePlanLink";
+import ServiceDetails from "../components/ServiceDetails";
+import quote from "../data/quote.json";
+import services from "../data/services.json";
 export default function Pricing() {
   return (
-    <Layout title={pricing.page.title}>
-      <PageIntro content={pricing.page.intro} />
-      <PricingScopeNote />
-      <PricingTabs />
-      <CallToAction />
+    <Layout title={quote.title}>
+      <PageIntro content={quote.intro} />
+      <section className="section">
+        <WebsitePlanLink />
+      </section>
+      {services.items.map((service) => (
+        <ServiceDetails key={service.slug} service={service} />
+      ))}
     </Layout>
   );
 }

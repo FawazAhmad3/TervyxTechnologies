@@ -28,12 +28,12 @@
       "href": "/process.html"
     },
     {
-      "label": "Pricing",
-      "href": "/pricing.html"
+      "label": "Request a Quote",
+      "href": "/contact.html"
     }
   ],
   "contactLink": {
-    "label": "Let’s talk",
+    "label": "Let\u2019s talk",
     "href": "/contact.html"
   },
   "menu": {
@@ -42,7 +42,7 @@
   },
   "footer": {
     "lines": ["Innovation in every line.", "Possibility in every idea."],
-    "top": "BACK TO TOP ↑",
+    "top": "BACK TO TOP \u2191",
     "copyright": "TERVYX Technologies.",
     "tagline": "CODE THE FUTURE.",
     "note": "BUILT WITH PURPOSE. READY FOR TOMORROW.",
@@ -56,15 +56,15 @@
         "href": "/services.html"
       },
       {
-        "label": "Pricing",
-        "href": "/pricing.html"
+        "label": "Request a Quote",
+        "href": "/contact.html"
       },
       {
         "label": "Our process",
         "href": "/process.html"
       },
       {
-        "label": "Start a project ↗",
+        "label": "Start a project \u2197",
         "href": "/contact.html"
       }
     ]
@@ -72,7 +72,7 @@
   "cta": {
     "label": "YOUR NEXT CHAPTER",
     "heading": "Have an idea?",
-    "accent": "Let’s bring it to life.",
+    "accent": "Let\u2019s bring it to life.",
     "button": {
       "label": "Start a conversation",
       "href": "/contact.html"
@@ -80,7 +80,7 @@
   },
   "notFound": {
     "title": "Page not found",
-    "description": "Let’s get you back to what’s next.",
+    "description": "Let\u2019s get you back to what\u2019s next.",
     "label": "Back to home",
     "href": "/"
   },

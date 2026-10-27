@@ -3,7 +3,7 @@
   "intro": {
     "label": "WHAT WE DO",
     "heading": "Built for your business.",
-    "accent": "Ready for what’s next.",
+    "accent": "Ready for what\u2019s next.",
     "description": "Explore our three core services. Each brings a different perspective; together, they create a connected digital presence."
   },
   "listing": {
@@ -16,7 +16,7 @@
     ]
   },
   "cardLabel": "EXPERTISE",
-  "cardLink": "Explore service ↗",
+  "cardLink": "Explore service \u2197",
   "detail": {
     "heading": "Where we can",
     "muted": "make a difference.",
@@ -24,10 +24,10 @@
       "Shaped around your goals.",
       "Scoped around what you need."
     ],
-    "planningLabel": "LET’S FIND THE RIGHT STARTING POINT",
+    "planningLabel": "LET\u2019S FIND THE RIGHT STARTING POINT",
     "planningHeading": "First, we understand",
     "planningMuted": "what you want to achieve.",
-    "button": "Discuss your project ↗"
+    "button": "Request a Quote"
   },
   "items": [
     {
@@ -35,7 +35,7 @@
       "title": "Web Development",
       "href": "/web-development.html",
       "short": "Beautifully crafted websites. Purposeful digital experiences.",
-      "icon": "↗",
+      "icon": "\u2197",
       "tags": ["BUSINESS WEBSITES", "WEB APPS", "E-COMMERCE"],
       "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable.",
       "intro": {
@@ -58,7 +58,7 @@
           "description": "Create a thoughtful shopping experience that helps people discover products and move toward a purchase."
         }
       ],
-      "planning": "We’ll discuss your audience, content, required features, and the role your website should play in your business.",
+      "planning": "We\u2019ll discuss your audience, content, required features, and the role your website should play in your business.",
       "contactHref": "/contact.html?service=web-development",
       "image": {
         "src": "",
@@ -69,8 +69,8 @@
       "slug": "app-development",
       "title": "App Development",
       "href": "/app-development.html",
-      "short": "Your business, in the palm of your customers’ hands.",
-      "icon": "✳",
+      "short": "Your business, in the palm of your customers\u2019 hands.",
+      "icon": "\u2733",
       "tags": ["iOS & ANDROID", "CROSS-PLATFORM", "UI / UX"],
       "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience.",
       "intro": {
@@ -93,7 +93,7 @@
           "description": "Shape clear journeys, purposeful screens, and interactions that make everyday tasks easier."
         }
       ],
-      "planning": "We’ll discuss your users, the problem you want to solve, core journeys, platform preferences, and your first-release priorities.",
+      "planning": "We\u2019ll discuss your users, the problem you want to solve, core journeys, platform preferences, and your first-release priorities.",
       "contactHref": "/contact.html?service=app-development",
       "image": {
         "src": "",
@@ -105,7 +105,7 @@
       "title": "Digital Marketing",
       "href": "/digital-marketing.html",
       "short": "Build visibility. Connect with people. Create opportunity.",
-      "icon": "↗",
+      "icon": "\u2197",
       "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
       "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy.",
       "intro": {
@@ -128,7 +128,7 @@
           "description": "Connect campaign goals, messaging, channels, and measurement in a purposeful marketing plan."
         }
       ],
-      "planning": "We’ll discuss your brand, audience, current channels, business objectives, and the actions you want people to take.",
+      "planning": "We\u2019ll discuss your brand, audience, current channels, business objectives, and the actions you want people to take.",
       "contactHref": "/contact.html?service=digital-marketing",
       "image": {
         "src": "",
