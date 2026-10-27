@@ -102,3 +102,9 @@ Use the header’s sun/moon button to switch between dark and light mode. `Theme
 ## Email configuration
 
 Edit `Backend/config/email.json` for the sender email, email app password, receiving inbox, and SMTP settings. See `Backend/config/Readme.md`. The private JSON is ignored by Git; `email.example.json` is the blank template. Email delivery is not connected yet.
+
+## Netlify deployment
+
+The root `netlify.toml` sets the base directory to the repository root, runs `npm --workspace @tervyx/frontend run build`, and publishes `dist`. Vite deliberately outputs to root `dist`, not `Frontend/dist`. Node 22 is selected for Vite 7. Repository configuration overrides matching Netlify UI settings.
+
+Connect the repository’s `main` branch and retry the deployment after pulling these settings. This deploys the static frontend only; the standalone Node backend is not started by Netlify.
