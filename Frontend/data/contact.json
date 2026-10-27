@@ -1,16 +1,16 @@
 {
-  "title": "Start a project",
-  "label": "04 / LET’S START SOMETHING",
+  "title": "Let\u2019s talk",
+  "label": "04 / LET\u2019S START SOMETHING",
   "lines": ["Your next big idea", "deserves a"],
   "accent": "great beginning.",
   "description": [
     "Tell us what you have in mind.",
-    "Let’s turn “what if” into what’s next."
+    "Request a tailored quote for your website, app, or digital marketing project."
   ],
   "signature": ["CODE THE FUTURE.", "TOGETHER."],
   "form": {
-    "title": "What are we building?",
-    "description": "Select a service to start your project brief.",
+    "title": "Tell us about your project",
+    "description": "Select your services and describe your goals, features, and timeline to prepare your quote request.",
     "name": {
       "label": "Your name",
       "placeholder": "Alex Morgan"
@@ -20,16 +20,16 @@
       "placeholder": "alex@company.com"
     },
     "idea": {
-      "label": "A little about your idea",
-      "placeholder": "The idea, the ambition, the possibilities…"
+      "label": "Project requirements",
+      "placeholder": "What do you need? Share your goals, features, scope, and timeline\u2026"
     },
-    "button": "Create my project brief",
-    "note": "Download your brief to share with TERVYX. This form doesn’t send a message.",
+    "button": "Prepare my quote request",
+    "note": "Download your quote request to share with TERVYX. Your quote will depend on the agreed project scope. This form doesn\u2019t send a message.",
     "missingService": "Please select at least one service.",
-    "success": "Your brief is ready. Save it and share it with TERVYX to begin the conversation.",
+    "success": "Your quote request is ready. Save it and share it with TERVYX to discuss your project.",
     "downloadName": "TERVYX-project-brief.txt",
     "brief": {
-      "title": "PROJECT BRIEF",
+      "title": "QUOTE REQUEST",
       "name": "Name",
       "email": "Email",
       "services": "Services",

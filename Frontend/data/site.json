@@ -26,10 +26,6 @@
     {
       "label": "Our process",
       "href": "/process.html"
-    },
-    {
-      "label": "Request a Quote",
-      "href": "/contact.html"
     }
   ],
   "contactLink": {
@@ -54,10 +50,6 @@
       {
         "label": "Services",
         "href": "/services.html"
-      },
-      {
-        "label": "Request a Quote",
-        "href": "/contact.html"
       },
       {
         "label": "Our process",
