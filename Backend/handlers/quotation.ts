@@ -1,5 +1,9 @@
 import { randomUUID } from "node:crypto";
-import { sendQuotation, validEmail } from "../services/emailService.js";
+import {
+  loadEmailConfig,
+  sendQuotation,
+  validEmail,
+} from "../services/emailService.js";
 import type { Quotation } from "../email/quotationTemplate.js";
 const allowedServices = new Set([
   "Web Development",
@@ -48,6 +52,21 @@ export async function handleQuotation(
   request: Request,
   deliver = sendQuotation,
 ): Promise<Response> {
+  // Safe deployment check: reports readiness only, never secrets or addresses.
+  if (
+    request.method === "GET" &&
+    new URL(request.url).searchParams.get("health") === "1"
+  ) {
+    try {
+      await loadEmailConfig();
+      return json({ configured: true });
+    } catch {
+      return json(
+        { configured: false, code: "EMAIL_CONFIGURATION_UNAVAILABLE" },
+        503,
+      );
+    }
+  }
   if (request.method !== "POST")
     return json({ error: "Method not allowed" }, 405, { Allow: "POST" });
   const origin = request.headers.get("origin");
