@@ -17,32 +17,65 @@ export function validEmail(value: unknown): value is string {
     /^[^\s<>@,;]+@[^\s<>@,;]+\.[^\s<>@,;]+$/.test(value)
   );
 }
+export class EmailConfigurationError extends Error {
+  constructor(
+    public code: string,
+    public fields: string[] = [],
+  ) {
+    super("Email configuration is unavailable");
+  }
+}
 export function validateEmailConfig(value: unknown): EmailConfig {
-  const c = value as EmailConfig;
+  const c = value as EmailConfig | null;
+  const fields: string[] = [];
+  if (typeof c?.smtp?.host !== "string" || !c.smtp.host.trim())
+    fields.push("smtp.host");
   if (
-    !c ||
-    !c.smtp ||
-    typeof c.smtp.host !== "string" ||
-    !c.smtp.host.trim() ||
-    !Number.isInteger(c.smtp.port) ||
-    c.smtp.port < 1 ||
-    c.smtp.port > 65535 ||
-    typeof c.smtp.secure !== "boolean" ||
-    !validEmail(c.sender?.email) ||
-    typeof c.sender.name !== "string" ||
-    /[\r\n]/.test(c.sender.name) ||
-    !c.sender.appPassword?.trim() ||
-    !validEmail(c.notifications?.receivingEmail)
+    !Number.isInteger(c?.smtp?.port) ||
+    c!.smtp.port < 1 ||
+    c!.smtp.port > 65535
   )
-    throw new Error("Email configuration is incomplete");
-  return c;
+    fields.push("smtp.port");
+  if (typeof c?.smtp?.secure !== "boolean") fields.push("smtp.secure");
+  if (!validEmail(c?.sender?.email)) fields.push("sender.email");
+  if (typeof c?.sender?.name !== "string" || /[\r\n]/.test(c.sender.name))
+    fields.push("sender.name");
+  if (
+    typeof c?.sender?.appPassword !== "string" ||
+    !c.sender.appPassword.trim()
+  )
+    fields.push("sender.appPassword");
+  if (!validEmail(c?.notifications?.receivingEmail))
+    fields.push("notifications.receivingEmail");
+  if (fields.length)
+    throw new EmailConfigurationError("EMAIL_CONFIG_INVALID_SETTINGS", fields);
+  const result = c as EmailConfig;
+  return {
+    ...result,
+    sender: {
+      ...result.sender,
+      appPassword:
+        result.smtp.host === "smtp.gmail.com"
+          ? result.sender.appPassword.replace(/\s/g, "")
+          : result.sender.appPassword,
+    },
+  };
 }
 export async function loadEmailConfig(): Promise<EmailConfig> {
-  if (process.env.EMAIL_CONFIG_JSON)
-    return validateEmailConfig(JSON.parse(process.env.EMAIL_CONFIG_JSON));
+  if (process.env.EMAIL_CONFIG_JSON !== undefined) {
+    if (!process.env.EMAIL_CONFIG_JSON.trim())
+      throw new EmailConfigurationError("EMAIL_CONFIG_EMPTY");
+    let value: unknown;
+    try {
+      value = JSON.parse(process.env.EMAIL_CONFIG_JSON.trim());
+    } catch {
+      throw new EmailConfigurationError("EMAIL_CONFIG_INVALID_JSON");
+    }
+    return validateEmailConfig(value);
+  }
   // Hosted functions use environment secrets only; never package the private JSON.
   if (process.env.NETLIFY)
-    throw new Error("Email environment secret is missing");
+    throw new EmailConfigurationError("EMAIL_CONFIG_MISSING");
   const paths = [
     resolve("Backend/config/email.json"),
     resolve("config/email.json"),
@@ -54,7 +87,7 @@ export async function loadEmailConfig(): Promise<EmailConfig> {
       if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
     }
   }
-  throw new Error("Email configuration is missing");
+  throw new EmailConfigurationError("EMAIL_CONFIG_MISSING");
 }
 export async function sendQuotation(
   quote: Quotation,

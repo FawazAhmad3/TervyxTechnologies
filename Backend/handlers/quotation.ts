@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import {
+  EmailConfigurationError,
   loadEmailConfig,
   sendQuotation,
   validEmail,
@@ -60,9 +61,16 @@ export async function handleQuotation(
     try {
       await loadEmailConfig();
       return json({ configured: true });
-    } catch {
+    } catch (error) {
       return json(
-        { configured: false, code: "EMAIL_CONFIGURATION_UNAVAILABLE" },
+        {
+          configured: false,
+          code:
+            error instanceof EmailConfigurationError
+              ? error.code
+              : "EMAIL_CONFIG_UNREADABLE",
+          fields: error instanceof EmailConfigurationError ? error.fields : [],
+        },
         503,
       );
     }
