@@ -111,6 +111,6 @@ Connect the repository’s `main` branch and retry the deployment after pulling 
 
 ## Navy UI theme (UI branch)
 
-The `UI` branch introduces navy `#1B3A6B` headings, borders, selected controls, and white-on-navy bars; white `#FFFFFF` page backgrounds; `#F2F4F8` highlighted panels; and `#555555` supporting text. A matching navy dark mode retains system-theme detection and manual overrides. The original logo palette, shape, typography, responsive layout, and animations remain intact.
+The `UI` branch introduces navy `#1B3A6B` headings, borders, selected controls, and white-on-navy bars; white `#FFFFFF` page backgrounds; `#F2F4F8` highlighted panels; and `#555555` supporting text. A matching navy dark mode retains system-theme detection and manual overrides. The logo now uses navy and blue-gray gradients in both themes; its shape, typography, responsive layout, and animations remain intact.
 
 `Frontend/styles/navy-theme.css` defines the semantic roles, including table headers, alternating rows, and total bars for future tables. The quotation email uses the same navy/white palette. Work on this branch must not be merged into `main` without the owner’s explicit instruction.
