@@ -1,5 +1,6 @@
 import contact from "../data/contact.json";
 import Reveal from "./Reveal";
+import ContactChannels from "./ContactChannels";
 export default function ContactIntro() {
   return (
     <div>
@@ -18,6 +19,9 @@ export default function ContactIntro() {
             {line}
           </span>
         ))}
+      </Reveal>
+      <Reveal>
+        <ContactChannels />
       </Reveal>
       <Reveal className="contact-sign">
         <span aria-hidden="true">✳</span>

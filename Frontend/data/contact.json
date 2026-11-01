@@ -41,5 +41,16 @@
     "error": "We couldn\u2019t send your request. Your details are still here\u2014please try again shortly.",
     "rateLimited": "You\u2019ve sent several requests. Please wait a minute before trying again.",
     "referenceLabel": "Reference"
+  },
+  "channels": {
+    "label": "Contact TERVYX Technologies",
+    "email": {
+      "label": "info@tervyx.tech",
+      "href": "mailto:info@tervyx.tech"
+    },
+    "phone": {
+      "label": "+39 392 775 2848",
+      "href": "tel:+393927752848"
+    }
   }
 }

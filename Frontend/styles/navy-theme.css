@@ -225,3 +225,26 @@ th {
 [data-theme="dark"] .field textarea::placeholder {
   color: #aebdd2;
 }
+
+.contact-channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 15px;
+}
+.contact-channels a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  overflow-wrap: anywhere;
+}
+.contact-channels a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+footer .contact-channels {
+  margin-top: 6px;
+  font-size: 14px;
+}

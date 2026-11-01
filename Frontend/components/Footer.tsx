@@ -1,5 +1,6 @@
 import FooterArtwork from "./FooterArtwork";
 import Brand from "./Brand";
+import ContactChannels from "./ContactChannels";
 import site from "../data/site.json";
 export default function Footer() {
   return (
@@ -22,6 +23,7 @@ export default function Footer() {
           </a>
         ))}
       </div>
+      <ContactChannels />
       <div className="footer-brand-line" aria-hidden="true">
         <FooterArtwork />
       </div>
