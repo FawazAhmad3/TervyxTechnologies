@@ -7,7 +7,7 @@
   "theme_color": "#1B3A6B",
   "icons": [
     {
-      "src": "/brand/favicon-vector.svg",
+      "src": "/brand/tervyx-navy.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

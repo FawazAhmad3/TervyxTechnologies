@@ -91,7 +91,7 @@ The supplied brand board is retained only in `design-references/brand-board.png`
 
 The homepage and footer animate the same shared vector symbol. The light theme has a naturally transparent logo background and theme-aware live text; dark mode retains the original lime/metallic palette, while light mode uses deeper botanical greens and charcoal-metal tones for contrast. The light-only palette is editable in `Frontend/data/brand.json` under `lightSymbolPalette`; the geometry is shared and unchanged. Charcoal `#101413`, deep charcoal `#151A18`, electric lime `#C8FA73`, and sage gray `#929C94` follow the brand direction.
 
-The favicon at `Frontend/public/brand/favicon-vector.svg` is also native SVG. Run `node scripts/build-vector-favicon.mjs` after editing the symbol geometry to update it.
+The favicon at `Frontend/public/brand/tervyx-navy.svg` is also native SVG. Run `node scripts/build-vector-favicon.mjs` after editing the symbol geometry to update it.
 
 ## Themes and footer animation
 
