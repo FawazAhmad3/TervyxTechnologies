@@ -28,7 +28,7 @@
         ],
         "originalPrice": "$299",
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       },
       {
         "id": "standard-website",
@@ -49,7 +49,7 @@
         ],
         "originalPrice": "$599",
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       },
       {
         "id": "premium-website",
@@ -71,7 +71,7 @@
         ],
         "originalPrice": "$999",
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       }
     ]
   },
@@ -102,7 +102,7 @@
           "Email support"
         ],
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       },
       {
         "id": "standard-maintenance",
@@ -120,7 +120,7 @@
           "Contact form functionality checks"
         ],
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       },
       {
         "id": "premium-maintenance",
@@ -140,7 +140,7 @@
           "Priority technical support during business hours"
         ],
         "serviceSlug": "web-development",
-        "pricingHref": "/pricing.html#website-plans"
+        "pricingHref": "/pricing#website-plans"
       }
     ]
   },
@@ -150,14 +150,14 @@
     "description": "Website development from $199 one-time. Monthly maintenance from $49 after launch.",
     "link": {
       "label": "Explore website plans",
-      "href": "/pricing.html"
+      "href": "/pricing"
     }
   },
   "selection": {
     "label": "Selected plan",
     "changeLabel": "Change plan",
-    "changeHref": "/pricing.html",
-    "androidChangeHref": "/pricing.html#android-plans"
+    "changeHref": "/pricing",
+    "androidChangeHref": "/pricing#android-plans"
   },
   "priceLabels": {
     "original": "Original price",
@@ -257,7 +257,7 @@
           "Play Store submission assistance",
           "1 revision round"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       },
       {
         "id": "standard-android",
@@ -280,7 +280,7 @@
           "Play Store submission assistance",
           "2 revision rounds"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       },
       {
         "id": "premium-android",
@@ -304,7 +304,7 @@
           "Play Store submission assistance",
           "3 revision rounds"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       }
     ],
     "maintenance": [
@@ -324,7 +324,7 @@
           "Compatibility checks for supported Android versions",
           "Email support"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       },
       {
         "id": "standard-android-maintenance",
@@ -344,7 +344,7 @@
           "Google Play update submission assistance",
           "Email technical support"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       },
       {
         "id": "premium-android-maintenance",
@@ -364,7 +364,7 @@
           "Google Play update submission assistance",
           "Priority technical support during business hours"
         ],
-        "pricingHref": "/pricing.html#android-plans"
+        "pricingHref": "/pricing#android-plans"
       }
     ]
   },
@@ -411,7 +411,7 @@
           "Captions and hashtags",
           "Basic monthly analytics report"
         ],
-        "pricingHref": "/pricing.html#smm-plans"
+        "pricingHref": "/pricing#smm-plans"
       },
       {
         "id": "standard-smm",
@@ -431,7 +431,7 @@
           "Basic comment monitoring on weekends",
           "Monthly analytics report"
         ],
-        "pricingHref": "/pricing.html#smm-plans"
+        "pricingHref": "/pricing#smm-plans"
       },
       {
         "id": "premium-smm",
@@ -452,7 +452,7 @@
           "Basic comment monitoring on weekends",
           "Detailed monthly analytics and growth report"
         ],
-        "pricingHref": "/pricing.html#smm-plans"
+        "pricingHref": "/pricing#smm-plans"
       }
     ]
   },
@@ -484,7 +484,7 @@
           "XML sitemap review",
           "Basic monthly SEO performance report"
         ],
-        "pricingHref": "/pricing.html#seo-plans"
+        "pricingHref": "/pricing#seo-plans"
       },
       {
         "id": "standard-seo",
@@ -504,7 +504,7 @@
           "1 SEO-focused blog article per month (up to 800 words)",
           "Monthly keyword ranking and organic traffic report"
         ],
-        "pricingHref": "/pricing.html#seo-plans"
+        "pricingHref": "/pricing#seo-plans"
       },
       {
         "id": "premium-seo",
@@ -526,7 +526,7 @@
           "Detailed keyword ranking and organic traffic report",
           "Monthly SEO strategy recommendations"
         ],
-        "pricingHref": "/pricing.html#seo-plans"
+        "pricingHref": "/pricing#seo-plans"
       }
     ]
   }

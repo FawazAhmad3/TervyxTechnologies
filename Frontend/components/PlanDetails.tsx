@@ -46,7 +46,7 @@ export default function PlanDetails({
       </ul>
       <a
         className="plan-button"
-        href={`/contact.html?service=${encodeURIComponent(plan.serviceSlug)}&plan=${encodeURIComponent(plan.id)}`}
+        href={`/contact?service=${encodeURIComponent(plan.serviceSlug)}&plan=${encodeURIComponent(plan.id)}`}
       >
         {button}
         <span aria-hidden="true">↗</span>

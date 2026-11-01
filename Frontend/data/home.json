@@ -10,17 +10,17 @@
     ],
     "primary": {
       "label": "Let’s build something",
-      "href": "/contact.html"
+      "href": "/contact"
     },
     "secondary": {
       "label": "Explore our expertise",
-      "href": "/services.html"
+      "href": "/services"
     },
     "note": "Your vision. Our expertise. A better digital future.",
     "industry": "SOFTWARE DEVELOPMENT & IT SERVICES",
     "scroll": {
       "label": "SCROLL TO DISCOVER",
-      "href": "/about.html"
+      "href": "/about"
     },
     "image": {
       "src": "",
@@ -42,7 +42,7 @@
     "muted": "Our digital expertise.",
     "link": {
       "label": "All services ↗",
-      "href": "/services.html"
+      "href": "/services"
     }
   },
   "introduction": {
@@ -55,7 +55,7 @@
     ],
     "link": {
       "label": "Get to know TERVYX",
-      "href": "/about.html"
+      "href": "/about"
     },
     "principles": [
       {
@@ -94,7 +94,7 @@
           "Responsive layouts for phones, tablets, and desktops",
           "Enquiry journeys designed around your business"
         ],
-        "href": "/web-development.html",
+        "href": "/web-development",
         "preview": {
           "label": "YOUR BUSINESS, ONLINE",
           "title": "Make your next move.",
@@ -115,7 +115,7 @@
           "Platform decisions guided by your audience",
           "A first release built around the features that matter"
         ],
-        "href": "/app-development.html",
+        "href": "/app-development",
         "preview": {
           "label": "YOUR IDEA, IN HAND",
           "title": "Everything in reach.",
@@ -136,7 +136,7 @@
           "Search and social planning for your audience",
           "Campaign goals that help guide the next decision"
         ],
-        "href": "/digital-marketing.html",
+        "href": "/digital-marketing",
         "preview": {
           "label": "YOUR BRAND, CONNECTED",
           "title": "Start a conversation.",
@@ -173,7 +173,7 @@
     ],
     "link": {
       "label": "See our full process",
-      "href": "/process.html"
+      "href": "/process"
     },
     "visual": {
       "label": "YOUR VISION AT THE CENTER",
@@ -189,7 +189,7 @@
     "description": "A little clarity for your next step.",
     "link": {
       "label": "Have another question? Let’s talk",
-      "href": "/contact.html"
+      "href": "/contact"
     },
     "items": [
       {

@@ -33,7 +33,7 @@
     {
       "slug": "web-development",
       "title": "Web Development",
-      "href": "/web-development.html",
+      "href": "/web-development",
       "short": "Beautifully crafted websites. Purposeful digital experiences.",
       "icon": "\u2197",
       "tags": ["BUSINESS WEBSITES", "WEB APPS", "E-COMMERCE"],
@@ -59,7 +59,7 @@
         }
       ],
       "planning": "We\u2019ll discuss your audience, content, required features, and the role your website should play in your business.",
-      "contactHref": "/contact.html?service=web-development",
+      "contactHref": "/contact?service=web-development",
       "image": {
         "src": "",
         "alt": "Web Development illustration"
@@ -68,7 +68,7 @@
     {
       "slug": "app-development",
       "title": "App Development",
-      "href": "/app-development.html",
+      "href": "/app-development",
       "short": "Your business, in the palm of your customers\u2019 hands.",
       "icon": "\u2733",
       "tags": ["iOS & ANDROID", "CROSS-PLATFORM", "UI / UX"],
@@ -94,7 +94,7 @@
         }
       ],
       "planning": "We\u2019ll discuss your users, the problem you want to solve, core journeys, platform preferences, and your first-release priorities.",
-      "contactHref": "/contact.html?service=app-development",
+      "contactHref": "/contact?service=app-development",
       "image": {
         "src": "",
         "alt": "App Development illustration"
@@ -103,7 +103,7 @@
     {
       "slug": "digital-marketing",
       "title": "Digital Marketing",
-      "href": "/digital-marketing.html",
+      "href": "/digital-marketing",
       "short": "Build visibility. Connect with people. Create opportunity.",
       "icon": "\u2197",
       "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
@@ -129,7 +129,7 @@
         }
       ],
       "planning": "We\u2019ll discuss your brand, audience, current channels, business objectives, and the actions you want people to take.",
-      "contactHref": "/contact.html?service=digital-marketing",
+      "contactHref": "/contact?service=digital-marketing",
       "image": {
         "src": "",
         "alt": "Digital Marketing illustration"

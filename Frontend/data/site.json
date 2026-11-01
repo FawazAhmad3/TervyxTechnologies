@@ -17,20 +17,20 @@
     },
     {
       "label": "About us",
-      "href": "/about.html"
+      "href": "/about"
     },
     {
       "label": "Our expertise",
-      "href": "/services.html"
+      "href": "/services"
     },
     {
       "label": "Our process",
-      "href": "/process.html"
+      "href": "/process"
     }
   ],
   "contactLink": {
     "label": "Let\u2019s talk",
-    "href": "/contact.html"
+    "href": "/contact"
   },
   "menu": {
     "open": "Open navigation",
@@ -45,19 +45,19 @@
     "links": [
       {
         "label": "About",
-        "href": "/about.html"
+        "href": "/about"
       },
       {
         "label": "Services",
-        "href": "/services.html"
+        "href": "/services"
       },
       {
         "label": "Our process",
-        "href": "/process.html"
+        "href": "/process"
       },
       {
         "label": "Start a project \u2197",
-        "href": "/contact.html"
+        "href": "/contact"
       }
     ]
   },
@@ -67,7 +67,7 @@
     "accent": "Let\u2019s bring it to life.",
     "button": {
       "label": "Start a conversation",
-      "href": "/contact.html"
+      "href": "/contact"
     }
   },
   "notFound": {

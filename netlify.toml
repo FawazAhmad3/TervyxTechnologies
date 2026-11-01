@@ -10,3 +10,61 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
   external_node_modules = ["nodemailer"]
+
+# Serve page URLs without exposing HTML filenames.
+[build.processing.html]
+  pretty_urls = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/services/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/process.html"
+  to = "/process/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pricing.html"
+  to = "/pricing/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/web-development.html"
+  to = "/web-development/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/app-development.html"
+  to = "/app-development/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/digital-marketing.html"
+  to = "/digital-marketing/"
+  status = 301
+  force = true
