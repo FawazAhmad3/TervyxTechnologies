@@ -38,9 +38,10 @@
       "plan": "Selected plan"
     },
     "sending": "Sending your request\u2026",
-    "error": "We couldn\u2019t send your request. Your details are still here\u2014please try again shortly.",
+    "error": "We couldn\u2019t send your request. Your details are still here. Please contact us by WhatsApp or email below.",
     "rateLimited": "You\u2019ve sent several requests. Please wait a minute before trying again.",
-    "referenceLabel": "Reference"
+    "referenceLabel": "Reference",
+    "fallback": "You can also reach us directly:"
   },
   "channels": {
     "label": "Contact TERVYX Technologies",
@@ -51,6 +52,10 @@
     "phone": {
       "label": "+39 392 775 2848",
       "href": "tel:+393927752848"
+    },
+    "whatsapp": {
+      "label": "Chat on WhatsApp",
+      "href": "https://wa.me/393927752848?text=Hello%20TERVYX%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20project."
     }
   }
 }

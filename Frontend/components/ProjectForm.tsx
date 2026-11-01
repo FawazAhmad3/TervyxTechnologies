@@ -128,6 +128,21 @@ export default function ProjectForm() {
           <span aria-hidden="true">↗</span>
         </button>
         <p className="form-note">{c.note}</p>
+        {(status === c.error || status === c.rateLimited) && (
+          <div className="quote-contact-fallback">
+            <p>{c.fallback}</p>
+            <a
+              href={contact.channels.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {contact.channels.whatsapp.label} ↗
+            </a>
+            <a href={contact.channels.email.href}>
+              {contact.channels.email.label}
+            </a>
+          </div>
+        )}
         <p className="form-status" role="status">
           {status}
         </p>

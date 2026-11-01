@@ -248,3 +248,28 @@ footer .contact-channels {
   margin-top: 6px;
   font-size: 14px;
 }
+
+.quote-contact-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.quote-contact-fallback p {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+.quote-contact-fallback a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
