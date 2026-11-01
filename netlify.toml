@@ -15,6 +15,13 @@
 [build.processing.html]
   pretty_urls = true
 
+# Explicit API rewrite: keep the public form URL mapped to the deployed function.
+[[redirects]]
+  from = "/api/quotation"
+  to = "/.netlify/functions/quotation"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/index.html"
   to = "/"

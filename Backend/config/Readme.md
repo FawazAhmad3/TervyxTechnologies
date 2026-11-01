@@ -12,7 +12,7 @@ Edit `email.json` locally:
 
 ## Netlify setup
 
-The quotation form sends `POST /api/quotation`, handled by `netlify/functions/quotation.mts`. The function sends the HTML notification and plain-text alternative to `notifications.receivingEmail`, from your authenticated sender. Reply-To is the visitor’s email. No acknowledgement is sent to the visitor.
+The quotation form sends `POST /api/quotation`, rewritten by `netlify.toml` to the deployed `netlify/functions/quotation.mts` function. The function sends the HTML notification and plain-text alternative to `notifications.receivingEmail`, from your authenticated sender. Reply-To is the visitor’s email. No acknowledgement is sent to the visitor.
 
 1. Fill the private `email.json` with your SMTP details, sender app password, and receiving inbox.
 2. In Netlify, open Project configuration → Environment variables.
