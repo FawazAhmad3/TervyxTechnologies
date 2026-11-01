@@ -108,3 +108,9 @@ Edit `Backend/config/email.json` for the sender email, email app password, recei
 The root `netlify.toml` sets the base directory to the repository root, runs `npm --workspace @tervyx/frontend run build`, and publishes `dist`. Vite deliberately outputs to root `dist`, not `Frontend/dist`. Node 22 is selected for Vite 7. Repository configuration overrides matching Netlify UI settings.
 
 Connect the repository’s `main` branch and retry the deployment after pulling these settings. Netlify deploys the frontend and the quotation function. The standalone Node server is only needed for local development or separate Node hosting.
+
+## Navy UI theme (UI branch)
+
+The `UI` branch introduces navy `#1B3A6B` headings, borders, selected controls, and white-on-navy bars; white `#FFFFFF` page backgrounds; `#F2F4F8` highlighted panels; and `#555555` supporting text. A matching navy dark mode retains system-theme detection and manual overrides. The original logo palette, shape, typography, responsive layout, and animations remain intact.
+
+`Frontend/styles/navy-theme.css` defines the semantic roles, including table headers, alternating rows, and total bars for future tables. The quotation email uses the same navy/white palette. Work on this branch must not be merged into `main` without the owner’s explicit instruction.

@@ -8,7 +8,7 @@
   },
   "metadata": {
     "description": "TERVYX Technologies. Future-focused web development, app development, and digital marketing. Code the Future.",
-    "themeColor": "#101413"
+    "themeColor": "#102442"
   },
   "navigation": [
     {
@@ -82,6 +82,6 @@
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
     "storageKey": "tervyx-theme-preference",
-    "lightColor": "#F6F8F1"
+    "lightColor": "#FFFFFF"
   }
 }

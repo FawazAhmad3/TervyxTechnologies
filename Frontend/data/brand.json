@@ -1,5 +1,5 @@
 {
-  "logoAlt": "TERVYX Technologies — Code the Future",
+  "logoAlt": "TERVYX Technologies \u2014 Code the Future",
   "symbolAlt": "TERVYX orbital technology logo",
   "favicon": "/brand/favicon-vector.svg",
   "colors": {
@@ -44,5 +44,13 @@
     "--logo-sphere-3": "#4e8220",
     "--logo-highlight": "#d4f29d",
     "--logo-edge": "#536d4e"
+  },
+  "uiTheme": {
+    "name": "Navy Blue",
+    "navy": "#1B3A6B",
+    "panel": "#F2F4F8",
+    "background": "#FFFFFF",
+    "secondaryText": "#555555",
+    "logo": "Original logo colors and geometry preserved"
   }
 }

@@ -1,10 +1,10 @@
 :root {
-  --bg: #101413;
-  --panel: #151a18;
-  --ink: #f3f5ee;
-  --muted: #929c94;
-  --line: #303831;
-  --lime: #c8fa73;
+  --bg: #102442;
+  --panel: #18345c;
+  --ink: #ffffff;
+  --muted: #b9c7da;
+  --line: #36527b;
+  --lime: #1b3a6b;
 }
 * {
   box-sizing: border-box;
@@ -96,7 +96,7 @@ nav a:hover,
 }
 .nav-cta {
   font-size: 13px;
-  border: 1px solid #68705f;
+  border: 1px solid #586477;
   border-radius: 30px;
   padding: 14px 22px;
 }
@@ -117,8 +117,8 @@ nav a:hover,
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(#b9dda204 1px, transparent 1px),
-    linear-gradient(90deg, #b9dda204 1px, transparent 1px);
+    linear-gradient(#a2b9dd04 1px, transparent 1px),
+    linear-gradient(90deg, #a2b9dd04 1px, transparent 1px);
   background-size: 75px 75px;
   pointer-events: none;
 }
@@ -137,7 +137,7 @@ nav a:hover,
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #cbd2c6;
+  color: #c4cad4;
 }
 .eyebrow i,
 .orbit-label i {
@@ -145,7 +145,7 @@ nav a:hover,
   width: 6px;
   border-radius: 100%;
   background: var(--lime);
-  box-shadow: 0 0 12px #c8fa7350;
+  box-shadow: 0 0 12px #1b3a6b50;
 }
 h1,
 h2,
@@ -199,7 +199,7 @@ p {
 }
 .button:hover {
   transform: translateY(-3px);
-  background: #ddffa8;
+  background: #becee9;
 }
 .lime {
   background: var(--lime);
@@ -257,14 +257,14 @@ p {
   top: 2%;
   width: 70%;
   height: 90%;
-  border: 24px solid #caee9f;
+  border: 24px solid #aac0e3;
   border-radius: 50%;
   background: transparent;
   box-shadow:
-    inset 4px 1px 9px #f0ffd5,
-    inset -7px -5px 12px #263521,
-    5px 6px 2px #5a7347,
-    -3px -3px 1px #d8efb6;
+    inset 4px 1px 9px #e0e8f4,
+    inset -7px -5px 12px #212935,
+    5px 6px 2px #475873,
+    -3px -3px 1px #bccde9;
   transform-style: preserve-3d;
 }
 .r1 {
@@ -272,34 +272,34 @@ p {
 }
 .r2 {
   transform: rotateY(85deg) rotateX(-25deg);
-  border-color: #91b96b;
+  border-color: #6b89b9;
 }
 .r3 {
   transform: rotateY(125deg) rotateX(20deg);
-  border-color: #c2db9c;
+  border-color: #9cb4db;
 }
 .r4 {
   transform: rotateY(15deg) rotateX(65deg);
-  border-color: #788b5d;
+  border-color: #5d6f8b;
 }
 .r5 {
   transform: rotateY(-25deg) rotateX(40deg);
-  border-color: #d5eeb6;
+  border-color: #bbcde8;
 }
 .core {
   position: absolute;
   top: 28%;
   left: 40%;
   font-size: 100px;
-  color: #d9ffad;
-  text-shadow: 0 0 40px #b6f28390;
+  color: #c2d1eb;
+  text-shadow: 0 0 40px #98b3dd90;
   transform: rotate(25deg);
 }
 .orbit-label {
   position: absolute;
   font-size: 8px;
   letter-spacing: 1.5px;
-  color: #929d8c;
+  color: #8591a4;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -318,7 +318,7 @@ p {
 }
 .art-cross {
   position: absolute;
-  color: #67715c;
+  color: #576376;
   font-size: 22px;
 }
 .one {
@@ -331,9 +331,9 @@ p {
 }
 .ticker {
   padding: 23px 0;
-  border-block: 1px solid #394137;
-  background: #c8fa73;
-  color: #101413;
+  border-block: 1px solid #333a45;
+  background: #1b3a6b;
+  color: #102442;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -367,7 +367,7 @@ h2 {
   letter-spacing: -2.5px;
 }
 h2 span {
-  color: #7c877c;
+  color: #6f7d94;
 }
 .about-bottom {
   display: flex;
@@ -385,7 +385,7 @@ h2 span {
   line-height: 1;
 }
 .services {
-  background: #171c19;
+  background: #16191d;
 }
 .section-top {
   display: flex;
@@ -438,17 +438,17 @@ h2 span {
   flex-wrap: wrap;
 }
 .tags span {
-  border: 1px solid #3a433b;
+  border: 1px solid #353c48;
   padding: 7px 9px;
   border-radius: 3px;
   font-size: 8px;
   letter-spacing: 1px;
-  color: #adb8a7;
+  color: #a4adbb;
 }
 .service-arrow {
   height: 48px;
   width: 48px;
-  border: 1px solid #46533d;
+  border: 1px solid #3d4553;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -458,7 +458,7 @@ h2 span {
 }
 .service:hover .service-arrow {
   background: var(--lime);
-  color: #101413;
+  color: #102442;
 }
 .service-art {
   width: 200px;
@@ -472,12 +472,12 @@ h2 span {
 .web-art > div {
   width: 170px;
   height: 120px;
-  border: 1px solid #b0cc91;
+  border: 1px solid #91a8cc;
   border-radius: 7px;
   transform: rotate(-10deg);
   padding: 20px;
-  background: linear-gradient(145deg, #536344, #242e24);
-  box-shadow: 10px 10px 0 #232d23;
+  background: linear-gradient(145deg, #445063, #23282f);
+  box-shadow: 10px 10px 0 #22272e;
 }
 .web-art b {
   display: block;
@@ -487,7 +487,7 @@ h2 span {
 }
 .web-art i {
   height: 5px;
-  background: #91a17e;
+  background: #7e8ba1;
   display: block;
   width: 80%;
   margin-top: 9px;
@@ -501,11 +501,11 @@ h2 span {
   justify-content: center;
 }
 .phone-art > div {
-  border: 2px solid #a2b28d;
+  border: 2px solid #8d9bb2;
   width: 75px;
   height: 130px;
   border-radius: 12px;
-  background: linear-gradient(45deg, #293327, #657a4c);
+  background: linear-gradient(45deg, #262b34, #4c5e7a);
   padding: 16px 8px;
   transform: rotate(-12deg);
 }
@@ -519,7 +519,7 @@ h2 span {
 }
 .phone-art b {
   height: 7px;
-  background: #82966b;
+  background: #6b7b96;
   margin-top: 10px;
   display: block;
   border-radius: 3px;
@@ -534,7 +534,7 @@ h2 span {
 .chart-art i {
   height: 30%;
   width: 24px;
-  background: linear-gradient(90deg, #708854, #d0f4a2);
+  background: linear-gradient(90deg, #546888, #b1c5e5);
   transform: skewY(-12deg);
 }
 .chart-art i:nth-child(2) {
@@ -558,11 +558,11 @@ h2 span {
   position: relative;
   padding: 100px 9%;
   background: var(--lime);
-  color: #182017;
+  color: #171a20;
   overflow: hidden;
 }
 .statement .section-label {
-  color: #4a5d35;
+  color: #35445d;
 }
 .statement h2 {
   font-size: clamp(60px, 8vw, 118px);
@@ -573,10 +573,10 @@ h2 span {
   z-index: 1;
 }
 .statement em {
-  color: #668344;
+  color: #445c83;
 }
 .statement p {
-  color: #40552f;
+  color: #2f3e55;
   font-size: 13px;
   margin-top: 35px;
 }
@@ -585,7 +585,7 @@ h2 span {
   right: 5%;
   top: 10%;
   font-size: 390px;
-  color: #adcf7f;
+  color: #7f9ecf;
   line-height: 1;
   transform: rotate(var(--spin, 0deg));
 }
@@ -604,7 +604,7 @@ h2 span {
   justify-content: space-between;
 }
 .step-number span {
-  color: #68765e;
+  color: #5a667a;
 }
 .steps h3 {
   font-size: 23px;
@@ -616,7 +616,7 @@ h2 span {
   font-size: 13px;
 }
 .contact {
-  background: #1a211b;
+  background: #191c22;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 100px;
@@ -642,8 +642,8 @@ h2 span {
 }
 form {
   padding: 30px;
-  background: #202923;
-  border: 1px solid #364135;
+  background: #1f232a;
+  border: 1px solid #323944;
   border-radius: 6px;
 }
 form h3 {
@@ -668,12 +668,12 @@ form > p {
   display: inline-block;
   font-size: 10px;
   padding: 10px;
-  border: 1px solid #526049;
+  border: 1px solid #485261;
   border-radius: 3px;
   cursor: pointer;
 }
 .service-options input:checked + span {
-  color: #101413;
+  color: #102442;
   background: var(--lime);
   border-color: var(--lime);
 }
@@ -684,7 +684,7 @@ form > p {
   display: block;
   font-size: 11px;
   margin: 20px 0;
-  color: #c9d1c3;
+  color: #c2c8d2;
 }
 .field input,
 .field textarea {
@@ -694,7 +694,7 @@ form > p {
   background: transparent;
   color: white;
   border: 0;
-  border-bottom: 1px solid #4a5549;
+  border-bottom: 1px solid #434c5b;
   border-radius: 0;
   padding: 8px 0 13px;
   font-size: 13px;
@@ -702,7 +702,7 @@ form > p {
 }
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #7c887c;
+  color: #6f7e95;
 }
 form .button {
   width: 100%;
@@ -737,7 +737,7 @@ footer {
     600 clamp(100px, 23vw, 350px)/1.25 "Space Grotesk",
     sans-serif;
   letter-spacing: -0.07em;
-  color: #cdd4c6;
+  color: #c6cbd4;
   position: relative;
 }
 .footer-word > span {
@@ -752,7 +752,7 @@ footer {
   border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
-  color: #7c877b;
+  color: #6e7d94;
   font-size: 8px;
   letter-spacing: 1px;
 }
@@ -851,7 +851,7 @@ footer {
     top: 81px;
     left: 0;
     right: 0;
-    background: #1a211b;
+    background: #191c22;
     padding: 25px;
     flex-direction: column;
     border-bottom: 1px solid var(--line);
@@ -1063,7 +1063,7 @@ nav a[aria-current="page"] {
 .page-intro {
   padding: 90px 7% 70px;
   border-bottom: 1px solid var(--line);
-  background: radial-gradient(ellipse at 100% 0%, #c8fa7310, transparent 65%);
+  background: radial-gradient(ellipse at 100% 0%, #1b3a6b10, transparent 65%);
 }
 .page-intro h1 {
   max-width: 1000px;
@@ -1119,7 +1119,7 @@ nav a[aria-current="page"] {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  background: #1c251c;
+  background: #1c1f25;
 }
 .page-cta h2 {
   margin-top: 20px;
