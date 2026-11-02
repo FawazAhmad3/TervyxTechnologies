@@ -1,13 +1,18 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { ThemeProvider } from "./context/ThemeContext";
 import App from "./App";
+import "./styles/fonts.css";
 import "./styles/tailwind.css";
 import "./styles/navy-theme.css";
-createRoot(document.getElementById("root")!).render(
+const app = (
   <StrictMode>
     <ThemeProvider>
       <App />
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 );
+
+const root = document.getElementById("root")!;
+if (root.hasChildNodes()) hydrateRoot(root, app);
+else createRoot(root).render(app);

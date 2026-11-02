@@ -20,10 +20,13 @@ function preference(): Theme | null {
   }
 }
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [choice, setChoice] = useState<Theme | null>(preference);
-  const [systemDark, setSystemDark] = useState(
-    () => matchMedia("(prefers-color-scheme: dark)").matches,
-  );
+  const [choice, setChoice] = useState<Theme | null>(null);
+  // Match prerendered markup on hydration; resolve the visitor preference before paint.
+  const [systemDark, setSystemDark] = useState(false);
+  useLayoutEffect(() => {
+    setChoice(preference());
+    setSystemDark(matchMedia("(prefers-color-scheme: dark)").matches);
+  }, []);
   const theme = resolveTheme(choice, systemDark);
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;

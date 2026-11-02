@@ -17,6 +17,13 @@ export default function Reveal({
       el.classList.add("visible");
       return;
     }
+    if (!("IntersectionObserver" in window)) {
+      el.classList.add("visible");
+      return;
+    }
+    if (el.getBoundingClientRect().top < innerHeight)
+      el.classList.add("visible");
+    el.classList.add("reveal-ready");
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((entry) => {

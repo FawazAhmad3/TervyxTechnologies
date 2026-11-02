@@ -1,3 +1,4 @@
+import { usePagePath } from "../context/PagePathContext";
 import Icon from "./Icon";
 import { useEffect, useRef, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
@@ -25,8 +26,7 @@ export default function Header() {
       media.removeEventListener("change", resize);
     };
   }, [open]);
-  const current =
-    location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+  const current = usePagePath();
   return (
     <header>
       <Brand />

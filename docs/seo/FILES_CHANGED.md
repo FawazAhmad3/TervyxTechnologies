@@ -1,0 +1,62 @@
+# Complete modified-file inventory
+
+All files added or modified by the SEO implementation, relative to the repository root. No private email configuration, backend mail implementation or logo geometry was modified. Generated dist output is ignored and rebuilt locally.
+
+- `.gitignore` — Ignore temporary SSR build directory.
+- `Frontend/404.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/App.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/about.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/app-development.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/components/DetailCard.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/Header.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/Layout.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/ProjectForm.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/Reveal.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/ServiceDetails.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/ServiceDirectory.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/ServiceIllustration.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/ServiceList.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/components/WebsitePlanLink.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/contact.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/context/PagePathContext.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/context/ThemeContext.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/data/home.json` — Descriptive service content, headings and internal link data.
+- `Frontend/data/marketing-services.json` — Descriptive service content, headings and internal link data.
+- `Frontend/data/seo.json` — Central metadata, canonical, indexing and structured-data rules.
+- `Frontend/data/services.json` — Descriptive service content, headings and internal link data.
+- `Frontend/digital-marketing.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/entry-server.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/index.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/main.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/package.json` — Build/test commands and HTML parser test dependency.
+- `Frontend/pages/SeoServices.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/pages/SocialMediaMarketing.tsx` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/pricing.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/process.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/public/brand/social-card.png` — 1200 × 630 social sharing image using existing branding.
+- `Frontend/public/fonts/dm-sans-latin.woff2` — Existing font family self-hosting or its OFL license.
+- `Frontend/public/fonts/dmsans-OFL.txt` — Existing font family self-hosting or its OFL license.
+- `Frontend/public/fonts/space-grotesk-latin.woff2` — Existing font family self-hosting or its OFL license.
+- `Frontend/public/fonts/spacegrotesk-OFL.txt` — Existing font family self-hosting or its OFL license.
+- `Frontend/seo-services.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/seo/config.ts` — Central metadata, canonical, indexing and structured-data rules.
+- `Frontend/seo/paths.ts` — Central metadata, canonical, indexing and structured-data rules.
+- `Frontend/services.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/social-media-marketing.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Frontend/styles/design.css` — Same font families, progressive reveal visibility or existing-style service links.
+- `Frontend/styles/fonts.css` — Same font families, progressive reveal visibility or existing-style service links.
+- `Frontend/styles/navy-theme.css` — Same font families, progressive reveal visibility or existing-style service links.
+- `Frontend/vite.config.ts` — React prerender/hydration compatibility, service navigation or accessible heading/image behavior.
+- `Frontend/web-development.html` — Page entrypoint: local font preloads and generated SEO head/prerender target.
+- `Readme.md` — SEO editing/build instructions and approval constraint.
+- `docs/seo/AUDIT.md` — Audit evidence, findings, keyword research, validation or file inventory.
+- `docs/seo/FILES_CHANGED.md` — Audit evidence, findings, keyword research, validation or file inventory.
+- `docs/seo/KEYWORDS.md` — Audit evidence, findings, keyword research, validation or file inventory.
+- `docs/seo/VALIDATION.md` — Audit evidence, findings, keyword research, validation or file inventory.
+- `docs/seo/live-baseline.json` — Audit evidence, findings, keyword research, validation or file inventory.
+- `docs/seo/rendered-baseline.json` — Audit evidence, findings, keyword research, validation or file inventory.
+- `netlify.toml` — Legacy URL redirects and asset cache headers; existing API route retained.
+- `package-lock.json` — Build/test commands and HTML parser test dependency.
+- `package.json` — Build/test commands and HTML parser test dependency.
+- `scripts/check-seo.mjs` — Build-time prerender/sitemap/robots generation or generated-page SEO validation.
+- `scripts/prerender.mjs` — Build-time prerender/sitemap/robots generation or generated-page SEO validation.

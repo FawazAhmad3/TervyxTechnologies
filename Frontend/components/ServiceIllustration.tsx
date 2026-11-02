@@ -7,6 +7,10 @@ export default function ServiceIllustration({ service }: { service: Service }) {
         className="service-art object-contain"
         src={service.image.src}
         alt={service.image.alt}
+        width={service.image.width}
+        height={service.image.height}
+        loading="lazy"
+        decoding="async"
       />
     );
   if (service.slug === "web-development")

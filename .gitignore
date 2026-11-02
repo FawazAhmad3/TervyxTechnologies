@@ -12,3 +12,6 @@ Backend/config/email.json
 
 .netlify/
 Backend/email/preview.html
+
+# Temporary server-rendering bundle used only during static builds
+.seo-prerender/

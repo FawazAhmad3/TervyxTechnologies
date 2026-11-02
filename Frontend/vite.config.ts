@@ -3,23 +3,12 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve, basename } from "node:path";
 import site from "./data/site.json";
-import home from "./data/home.json";
-import about from "./data/about.json";
-import services from "./data/services.json";
-import processPage from "./data/process.json";
-import pricing from "./data/pricing.json";
-import contact from "./data/contact.json";
-const titles: Record<string, string> = {
-  index: home.title,
-  about: about.title,
-  services: services.title,
-  process: processPage.title,
-  contact: contact.title,
-  pricing: pricing.page.title,
-  ...Object.fromEntries(
-    services.items.map((service) => [service.slug, service.title]),
-  ),
-};
+import {
+  canonicalFor,
+  metadataTags,
+  seoPages,
+  structuredData,
+} from "./seo/config";
 const escapeHtml = (text: string) =>
   text.replace(
     /[&<>"']/g,
@@ -28,39 +17,54 @@ const escapeHtml = (text: string) =>
         char
       ]!,
   );
-const pages = [
-  "index",
-  "about",
-  "services",
-  "process",
-  "contact",
-  "pricing",
-  "web-development",
-  "app-development",
-  "digital-marketing",
-];
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
     {
-      name: "tervyx-json-metadata",
+      name: "tervyx-page-metadata",
       transformIndexHtml(html, context) {
-        const title =
-          titles[basename(context.filename, ".html")] ?? site.brand.tagline;
-        return html
-          .replace(
-            /<title>.*?<\/title>/,
-            `<title>${escapeHtml(title)} — ${escapeHtml(site.brand.fullName)}</title>`,
-          )
-          .replace(
-            /(<meta\s+name="description"\s+content=")[^"]*("\s*\/?>)/,
-            `$1${escapeHtml(site.metadata.description)}$2`,
-          )
-          .replace(
-            /(<meta\s+name="theme-color"\s+content=")[^"]*("\s*\/?>)/,
-            `$1${site.metadata.themeColor}$2`,
-          );
+        const page =
+          seoPages[basename(context.filename, ".html")] ?? seoPages["404"];
+        const metadata = metadataTags(page);
+        if (process.env.CONTEXT && process.env.CONTEXT !== "production")
+          metadata.robots = "noindex, follow";
+        const canonical = canonicalFor(page),
+          graph = structuredData(page);
+        const tags = Object.entries(metadata)
+          .filter(([key]) => key !== "description")
+          .map(([key, content]) => ({
+            tag: "meta",
+            attrs: {
+              [key.startsWith("og:") ? "property" : "name"]: key,
+              content,
+            },
+            injectTo: "head" as const,
+          }));
+        const extra =
+          (canonical
+            ? `<link rel="canonical" href="${escapeHtml(canonical)}">`
+            : "") +
+          (graph
+            ? `<script type="application/ld+json" data-seo-schema>${JSON.stringify(graph).replace(/</g, "\\u003c")}</script>`
+            : "");
+        return {
+          html: html
+            .replace(
+              /<title>.*?<\/title>/,
+              `<title>${escapeHtml(page.title)}</title>`,
+            )
+            .replace(
+              /(<meta\s+name="description"\s+content=")[^"]*("\s*\/?>)/,
+              `$1${escapeHtml(page.description)}$2`,
+            )
+            .replace(
+              /(<meta\s+name="theme-color"\s+content=")[^"]*("\s*\/?>)/,
+              `$1${site.metadata.themeColor}$2`,
+            )
+            .replace("</head>", extra + "</head>"),
+          tags,
+        };
       },
     },
   ],
@@ -69,11 +73,20 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: Object.fromEntries(
-        pages.map((page) => [
+        Object.keys(seoPages).map((page) => [
           page,
           resolve(import.meta.dirname, `${page}.html`),
         ]),
       ),
+      output: {
+        manualChunks(id) {
+          if (
+            id.includes("node_modules/react") ||
+            id.includes("node_modules/scheduler")
+          )
+            return "react-vendor";
+        },
+      },
     },
   },
   server: {

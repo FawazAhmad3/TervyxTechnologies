@@ -1,3 +1,7 @@
+import { PagePathContext } from "./context/PagePathContext";
+import { normalizePath } from "./seo/paths";
+import SocialMediaMarketing from "./pages/SocialMediaMarketing";
+import SeoServices from "./pages/SeoServices";
 import Pricing from "./pages/Pricing";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -20,10 +24,19 @@ const pages = {
   "/web-development": WebDevelopment,
   "/app-development": AppDevelopment,
   "/digital-marketing": DigitalMarketing,
+  "/social-media-marketing": SocialMediaMarketing,
+  "/seo-services": SeoServices,
 };
-export default function App() {
-  const path =
-    location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+export default function App({
+  path = typeof location === "undefined" ? "/" : location.pathname,
+}: {
+  path?: string;
+}) {
+  path = normalizePath(path);
   const Page = pages[path as keyof typeof pages] ?? NotFound;
-  return <Page />;
+  return (
+    <PagePathContext.Provider value={path}>
+      <Page />
+    </PagePathContext.Provider>
+  );
 }

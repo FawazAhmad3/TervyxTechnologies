@@ -1,3 +1,4 @@
+import ServiceDirectory from "./ServiceDirectory";
 import services from "../data/services.json";
 import type { Service } from "./ServiceCard";
 import SectionHeading from "./SectionHeading";
@@ -9,12 +10,19 @@ export default function ServiceDetails({ service }: { service: Service }) {
   return (
     <>
       <section className="section">
-        <SectionHeading content={c} />
+        <SectionHeading
+          content={{
+            ...c,
+            heading: service.detailsHeading,
+            muted: service.detailsMuted,
+          }}
+        />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {service.offers.map((offer, index) => (
             <DetailCard key={offer.title} {...offer} index={index} />
           ))}
         </div>
+        <ServiceDirectory />
       </section>
       <section className="section detail-planning">
         <Reveal className="section-label">{c.planningLabel}</Reveal>

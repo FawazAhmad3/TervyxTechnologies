@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "slug": "social-media-marketing",
+      "title": "Social Media Marketing",
+      "href": "/social-media-marketing",
+      "short": "Social media marketing services for businesses that need a consistent, practical content plan. We discuss your audience, brand voice, selected platforms, and available assets before agreeing deliverables.",
+      "icon": "↗",
+      "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
+      "description": "Social media marketing services for businesses that need a consistent, practical content plan. We discuss your audience, brand voice, selected platforms, and available assets before agreeing deliverables.",
+      "intro": {
+        "label": "OUR EXPERTISE / SOCIAL MEDIA MARKETING",
+        "heading": "Social media marketing.",
+        "accent": "Content with a clear direction.",
+        "description": "Social media marketing services for businesses that need a consistent, practical content plan. We discuss your audience, brand voice, selected platforms, and available assets before agreeing deliverables."
+      },
+      "offers": [
+        {
+          "title": "Platform & content strategy",
+          "description": "Choose appropriate platforms, content themes, and a posting calendar based on your audience and business priorities.",
+          "href": ""
+        },
+        {
+          "title": "Post design & captions",
+          "description": "Prepare branded post designs, captions, and hashtag research within the agreed scope. Any footage, photography, or approvals needed from you are discussed up front.",
+          "href": ""
+        },
+        {
+          "title": "Reporting & next steps",
+          "description": "Review agreed platform analytics and content performance. Use those observations to refine future content rather than promise a fixed number of followers or leads.",
+          "href": ""
+        }
+      ],
+      "planning": "Share your social profiles, target audience, brand guidelines, available images or footage, and posting priorities. We will discuss platforms, post quantities, approval workflows, reporting, and whether advertising is included.",
+      "contactHref": "/contact?service=digital-marketing",
+      "image": {
+        "src": "",
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Social Media Marketing support.",
+      "detailsMuted": "Agreed to your priorities."
+    },
+    {
+      "slug": "seo-services",
+      "title": "Search Engine Optimization",
+      "href": "/seo-services",
+      "short": "Search engine optimization services covering keyword research, on-page improvements, technical reviews, and content planning. We identify priorities from your website, audience, and current search visibility.",
+      "icon": "↗",
+      "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
+      "description": "Search engine optimization services covering keyword research, on-page improvements, technical reviews, and content planning. We identify priorities from your website, audience, and current search visibility.",
+      "intro": {
+        "label": "OUR EXPERTISE / SEARCH ENGINE OPTIMIZATION",
+        "heading": "SEO services.",
+        "accent": "Build a discoverable website.",
+        "description": "Search engine optimization services covering keyword research, on-page improvements, technical reviews, and content planning. We identify priorities from your website, audience, and current search visibility."
+      },
+      "offers": [
+        {
+          "title": "Keyword research & page mapping",
+          "description": "Identify relevant queries and their search intent, then map them to useful service pages and content. Search volumes and competition require appropriate tools and market-specific evidence.",
+          "href": ""
+        },
+        {
+          "title": "On-page & technical SEO",
+          "description": "Review titles, descriptions, headings, internal links, crawlability, indexing directives, structured data, and mobile performance. Implementation work is agreed to your website’s needs.",
+          "href": ""
+        },
+        {
+          "title": "Content planning & reporting",
+          "description": "Plan helpful content around customer questions and review available Search Console data. Rankings and traffic depend on many factors and cannot be guaranteed.",
+          "href": ""
+        }
+      ],
+      "planning": "Share your website URL, priority services, markets, and any existing Search Console access. We will discuss audit findings, implementation scope, content responsibilities, and how progress can be measured over time.",
+      "contactHref": "/contact?service=digital-marketing",
+      "image": {
+        "src": "",
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Search Engine Optimization support.",
+      "detailsMuted": "Agreed to your priorities."
+    }
+  ]
+}

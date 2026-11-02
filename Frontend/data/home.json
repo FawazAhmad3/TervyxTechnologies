@@ -1,12 +1,12 @@
 {
   "title": "Code the Future",
   "hero": {
-    "label": "BUILT FOR WHAT’S NEXT",
-    "lines": ["Great ideas.", "Powerful code."],
-    "accent": "Endless possibility.",
+    "label": "WEB DEVELOPMENT, APPS & DIGITAL MARKETING",
+    "lines": ["Web development.", "App development."],
+    "accent": "Digital marketing.",
     "paragraph": [
-      "We turn your ambition into digital experiences.",
-      "Websites, apps, and marketing that move your business forward."
+      "Custom websites, mobile apps, social media marketing, and SEO for your business.",
+      "We work with businesses worldwide to plan and build purposeful digital experiences."
     ],
     "primary": {
       "label": "Let’s build something",
@@ -38,8 +38,8 @@
   },
   "services": {
     "label": "OUR EXPERTISE",
-    "heading": "Your ambition.",
-    "muted": "Our digital expertise.",
+    "heading": "Development expertise.",
+    "muted": "Digital marketing support.",
     "link": {
       "label": "All services ↗",
       "href": "/services"

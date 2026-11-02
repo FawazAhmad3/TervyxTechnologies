@@ -7,7 +7,7 @@ export default function WebsitePlanLink() {
     <Reveal className="website-plan-link">
       <div>
         <div className="section-label">{c.label}</div>
-        <h3>{c.heading}</h3>
+        <h2>{c.heading}</h2>
         <p>{c.description}</p>
       </div>
       <a className="text-link" href={c.link.href}>

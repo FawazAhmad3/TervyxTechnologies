@@ -1,15 +1,17 @@
 import Icon from "./Icon";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import services from "../data/services.json";
 import contact from "../data/contact.json";
 import Reveal from "./Reveal";
 export default function ProjectForm() {
   const c = contact.form;
-  const params = new URLSearchParams(location.search);
-  const initial = params.get("service");
-  const [selected, setSelected] = useState<string[]>(
-    services.items.filter((s) => s.slug === initial).map((s) => s.title),
-  );
+  const [selected, setSelected] = useState<string[]>([]);
+  useEffect(() => {
+    const initial = new URLSearchParams(location.search).get("service");
+    setSelected(
+      services.items.filter((s) => s.slug === initial).map((s) => s.title),
+    );
+  }, []);
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
   async function submit(event: FormEvent<HTMLFormElement>) {

@@ -118,3 +118,9 @@ The `UI` branch introduces navy `#1B3A6B` headings, borders, selected controls, 
 ## Clean page URLs
 
 Navigation uses extensionless URLs such as `/process`. Netlify Pretty URLs serves the matching HTML entrypoint and normalizes the URL. Explicit permanent redirects preserve old `.html` bookmarks and inbound links, including query parameters. Physical HTML entrypoints remain unchanged for the Vite multi-page build.
+
+## SEO branch implementation
+
+SEO metadata is editable in `Frontend/data/seo.json`; service copy remains in JSON data files. The frontend build now prerenders React content into all 12 HTML entrypoints, creates `dist/sitemap.xml` and `dist/robots.txt`, and hydrates the same tree in the browser. Ten canonical pages are indexable; pricing is a legacy contact alias and the error page is noindex. Netlify preview contexts are noindex.
+
+Run `npm run build`, `npm test`, `npm run typecheck`, and `npm run test:seo` before review. Self-hosted DM Sans and Space Grotesk fonts retain their OFL license files in `Frontend/public/fonts`. Audit evidence, keyword mapping, validation and remaining manual tasks are under `docs/seo`. This SEO work must not be merged or deployed without the owner's approval.

@@ -1,0 +1,100 @@
+{
+  "origin": "https://www.tervyx.tech",
+  "language": "en",
+  "market": "Worldwide English-speaking clients",
+  "organization": {
+    "name": "TERVYX Technologies",
+    "email": "info@tervyx.tech",
+    "telephone": "+393927752848",
+    "logo": "/brand/tervyx-navy.svg"
+  },
+  "searchConsoleVerification": "",
+  "socialImage": "/brand/social-card.png",
+  "pages": {
+    "index": {
+      "path": "/",
+      "title": "Web & App Development, Digital Marketing | TERVYX Technologies",
+      "description": "Build your digital presence with TERVYX Technologies: custom website and app development, social media marketing, and SEO for businesses worldwide.",
+      "label": "Home"
+    },
+    "about": {
+      "path": "/about",
+      "title": "About Our Software House | TERVYX Technologies",
+      "description": "Meet TERVYX Technologies, a software house connecting website development, mobile apps, social media marketing, and SEO around your business goals.",
+      "label": "About"
+    },
+    "services": {
+      "path": "/services",
+      "title": "Development & Digital Marketing Services | TERVYX Technologies",
+      "description": "Explore website development, mobile app development, social media marketing, and search engine optimization services from TERVYX Technologies.",
+      "label": "Services"
+    },
+    "process": {
+      "path": "/process",
+      "title": "Our Design & Development Process | TERVYX Technologies",
+      "description": "See how TERVYX Technologies plans digital projects: discovery, design, development, testing, and launch, with scope and feedback agreed along the way.",
+      "label": "Our process"
+    },
+    "contact": {
+      "path": "/contact",
+      "title": "Contact Us & Request a Quote | TERVYX Technologies",
+      "description": "Discuss your website, app, social media, or SEO project with TERVYX Technologies. Share your requirements or contact us by email, phone, or WhatsApp.",
+      "label": "Contact"
+    },
+    "pricing": {
+      "path": "/pricing",
+      "title": "Request a Project Quote | TERVYX Technologies",
+      "description": "Request a tailored quotation for your project. Pricing depends on agreed features, scope, and requirements. Continue to the TERVYX contact page.",
+      "label": "Request a quote",
+      "canonical": "/contact",
+      "noindex": true
+    },
+    "web-development": {
+      "path": "/web-development",
+      "title": "Website Development Services | TERVYX Technologies",
+      "description": "Custom website development for business websites, web applications, and e-commerce. Discuss responsive design, features, and project scope with TERVYX.",
+      "label": "Website development",
+      "service": "Website development",
+      "parent": "/services"
+    },
+    "app-development": {
+      "path": "/app-development",
+      "title": "Mobile App Development Services | TERVYX Technologies",
+      "description": "Plan and build Android, iOS, and cross-platform mobile apps with TERVYX Technologies. Explore UI/UX, core features, integrations, and launch requirements.",
+      "label": "App development",
+      "service": "Mobile app development",
+      "parent": "/services"
+    },
+    "digital-marketing": {
+      "path": "/digital-marketing",
+      "title": "Digital Marketing Services | TERVYX Technologies",
+      "description": "Connect social media marketing, SEO, and campaign planning around your business goals. Explore TERVYX Technologies digital marketing services and request a quote.",
+      "label": "Digital marketing",
+      "service": "Digital marketing",
+      "parent": "/services"
+    },
+    "social-media-marketing": {
+      "path": "/social-media-marketing",
+      "title": "Social Media Marketing Services | TERVYX Technologies",
+      "description": "Plan your social media presence with TERVYX Technologies: content strategy, post design, captions, content calendars, and reporting based on agreed scope.",
+      "label": "Social media marketing",
+      "service": "Social media marketing",
+      "parent": "/digital-marketing"
+    },
+    "seo-services": {
+      "path": "/seo-services",
+      "title": "SEO Services for Business Websites | TERVYX Technologies",
+      "description": "Explore keyword research, on-page optimization, technical SEO, and content planning with TERVYX Technologies. Request a scoped SEO review for your website.",
+      "label": "SEO services",
+      "service": "Search engine optimization",
+      "parent": "/digital-marketing"
+    },
+    "404": {
+      "path": "/404",
+      "title": "Page Not Found | TERVYX Technologies",
+      "description": "This page could not be found. Browse TERVYX Technologies services or contact us about your project.",
+      "label": "Page not found",
+      "noindex": true
+    }
+  }
+}

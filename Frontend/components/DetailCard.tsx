@@ -4,10 +4,12 @@ export default function DetailCard({
   title,
   description,
   index,
+  href,
 }: {
   title: string;
   description: string;
   index: number;
+  href?: string;
 }) {
   return (
     <Reveal as="article" className="detail-card">
@@ -17,7 +19,7 @@ export default function DetailCard({
           <Icon name="arrow-up-right" />
         </span>
       </div>
-      <h3>{title}</h3>
+      <h3>{href ? <a href={href}>{title}</a> : title}</h3>
       <p>{description}</p>
     </Reveal>
   );

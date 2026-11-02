@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#102442" />
+    <meta
+      name="description"
+      content="TERVYX Technologies — web development, app development, and digital marketing. Code the Future."
+    />
+    <title>TERVYX Technologies — Code the Future</title>
+    <link
+      rel="preload"
+      href="/fonts/space-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/dm-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="icon" type="image/svg+xml" href="/brand/tervyx-navy.svg" />
+    <link rel="manifest" href="/brand/site.webmanifest" />
+    <script>
+      (function () {
+        var p = null;
+        try {
+          p = localStorage.getItem("tervyx-theme-preference");
+        } catch (e) {}
+        var t =
+          p === "light" || p === "dark"
+            ? p
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = t;
+        document.documentElement.style.colorScheme = t;
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", t === "light" ? "#FFFFFF" : "#102442");
+      })();
+    </script>
+  </head>
+  <body id="top">
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>

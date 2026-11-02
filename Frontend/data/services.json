@@ -2,9 +2,9 @@
   "title": "Our services",
   "intro": {
     "label": "WHAT WE DO",
-    "heading": "Built for your business.",
-    "accent": "Ready for what\u2019s next.",
-    "description": "Explore our three core services. Each brings a different perspective; together, they create a connected digital presence."
+    "heading": "Development services.",
+    "accent": "Digital marketing expertise.",
+    "description": "Explore website development, mobile app development, social media marketing, and SEO. We scope each project around your audience, requirements, and business goals."
   },
   "listing": {
     "label": "02 / OUR EXPERTISE",
@@ -16,7 +16,7 @@
     ]
   },
   "cardLabel": "EXPERTISE",
-  "cardLink": "Explore service \u2197",
+  "cardLink": "Explore service ↗",
   "detail": {
     "heading": "Where we can",
     "muted": "make a difference.",
@@ -24,10 +24,10 @@
       "Shaped around your goals.",
       "Scoped around what you need."
     ],
-    "planningLabel": "LET\u2019S FIND THE RIGHT STARTING POINT",
+    "planningLabel": "LET’S FIND THE RIGHT STARTING POINT",
     "planningHeading": "First, we understand",
     "planningMuted": "what you want to achieve.",
-    "button": "Let\u2019s talk"
+    "button": "Let’s talk"
   },
   "items": [
     {
@@ -35,105 +35,145 @@
       "title": "Web Development",
       "href": "/web-development",
       "short": "Beautifully crafted websites. Purposeful digital experiences.",
-      "icon": "\u2197",
+      "icon": "↗",
       "tags": ["BUSINESS WEBSITES", "WEB APPS", "E-COMMERCE"],
       "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable.",
       "intro": {
         "label": "OUR EXPERTISE / WEB DEVELOPMENT",
-        "heading": "A stronger presence.",
-        "accent": "A better experience.",
-        "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable."
+        "heading": "Website development.",
+        "accent": "Built around your business.",
+        "description": "Custom website development for businesses launching online, improving an existing site, or planning a web application. We discuss content, responsive design, functionality, and integrations before agreeing the project scope."
       },
       "offers": [
         {
           "title": "Business websites",
-          "description": "Introduce your business with a distinctive, responsive website that makes your services easy to understand."
+          "description": "Responsive business websites with clear service pages, purposeful navigation, accessible content, and enquiry journeys for customers on phones, tablets, and desktops.",
+          "href": ""
         },
         {
           "title": "Web applications",
-          "description": "Turn a business workflow or product idea into an intuitive browser-based experience."
+          "description": "Browser-based applications built around your workflows. We define user journeys, data needs, account access, and integrations before estimating the work.",
+          "href": ""
         },
         {
           "title": "E-commerce",
-          "description": "Create a thoughtful shopping experience that helps people discover products and move toward a purchase."
+          "description": "Online shopping experiences shaped around your products, catalogue, checkout, payment provider, and fulfilment needs. E-commerce features are quoted to the agreed scope.",
+          "href": ""
         }
       ],
-      "planning": "We\u2019ll discuss your audience, content, required features, and the role your website should play in your business.",
+      "planning": "Tell us about your audience, page requirements, content, existing website, and any integrations. We will discuss design, testing, deployment, and maintenance options. SEO work is scoped separately from website development.",
       "contactHref": "/contact?service=web-development",
       "image": {
         "src": "",
-        "alt": "Web Development illustration"
-      }
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Website development services.",
+      "detailsMuted": "A clear plan for your site."
     },
     {
       "slug": "app-development",
       "title": "App Development",
       "href": "/app-development",
-      "short": "Your business, in the palm of your customers\u2019 hands.",
-      "icon": "\u2733",
+      "short": "Your business, in the palm of your customers’ hands.",
+      "icon": "✳",
       "tags": ["iOS & ANDROID", "CROSS-PLATFORM", "UI / UX"],
       "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience.",
       "intro": {
         "label": "OUR EXPERTISE / APP DEVELOPMENT",
-        "heading": "Big possibilities.",
-        "accent": "Small screen.",
-        "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience."
+        "heading": "Mobile app development.",
+        "accent": "From idea to usable screens.",
+        "description": "App development for Android, iOS, and cross-platform projects. We work through your users, essential features, UI/UX, data requirements, and release priorities before defining the first version."
       },
       "offers": [
         {
           "title": "iOS & Android",
-          "description": "Plan an experience around your audience and the mobile platforms they use."
+          "description": "Plan mobile applications for Android and iOS around the devices your audience uses. Platform selection, testing needs, and app-store submission requirements form part of the agreed scope.",
+          "href": ""
         },
         {
           "title": "Cross-platform development",
-          "description": "Explore a shared approach to reaching customers across mobile platforms."
+          "description": "Consider a shared approach for Android and iOS when it fits your features, integrations, and maintenance needs. We discuss trade-offs before choosing the development approach.",
+          "href": ""
         },
         {
           "title": "User experience & interface",
-          "description": "Shape clear journeys, purposeful screens, and interactions that make everyday tasks easier."
+          "description": "Map core user journeys, screen layouts, navigation, and interactions. Clear UI/UX helps people understand what to do and gives development a practical foundation.",
+          "href": ""
         }
       ],
-      "planning": "We\u2019ll discuss your users, the problem you want to solve, core journeys, platform preferences, and your first-release priorities.",
+      "planning": "Share the problem your app should solve, target platforms, expected screens, login requirements, backend services, and API integrations. We will agree what belongs in the first release and what can follow later.",
       "contactHref": "/contact?service=app-development",
       "image": {
         "src": "",
-        "alt": "App Development illustration"
-      }
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Mobile app development services.",
+      "detailsMuted": "Define the right first release."
     },
     {
       "slug": "digital-marketing",
       "title": "Digital Marketing",
       "href": "/digital-marketing",
       "short": "Build visibility. Connect with people. Create opportunity.",
-      "icon": "\u2197",
+      "icon": "↗",
       "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
       "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy.",
       "intro": {
         "label": "OUR EXPERTISE / DIGITAL MARKETING",
-        "heading": "Be seen.",
-        "accent": "Make it matter.",
-        "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy."
+        "heading": "Digital marketing.",
+        "accent": "A connected approach.",
+        "description": "Bring social media marketing, search engine optimization, and campaign planning into one discussion. We start with your audience, current website, available content, and business priorities."
       },
       "offers": [
         {
           "title": "Search engine optimization",
-          "description": "Plan useful content and a discoverable website around the things your audience is looking for."
+          "description": "Keyword research, on-page optimization, technical website reviews, and content planning. Explore our SEO services to understand the scope and priorities for your website.",
+          "href": "/seo-services"
         },
         {
-          "title": "Social media",
-          "description": "Develop a consistent presence and content direction that reflects your brand and speaks to your audience."
+          "title": "Social media marketing",
+          "description": "Plan relevant platforms, a content calendar, post design, captions, and reporting. Explore how our social media marketing services fit your business and available content.",
+          "href": "/social-media-marketing"
         },
         {
           "title": "Campaign strategy",
-          "description": "Connect campaign goals, messaging, channels, and measurement in a purposeful marketing plan."
+          "description": "Connect campaign goals, messaging, channels, and measurement in a purposeful marketing plan.",
+          "href": ""
         }
       ],
-      "planning": "We\u2019ll discuss your brand, audience, current channels, business objectives, and the actions you want people to take.",
+      "planning": "Tell us which audiences you want to reach, the platforms you use, what content is available, and what outcomes matter. We agree deliverables and reporting before work starts; rankings, reach, and enquiries are not guaranteed.",
       "contactHref": "/contact?service=digital-marketing",
       "image": {
         "src": "",
-        "alt": "Digital Marketing illustration"
-      }
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Digital marketing services.",
+      "detailsMuted": "Choose the support you need."
+    }
+  ],
+  "directoryLabel": "Explore our services",
+  "directory": [
+    {
+      "label": "Website development",
+      "href": "/web-development"
+    },
+    {
+      "label": "App development",
+      "href": "/app-development"
+    },
+    {
+      "label": "Social media marketing",
+      "href": "/social-media-marketing"
+    },
+    {
+      "label": "SEO services",
+      "href": "/seo-services"
     }
   ]
 }
