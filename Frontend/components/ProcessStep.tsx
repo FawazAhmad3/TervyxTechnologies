@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import Reveal from "./Reveal";
 export default function ProcessStep({
   title,
@@ -12,7 +13,9 @@ export default function ProcessStep({
     <Reveal as="article">
       <div className="step-number">
         {String(index + 1).padStart(2, "0")}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <Icon name="arrow-up-right" />
+        </span>
       </div>
       <h3>{title}</h3>
       <p>{description}</p>

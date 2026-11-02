@@ -1,3 +1,4 @@
+import { IconText } from "./Icon";
 import services from "../data/services.json";
 import Reveal from "./Reveal";
 export type Service = (typeof services.items)[number];
@@ -15,7 +16,9 @@ export default function ServiceCard({
           {String(index + 1).padStart(2, "0")} / {services.cardLabel}
         </span>
         <div className="service-icon-frame" aria-hidden="true">
-          <div className="card-icon">{service.icon}</div>
+          <div className="card-icon">
+            <IconText text={service.icon} />
+          </div>
         </div>
         <h3>{service.title}</h3>
         <p>{service.short}</p>

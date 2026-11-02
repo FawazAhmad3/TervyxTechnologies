@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 import Reveal from "./Reveal";
 import FaqItem from "./FaqItem";
@@ -16,7 +17,9 @@ export default function FaqSection() {
           <p className="mt-6 text-sm">{c.description}</p>
           <a className="text-link mt-7 text-brand-lime" href={c.link.href}>
             {c.link.label}
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">
+              <Icon name="arrow-up-right" />
+            </span>
           </a>
         </Reveal>
         <Reveal>

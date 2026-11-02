@@ -1,3 +1,4 @@
+import { IconText } from "./Icon";
 import home from "../data/home.json";
 import services from "../data/services.json";
 import Reveal from "./Reveal";
@@ -14,7 +15,7 @@ export default function ServicePreview() {
           <span>{c.muted}</span>
         </h2>
         <a className="text-link" href={c.link.href}>
-          {c.link.label}
+          <IconText text={c.link.label} />
         </a>
       </Reveal>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

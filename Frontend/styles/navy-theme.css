@@ -273,3 +273,27 @@ footer .contact-channels {
   text-underline-offset: 4px;
   overflow-wrap: anywhere;
 }
+
+/* Draw symbols as vectors rather than platform-dependent emoji glyphs. */
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  color: inherit;
+}
+.card-icon .ui-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.preview-orb .ui-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contact-channels a,
+.quote-contact-fallback a {
+  gap: 6px;
+}

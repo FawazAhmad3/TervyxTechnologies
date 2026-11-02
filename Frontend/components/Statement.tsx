@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import { useEffect, useRef } from "react";
 import process from "../data/process.json";
 import Reveal from "./Reveal";
@@ -24,7 +25,7 @@ export default function Statement() {
         <em>{c.accent}</em>
       </Reveal>
       <div className="statement-orbit" aria-hidden="true">
-        ✳
+        <Icon name="asterisk" />
       </div>
       <Reveal as="p">
         {c.description.map((line) => (

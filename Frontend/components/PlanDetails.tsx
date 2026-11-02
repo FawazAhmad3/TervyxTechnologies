@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import pricing from "../data/pricing.json";
 export type Plan = Omit<
   (typeof pricing.website.plans)[number],
@@ -49,7 +50,9 @@ export default function PlanDetails({
         href={`/contact?service=${encodeURIComponent(plan.serviceSlug)}&plan=${encodeURIComponent(plan.id)}`}
       >
         {button}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <Icon name="arrow-up-right" />
+        </span>
       </a>
     </section>
   );

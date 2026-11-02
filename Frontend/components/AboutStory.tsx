@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import about from "../data/about.json";
 import Reveal from "./Reveal";
 export default function AboutStory() {
@@ -16,7 +17,7 @@ export default function AboutStory() {
         </Reveal>
         <Reveal className="about-bottom">
           <div className="asterisk" aria-hidden="true">
-            ✳
+            <Icon name="asterisk" />
           </div>
           <div>
             {c.paragraphs.map((p) => (

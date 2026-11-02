@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import type { ReactNode } from "react";
 export default function Button({
   href,
@@ -9,7 +10,9 @@ export default function Button({
   return (
     <a className="button lime" href={href}>
       {children}
-      <span aria-hidden="true">↗</span>
+      <span aria-hidden="true">
+        <Icon name="arrow-up-right" />
+      </span>
     </a>
   );
 }

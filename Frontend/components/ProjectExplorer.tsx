@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import { useRef, useState, type KeyboardEvent } from "react";
 import home from "../data/home.json";
 import Reveal from "./Reveal";
@@ -44,7 +45,9 @@ export default function ProjectExplorer() {
               onClick={() => setActive(index)}
             >
               {project.tab}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                <Icon name="arrow-up-right" />
+              </span>
             </button>
           ))}
         </div>
@@ -64,14 +67,18 @@ export default function ProjectExplorer() {
             <ul>
               {item.features.map((feature) => (
                 <li key={feature}>
-                  <span aria-hidden="true">↗</span>
+                  <span aria-hidden="true">
+                    <Icon name="arrow-up-right" />
+                  </span>
                   {feature}
                 </li>
               ))}
             </ul>
             <a className="text-link" href={item.href}>
               {c.button}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                <Icon name="arrow-up-right" />
+              </span>
             </a>
           </div>
         </div>

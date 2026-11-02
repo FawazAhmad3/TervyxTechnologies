@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 type Preview = (typeof home.projects.items)[number]["preview"];
 export default function ProjectPreview({ preview }: { preview: Preview }) {
@@ -11,18 +12,24 @@ export default function ProjectPreview({ preview }: { preview: Preview }) {
           <i />
           <i />
           <i />
-          <span>↗</span>
+          <span>
+            <Icon name="arrow-up-right" />
+          </span>
         </div>
         <div className="preview-window-content">
           <div className="preview-kicker">{preview.label}</div>
           <div className="preview-symbol-frame">
-            <div className="preview-orb">✳</div>
+            <div className="preview-orb">
+              <Icon name="asterisk" />
+            </div>
           </div>
           <h3>{preview.title}</h3>
           <p>{preview.subtitle}</p>
           <div className="preview-action">
             {preview.button}
-            <span>↗</span>
+            <span>
+              <Icon name="arrow-up-right" />
+            </span>
           </div>
           <div className="preview-mini-grid">
             <div />

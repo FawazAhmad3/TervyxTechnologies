@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import { useEffect, useRef } from "react";
 import home from "../data/home.json";
 export default function AnimatedRibbon() {
@@ -69,7 +70,7 @@ export default function AnimatedRibbon() {
             <span className="ribbon-item" key={`${item}-${i}`}>
               {item}
               <span className="ribbon-star" aria-hidden="true">
-                ✳
+                <Icon name="asterisk" />
               </span>
             </span>
           ))}

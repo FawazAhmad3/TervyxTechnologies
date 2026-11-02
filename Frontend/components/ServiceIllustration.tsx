@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import type { Service } from "./ServiceCard";
 export default function ServiceIllustration({ service }: { service: Service }) {
   if (service.image.src)
@@ -12,7 +13,9 @@ export default function ServiceIllustration({ service }: { service: Service }) {
     return (
       <div className="service-art web-art" aria-hidden="true">
         <div>
-          <b>↗</b>
+          <b>
+            <Icon name="arrow-up-right" />
+          </b>
           <i />
           <i />
           <i />
@@ -23,12 +26,16 @@ export default function ServiceIllustration({ service }: { service: Service }) {
     return (
       <div className="service-art phone-art" aria-hidden="true">
         <div>
-          <span>✳</span>
+          <span>
+            <Icon name="asterisk" />
+          </span>
           <b />
           <b />
         </div>
         <div>
-          <span>↗</span>
+          <span>
+            <Icon name="arrow-up-right" />
+          </span>
           <b />
         </div>
       </div>
@@ -39,7 +46,9 @@ export default function ServiceIllustration({ service }: { service: Service }) {
       <i />
       <i />
       <i />
-      <b>↗</b>
+      <b>
+        <Icon name="arrow-up-right" />
+      </b>
     </div>
   );
 }

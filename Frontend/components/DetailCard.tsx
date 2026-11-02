@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import Reveal from "./Reveal";
 export default function DetailCard({
   title,
@@ -12,7 +13,9 @@ export default function DetailCard({
     <Reveal as="article" className="detail-card">
       <div className="step-number">
         {String(index + 1).padStart(2, "0")}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <Icon name="arrow-up-right" />
+        </span>
       </div>
       <h3>{title}</h3>
       <p>{description}</p>

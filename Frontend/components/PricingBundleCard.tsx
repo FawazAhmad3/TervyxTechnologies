@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import PlanDetails, { type Plan } from "./PlanDetails";
 import Reveal from "./Reveal";
 export type BundleContent = {
@@ -22,7 +23,9 @@ export default function PricingBundleCard({
       >
         <div className="bundle-title">
           <h2>{bundle.name}</h2>
-          <span aria-hidden="true">✳</span>
+          <span aria-hidden="true">
+            <Icon name="asterisk" />
+          </span>
         </div>
         <div className="bundle-website">
           <PlanDetails

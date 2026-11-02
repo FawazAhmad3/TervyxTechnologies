@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import contact from "../data/contact.json";
 export default function ContactChannels() {
   const c = contact.channels;
@@ -6,7 +7,7 @@ export default function ContactChannels() {
       <a href={c.email.href}>{c.email.label}</a>
       <a href={c.phone.href}>{c.phone.label}</a>
       <a href={c.whatsapp.href} target="_blank" rel="noopener noreferrer">
-        {c.whatsapp.label} ↗
+        {c.whatsapp.label} <Icon name="arrow-up-right" />
       </a>
     </address>
   );

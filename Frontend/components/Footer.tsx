@@ -1,3 +1,4 @@
+import { IconText } from "./Icon";
 import FooterArtwork from "./FooterArtwork";
 import Brand from "./Brand";
 import ContactChannels from "./ContactChannels";
@@ -14,12 +15,14 @@ export default function Footer() {
             </span>
           ))}
         </p>
-        <a href="#top">{site.footer.top}</a>
+        <a href="#top">
+          <IconText text={site.footer.top} />
+        </a>
       </div>
       <div className="footer-links">
         {site.footer.links.map((link) => (
           <a key={link.href} href={link.href}>
-            {link.label}
+            <IconText text={link.label} />
           </a>
         ))}
       </div>

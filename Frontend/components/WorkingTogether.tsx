@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 import Reveal from "./Reveal";
 import CollaborationVisual from "./CollaborationVisual";
@@ -20,7 +21,7 @@ export default function WorkingTogether() {
             {c.items.map((item) => (
               <Reveal key={item.title} className="flex gap-4">
                 <span className="mt-1 text-brand-lime" aria-hidden="true">
-                  ✳
+                  <Icon name="asterisk" />
                 </span>
                 <div>
                   <h3 className="text-lg font-medium">{item.title}</h3>
@@ -32,7 +33,9 @@ export default function WorkingTogether() {
           <Reveal className="mt-9">
             <a className="text-link text-brand-lime" href={c.link.href}>
               {c.link.label}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                <Icon name="arrow-up-right" />
+              </span>
             </a>
           </Reveal>
         </div>

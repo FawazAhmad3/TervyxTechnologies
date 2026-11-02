@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import { useState, type FormEvent } from "react";
 import services from "../data/services.json";
 import contact from "../data/contact.json";
@@ -88,7 +89,9 @@ export default function ProjectForm() {
                   setStatus("");
                 }}
               />
-              <span>{service.title} ↗</span>
+              <span>
+                {service.title} <Icon name="arrow-up-right" />
+              </span>
             </label>
           ))}
         </fieldset>
@@ -125,7 +128,9 @@ export default function ProjectForm() {
         </label>
         <button className="button lime" type="submit" disabled={sending}>
           {sending ? c.sending : c.button}
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">
+            <Icon name="arrow-up-right" />
+          </span>
         </button>
         <p className="form-note">{c.note}</p>
         {(status === c.error || status === c.rateLimited) && (
@@ -136,7 +141,7 @@ export default function ProjectForm() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {contact.channels.whatsapp.label} ↗
+              {contact.channels.whatsapp.label} <Icon name="arrow-up-right" />
             </a>
             <a href={contact.channels.email.href}>
               {contact.channels.email.label}

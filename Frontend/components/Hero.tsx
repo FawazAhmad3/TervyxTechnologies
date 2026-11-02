@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 import Button from "./Button";
 import OrbitSculpture from "./OrbitSculpture";
@@ -30,12 +31,14 @@ export default function Hero() {
           <Button href={c.primary.href}>{c.primary.label}</Button>
           <a className="text-link" href={c.secondary.href}>
             {c.secondary.label}
-            <span>↓</span>
+            <span>
+              <Icon name="arrow-down" />
+            </span>
           </a>
         </div>
         <div className="hero-note">
           <span className="mini-stars" aria-hidden="true">
-            ✳
+            <Icon name="asterisk" />
           </span>
           {c.note}
         </div>
@@ -45,7 +48,9 @@ export default function Hero() {
         <span>{c.industry}</span>
         <a href={c.scroll.href}>
           {c.scroll.label}
-          <span>↓</span>
+          <span>
+            <Icon name="arrow-down" />
+          </span>
         </a>
       </div>
     </section>

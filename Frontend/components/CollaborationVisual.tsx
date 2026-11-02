@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 import Reveal from "./Reveal";
 export default function CollaborationVisual() {
@@ -9,7 +10,9 @@ export default function CollaborationVisual() {
         <div className="map-orbit" aria-hidden="true" />
         <div className="map-orbit inner" aria-hidden="true" />
         <div className="map-center">
-          <span aria-hidden="true">✳</span>
+          <span aria-hidden="true">
+            <Icon name="asterisk" />
+          </span>
           <span>{c.center}</span>
         </div>
         {c.nodes.map((node, index) => (

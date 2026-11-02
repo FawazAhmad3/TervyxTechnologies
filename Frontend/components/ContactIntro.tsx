@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import contact from "../data/contact.json";
 import Reveal from "./Reveal";
 import ContactChannels from "./ContactChannels";
@@ -24,7 +25,9 @@ export default function ContactIntro() {
         <ContactChannels />
       </Reveal>
       <Reveal className="contact-sign">
-        <span aria-hidden="true">✳</span>
+        <span aria-hidden="true">
+          <Icon name="asterisk" />
+        </span>
         <span>
           {contact.signature.map((line) => (
             <span className="block" key={line}>

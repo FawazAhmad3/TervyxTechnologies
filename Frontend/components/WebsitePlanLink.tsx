@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import quote from "../data/quote.json";
 import Reveal from "./Reveal";
 export default function WebsitePlanLink() {
@@ -11,7 +12,9 @@ export default function WebsitePlanLink() {
       </div>
       <a className="text-link" href={c.link.href}>
         {c.link.label}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <Icon name="arrow-up-right" />
+        </span>
       </a>
     </Reveal>
   );

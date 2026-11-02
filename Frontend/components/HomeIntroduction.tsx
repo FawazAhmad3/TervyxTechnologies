@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import home from "../data/home.json";
 import Reveal from "./Reveal";
 export default function HomeIntroduction() {
@@ -20,7 +21,9 @@ export default function HomeIntroduction() {
             ))}
             <a className="text-link pt-3 text-brand-lime" href={c.link.href}>
               {c.link.label}
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                <Icon name="arrow-up-right" />
+              </span>
             </a>
           </Reveal>
         </div>

@@ -1,3 +1,4 @@
+import Icon from "./Icon";
 import { useEffect, useRef, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import Brand from "./Brand";
@@ -50,7 +51,9 @@ export default function Header() {
         <ThemeToggle />
         <a className="nav-cta" href={site.contactLink.href}>
           {site.contactLink.label}
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">
+            <Icon name="arrow-up-right" />
+          </span>
         </a>
         <button
           ref={menuButton}
