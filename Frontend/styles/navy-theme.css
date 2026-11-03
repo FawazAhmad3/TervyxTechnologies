@@ -327,3 +327,31 @@ footer .contact-channels {
     transform: none;
   }
 }
+
+/* Slim black arrow pointer on mouse-operated devices. */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  body * {
+    cursor: url("/cursors/tervyx-pointer.png") 7 4, default;
+  }
+  a,
+  button,
+  summary,
+  [role="button"],
+  [role="tab"],
+  input[type="checkbox"],
+  input[type="radio"],
+  .service-options span {
+    cursor: url("/cursors/tervyx-pointer.png") 7 4, default;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+  button:disabled,
+  [aria-busy="true"] {
+    cursor: wait;
+  }
+}
