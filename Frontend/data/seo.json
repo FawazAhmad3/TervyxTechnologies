@@ -5,7 +5,6 @@
   "organization": {
     "name": "TERVYX Technologies",
     "email": "info@tervyx.tech",
-    "telephone": "+393927752848",
     "logo": "/brand/tervyx-navy.svg"
   },
   "searchConsoleVerification": "",
@@ -38,7 +37,7 @@
     "contact": {
       "path": "/contact",
       "title": "Contact Us & Request a Quote | TERVYX Technologies",
-      "description": "Discuss your website, app, social media, or SEO project with TERVYX Technologies. Share your requirements or contact us by email, phone, or WhatsApp.",
+      "description": "Discuss your website, app, social media, or SEO project with TERVYX Technologies. Share your requirements or contact our team by email.",
       "label": "Contact"
     },
     "pricing": {

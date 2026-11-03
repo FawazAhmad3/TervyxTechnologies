@@ -138,13 +138,6 @@ export default function ProjectForm() {
         {(status === c.error || status === c.rateLimited) && (
           <div className="quote-contact-fallback">
             <p>{c.fallback}</p>
-            <a
-              href={contact.channels.whatsapp.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {contact.channels.whatsapp.label} <Icon name="arrow-up-right" />
-            </a>
             <a href={contact.channels.email.href}>
               {contact.channels.email.label}
             </a>

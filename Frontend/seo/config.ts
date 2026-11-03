@@ -33,7 +33,6 @@ export function structuredData(page: SeoPage) {
     url: origin + "/",
     logo: { "@type": "ImageObject", url: origin + seo.organization.logo },
     email: seo.organization.email,
-    telephone: seo.organization.telephone,
   };
   const website = {
     "@type": "WebSite",
