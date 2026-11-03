@@ -355,3 +355,42 @@ footer .contact-channels {
     cursor: wait;
   }
 }
+
+.contact-map {
+  padding-top: 0;
+}
+.contact-map-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.contact-map-heading .section-label {
+  margin-bottom: 14px;
+}
+.contact-map-heading h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin: 0;
+}
+.contact-map-heading a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 42vw, 480px);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+@media (max-width: 600px) {
+  .contact-map-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}

@@ -43,6 +43,14 @@
     "referenceLabel": "Reference",
     "fallback": "You can also reach us directly:"
   },
+  "map": {
+    "title": "Map",
+    "label": "Our location",
+    "frameTitle": "Map of Milan, Italy",
+    "embedUrl": "https://maps.google.com/maps?q=Milan%2C%20Italy&z=12&output=embed",
+    "linkUrl": "https://www.google.com/maps/search/?api=1&query=Milan%2C%20Italy",
+    "linkLabel": "Open in Google Maps"
+  },
   "channels": {
     "label": "Contact TERVYX Technologies",
     "email": {
