@@ -5,6 +5,7 @@ import App from "./App";
 import "./styles/fonts.css";
 import "./styles/tailwind.css";
 import "./styles/navy-theme.css";
+import "./styles/dark-theme.css";
 const app = (
   <StrictMode>
     <ThemeProvider>
