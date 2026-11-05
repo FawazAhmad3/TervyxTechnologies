@@ -26,6 +26,19 @@ export default function ServiceIllustration({ service }: { service: Service }) {
         </div>
       </div>
     );
+  if (service.slug === "ui-ux-design")
+    return (
+      <div className="service-art web-art" aria-hidden="true">
+        <div>
+          <b>
+            <Icon name="asterisk" />
+          </b>
+          <i />
+          <i />
+          <i />
+        </div>
+      </div>
+    );
   if (service.slug === "app-development")
     return (
       <div className="service-art phone-art" aria-hidden="true">

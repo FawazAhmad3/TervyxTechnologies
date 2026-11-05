@@ -26,6 +26,7 @@ const routes = [
   "digital-marketing",
   "seo-services",
   "social-media-marketing",
+  "ui-ux-design",
 ];
 let tested = 0;
 for (const route of routes) {

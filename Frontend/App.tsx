@@ -12,6 +12,7 @@ import WebDevelopment from "./pages/WebDevelopment";
 import AppDevelopment from "./pages/AppDevelopment";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import NotFound from "./pages/NotFound";
+import UiUxDesign from "./pages/UiUxDesign";
 // Physical HTML entrypoints keep every page independently addressable.
 const pages = {
   "/": Home,
@@ -26,6 +27,7 @@ const pages = {
   "/digital-marketing": DigitalMarketing,
   "/social-media-marketing": SocialMediaMarketing,
   "/seo-services": SeoServices,
+  "/ui-ux-design": UiUxDesign,
 };
 export default function App({
   path = typeof location === "undefined" ? "/" : location.pathname,

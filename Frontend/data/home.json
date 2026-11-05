@@ -1,11 +1,11 @@
 {
   "title": "Code the Future",
   "hero": {
-    "label": "WEB DEVELOPMENT, APPS & DIGITAL MARKETING",
+    "label": "DESIGN, DEVELOPMENT & DIGITAL MARKETING",
     "lines": ["Web development.", "App development."],
     "accent": "Digital marketing.",
     "paragraph": [
-      "Custom websites, mobile apps, social media marketing, and SEO for your business.",
+      "Custom websites, mobile apps, UI/UX design in Figma, social media marketing, and SEO for your business.",
       "We work with businesses worldwide to plan and build purposeful digital experiences."
     ],
     "primary": {
@@ -58,7 +58,7 @@
     "heading": "Ideas need ambition.",
     "muted": "Progress needs a partner.",
     "paragraphs": [
-      "TERVYX Technologies brings web development, app development, and digital marketing together around your business goals. We help connect what you want to achieve with what your customers need to experience.",
+      "TERVYX Technologies brings UI/UX design, web development, app development and digital marketing together around your business goals. We help connect what you want to achieve with what your customers need to experience.",
       "Launching something new? Taking an existing business online? Reworking an experience that no longer fits? We start by understanding the challenge, then shape a practical way forward."
     ],
     "link": {
@@ -202,7 +202,7 @@
     "items": [
       {
         "question": "What can TERVYX help me with?",
-        "answer": "Our core services are web development, app development, and digital marketing. We can discuss one focused project or how those disciplines could work together for your business."
+        "answer": "Our services include web development, app development, UI/UX design in Figma, and digital marketing. We can discuss a focused design project or how design, development and marketing could work together for your business."
       },
       {
         "question": "Can I start with just an idea?",

@@ -4,12 +4,12 @@
     "label": "WHAT WE DO",
     "heading": "Development services.",
     "accent": "Digital marketing expertise.",
-    "description": "Explore website development, mobile app development, social media marketing, and SEO. We scope each project around your audience, requirements, and business goals."
+    "description": "Explore website and app development, UI/UX design in Figma, social media marketing, and SEO. We scope each project around your audience, requirements, and business goals."
   },
   "listing": {
     "label": "02 / OUR EXPERTISE",
-    "heading": "Three disciplines.",
-    "muted": "One digital partner.",
+    "heading": "Design and development.",
+    "muted": "Marketing that connects.",
     "description": [
       "From the first click to lasting growth.",
       "Everything starts with your ambition."
@@ -173,6 +173,54 @@
       ],
       "planningHeading": "Connect your channels.",
       "planningMuted": "Measure agreed outcomes."
+    },
+    {
+      "slug": "ui-ux-design",
+      "title": "UI/UX Design",
+      "href": "/ui-ux-design",
+      "short": "Figma designs, wireframes and interactive prototypes for websites and mobile apps.",
+      "icon": "✳",
+      "tags": ["FIGMA", "WIREFRAMES", "PROTOTYPES"],
+      "description": "Turn your website or app idea into a clear visual direction before development.",
+      "intro": {
+        "label": "OUR EXPERTISE / UI & UX DESIGN",
+        "heading": "UI/UX design.",
+        "accent": "From idea to interface.",
+        "description": "Website and mobile app design in Figma, from wireframes and user flows to interface screens and interactive prototypes. Start with a design project or discuss design alongside development."
+      },
+      "offers": [
+        {
+          "title": "Wireframes & user flows",
+          "description": "Map the screens, navigation and key journeys your users need. Wireframes help agree content priorities and page structure before detailed visual design.",
+          "href": ""
+        },
+        {
+          "title": "Website & app interfaces",
+          "description": "Design website pages and mobile app screens in Figma around your content, brand direction and target devices. Agree the screens, responsive layouts and reusable interface elements in scope.",
+          "href": ""
+        },
+        {
+          "title": "Prototypes & design handoff",
+          "description": "Connect agreed screens into an interactive prototype to review navigation and interactions. Discuss feedback rounds, Figma file access and the assets or notes needed for development handoff.",
+          "href": ""
+        }
+      ],
+      "planning": "Share your website or app idea, audience, brand assets and required screens. Agree the design deliverables, feedback rounds and handoff responsibilities. A Figma prototype demonstrates an experience; development and live functionality are scoped separately.",
+      "contactHref": "/contact?service=ui-ux-design",
+      "image": {
+        "src": "",
+        "alt": "",
+        "width": 320,
+        "height": 240
+      },
+      "detailsHeading": "Design before development.",
+      "detailsMuted": "Make the experience clear.",
+      "detailsDescription": [
+        "Wireframes, interface screens and prototypes in Figma.",
+        "Scope the design work around your users and project needs."
+      ],
+      "planningHeading": "Plan your design project.",
+      "planningMuted": "Agree screens and deliverables."
     }
   ],
   "directoryLabel": "Explore our services",
@@ -196,6 +244,10 @@
     {
       "label": "SEO services",
       "href": "/seo-services"
+    },
+    {
+      "label": "UI/UX Design & Figma",
+      "href": "/ui-ux-design"
     }
   ]
 }

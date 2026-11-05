@@ -177,3 +177,20 @@ test("SMTP uses configured recipient, authenticated sender, and visitor Reply-To
     else process.env.EMAIL_CONFIG_JSON = previous;
   }
 });
+
+test("design-only and combined service enquiries are accepted without real email delivery", async () => {
+  for (const services of [
+    ["UI/UX Design"],
+    ["Web Development", "App Development", "Digital Marketing", "UI/UX Design"],
+  ]) {
+    let received: string[] = [];
+    const response = await handleQuotation(
+      request({ ...quote, services }),
+      async (value) => {
+        received = value.services;
+      },
+    );
+    assert.equal(response.status, 200);
+    assert.deepEqual(received, services);
+  }
+});

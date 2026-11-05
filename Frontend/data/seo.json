@@ -13,19 +13,19 @@
     "index": {
       "path": "/",
       "title": "Web & App Development, Digital Marketing | TERVYX Technologies",
-      "description": "Build your digital presence with TERVYX Technologies: custom website and app development, social media marketing, and SEO for businesses worldwide.",
+      "description": "Build your digital presence with TERVYX Technologies: website and app development, UI/UX design in Figma, social media marketing and SEO for businesses worldwide.",
       "label": "Home"
     },
     "about": {
       "path": "/about",
       "title": "About Our Software House | TERVYX Technologies",
-      "description": "Meet TERVYX Technologies, a software house connecting website development, mobile apps, social media marketing, and SEO around your business goals.",
+      "description": "Meet TERVYX Technologies, a software house connecting website and app development, UI/UX design in Figma, social media marketing and SEO around your business goals.",
       "label": "About"
     },
     "services": {
       "path": "/services",
       "title": "Development & Digital Marketing Services | TERVYX Technologies",
-      "description": "Explore website development, mobile app development, social media marketing, and search engine optimization services from TERVYX Technologies.",
+      "description": "Explore website and app development, UI/UX design in Figma, social media marketing and SEO services from TERVYX Technologies. Discuss your project scope.",
       "label": "Services"
     },
     "process": {
@@ -94,6 +94,14 @@
       "description": "This page could not be found. Browse TERVYX Technologies services or contact us about your project.",
       "label": "Page not found",
       "noindex": true
+    },
+    "ui-ux-design": {
+      "path": "/ui-ux-design",
+      "title": "UI/UX Design & Figma Services | TERVYX Technologies",
+      "description": "Plan website and app experiences with TERVYX Technologies: UI/UX design in Figma, wireframes, interface screens, interactive prototypes and design handoff.",
+      "label": "UI/UX design",
+      "service": "UI/UX design and Figma design",
+      "parent": "/services"
     }
   }
 }

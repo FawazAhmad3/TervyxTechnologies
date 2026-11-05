@@ -116,3 +116,9 @@
   for = "/brand/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"
+
+[[redirects]]
+  from = "/ui-ux-design.html"
+  to = "/ui-ux-design"
+  status = 301
+  force = true

@@ -10,6 +10,7 @@ const allowedServices = new Set([
   "Web Development",
   "App Development",
   "Digital Marketing",
+  "UI/UX Design",
 ]);
 const maxBytes = 24000;
 export class InputError extends Error {}
@@ -24,7 +25,7 @@ export function validateQuotation(input: unknown): Quotation {
     !validEmail(q.email) ||
     !Array.isArray(q.services) ||
     !q.services.length ||
-    q.services.length > 3 ||
+    q.services.length > allowedServices.size ||
     q.services.some((s) => !allowedServices.has(s)) ||
     typeof q.idea !== "string" ||
     !q.idea.trim() ||

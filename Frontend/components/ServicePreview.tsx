@@ -23,7 +23,7 @@ export default function ServicePreview() {
           </a>
         </div>
       </Reveal>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {services.items.map((service, index) => (
           <ServiceCard key={service.slug} service={service} index={index} />
         ))}

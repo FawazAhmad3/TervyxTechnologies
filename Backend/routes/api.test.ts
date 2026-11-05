@@ -17,7 +17,12 @@ test("API serves shared JSON content and rejects unsupported routes and writes",
     const services = await fetch(`${base}/api/services`);
     assert.equal(services.status, 200);
     const content = await services.json();
-    assert.equal(content.services.length, 3);
+    assert.equal(content.services.length, 4);
+    assert.ok(
+      content.services.some(
+        (service: { title: string }) => service.title === "UI/UX Design",
+      ),
+    );
     assert.ok(
       content.services.every(
         (s: { title: string; href: string }) => s.title && s.href,
