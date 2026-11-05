@@ -333,7 +333,9 @@ footer .contact-channels {
   html,
   body,
   body * {
-    cursor: url("/cursors/tervyx-pointer.png") 7 4, default;
+    cursor:
+      url("/cursors/tervyx-pointer.png") 7 4,
+      default;
   }
   a,
   button,
@@ -343,9 +345,13 @@ footer .contact-channels {
   input[type="checkbox"],
   input[type="radio"],
   .service-options span {
-    cursor: url("/cursors/tervyx-pointer.png") 7 4, default;
+    cursor:
+      url("/cursors/tervyx-pointer.png") 7 4,
+      default;
   }
-  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not(
+      [type="button"]
+    ),
   textarea,
   [contenteditable="true"] {
     cursor: text;
@@ -423,4 +429,22 @@ footer .contact-channels {
     font-size: 16px;
     min-height: 44px;
   }
+}
+
+/* Keep service navigation within the existing headings and topic chips. */
+.service-title-link,
+.service-tag-link {
+  color: inherit;
+  text-decoration: none;
+}
+.service-title-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.service-tag-link {
+  display: inline-flex;
+  border-radius: 3px;
+}
+.service-tag-link:hover span {
+  border-color: currentColor;
 }

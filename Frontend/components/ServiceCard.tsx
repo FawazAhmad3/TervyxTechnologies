@@ -20,11 +20,24 @@ export default function ServiceCard({
             <IconText text={service.icon} />
           </div>
         </div>
-        <h3>{service.title}</h3>
+        <h3>
+          <a className="service-title-link" href={service.href}>
+            {service.title}
+          </a>
+        </h3>
         <p>{service.short}</p>
         <div className="tags service-card-tags">
           {service.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
+            <a
+              className="service-tag-link"
+              key={tag}
+              href={
+                services.tagLinks[tag as keyof typeof services.tagLinks] ??
+                service.href
+              }
+            >
+              <span>{tag}</span>
+            </a>
           ))}
         </div>
       </article>

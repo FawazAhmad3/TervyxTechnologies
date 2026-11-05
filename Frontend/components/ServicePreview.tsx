@@ -18,9 +18,6 @@ export default function ServicePreview() {
           <a className="text-link" href={c.link.href}>
             <IconText text={c.link.label} />
           </a>
-          <a className="text-link" href={c.marketingLink.href}>
-            <IconText text={c.marketingLink.label} />
-          </a>
         </div>
       </Reveal>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">

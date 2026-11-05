@@ -47,10 +47,6 @@
     "link": {
       "label": "All services ↗",
       "href": "/services"
-    },
-    "marketingLink": {
-      "label": "Digital Marketing Services ↗",
-      "href": "/digital-marketing"
     }
   },
   "introduction": {

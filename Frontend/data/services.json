@@ -249,5 +249,9 @@
       "label": "UI/UX Design & Figma",
       "href": "/ui-ux-design"
     }
-  ]
+  ],
+  "tagLinks": {
+    "SEO": "/seo-services",
+    "SOCIAL MEDIA": "/social-media-marketing"
+  }
 }

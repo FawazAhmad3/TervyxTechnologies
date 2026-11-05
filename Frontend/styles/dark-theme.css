@@ -131,8 +131,8 @@
   background: radial-gradient(ellipse at center, #355b8a24, transparent 70%);
 }
 [data-theme="dark"] .map-center {
-  background: #91bbff;
-  color: #0b1626;
+  background: transparent;
+  color: #c4dcff;
 }
 [data-theme="dark"] :is(.map-orbit, .faq-item, .footer-bottom, .hero-bottom) {
   border-color: var(--line);
