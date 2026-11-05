@@ -14,9 +14,14 @@ export default function ServicePreview() {
           <br />
           <span>{c.muted}</span>
         </h2>
-        <a className="text-link" href={c.link.href}>
-          <IconText text={c.link.label} />
-        </a>
+        <div className="home-service-links">
+          <a className="text-link" href={c.link.href}>
+            <IconText text={c.link.label} />
+          </a>
+          <a className="text-link" href={c.marketingLink.href}>
+            <IconText text={c.marketingLink.label} />
+          </a>
+        </div>
       </Reveal>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {services.items.map((service, index) => (

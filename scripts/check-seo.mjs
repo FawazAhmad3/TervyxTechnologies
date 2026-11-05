@@ -119,6 +119,37 @@ for (const [name, page] of pages) {
   if (scripts.length) {
     const graph = JSON.parse(text(scripts[0]));
     assert.equal(graph["@context"], "https://schema.org");
+    const entities = graph["@graph"];
+    const entityIds = entities.map((entity) => entity["@id"]);
+    assert.equal(
+      new Set(entityIds).size,
+      entityIds.length,
+      `${name}: duplicate schema IDs`,
+    );
+    const organizationId = config.origin + "/#organization";
+    const website = entities.find((entity) => entity["@type"] === "WebSite");
+    const webpage = entities.find(
+      (entity) => entity["@id"] === config.origin + page.path + "#webpage",
+    );
+    assert.equal(website.inLanguage, "en");
+    assert.equal(website.publisher["@id"], organizationId);
+    assert.equal(webpage.inLanguage, "en");
+    assert.equal(webpage.publisher["@id"], organizationId);
+    assert.equal(webpage.isPartOf["@id"], website["@id"]);
+    if (page.path !== "/") {
+      assert.equal(
+        webpage.breadcrumb["@id"],
+        config.origin + page.path + "#breadcrumbs",
+      );
+      assert.ok(entityIds.includes(webpage.breadcrumb["@id"]));
+    }
+    if (page.service) {
+      assert.equal(
+        webpage.mainEntity["@id"],
+        config.origin + page.path + "#service",
+      );
+      assert.ok(entityIds.includes(webpage.mainEntity["@id"]));
+    }
     assert.ok(graph["@graph"].some((n) => n["@type"] === "Organization"));
     if (page.service)
       assert.ok(
@@ -183,6 +214,31 @@ for (const [name, page] of pages) {
   assert.equal(metas.get("twitter:card"), "summary_large_image");
   await stat(resolve(dist, config.socialImage.slice(1)));
 }
+// Important destinations must be discoverable without selecting a JavaScript tab.
+for (const source of ["/", "/services"]) {
+  assert.ok(
+    nodes(
+      documents.get(source),
+      (node) =>
+        node.tagName === "a" && attr(node, "href") === "/digital-marketing",
+    ).length,
+    `${source}: missing permanent Digital Marketing link`,
+  );
+}
+const homeText = text(documents.get("/"));
+assert.ok(
+  !homeText.includes("does not send an enquiry automatically"),
+  "Outdated enquiry FAQ",
+);
+assert.ok(
+  homeText.includes("Send quote request"),
+  "FAQ must explain quote submission",
+);
+const processText = text(documents.get("/process"));
+assert.ok(
+  processText.includes("acceptance checks") && processText.includes("handover"),
+  "Detailed process information missing",
+);
 const sitemap = await readFile(resolve(dist, "sitemap.xml"), "utf8");
 const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
   (m) => m[1],

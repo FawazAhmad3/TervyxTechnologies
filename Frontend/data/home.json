@@ -19,12 +19,16 @@
     "note": "Your vision. Our expertise. A better digital future.",
     "industry": "SOFTWARE DEVELOPMENT & IT SERVICES",
     "scroll": {
-      "label": "SCROLL TO DISCOVER",
+      "label": "ABOUT TERVYX",
       "href": "/about"
     },
     "image": {
       "src": "",
-      "alt": "Abstract orbital technology sculpture"
+      "alt": "Abstract orbital technology sculpture",
+      "width": 624,
+      "height": 580,
+      "srcSet": "",
+      "sizes": "(max-width: 700px) 88vw, 43vw"
     },
     "orbit": {
       "top": "IDEAS INTO IMPACT",
@@ -43,6 +47,10 @@
     "link": {
       "label": "All services ↗",
       "href": "/services"
+    },
+    "marketingLink": {
+      "label": "Digital Marketing Services ↗",
+      "href": "/digital-marketing"
     }
   },
   "introduction": {
@@ -214,7 +222,7 @@
       },
       {
         "question": "What should I include in my project brief?",
-        "answer": "Tell us about your business, the service you need, your audience, the problem you want to solve, and any timing or budget constraints. The Contact page lets you create a brief to save and share; it does not send an enquiry automatically."
+        "answer": "Tell us about your business, the service you need, your audience, the problem you want to solve, and any timing or budget constraints. Submit your requirements using Send quote request on the Contact page. You can also email info@tervyx.tech to discuss your project."
       }
     ]
   }

@@ -2,17 +2,17 @@
   "title": "About us",
   "intro": {
     "label": "THE SOFTWARE HOUSE",
-    "heading": "Technology with purpose.",
-    "accent": "Possibility by design.",
-    "description": "Meet TERVYX Technologies. An innovation-focused software house bringing ideas, engineering, and digital strategy together."
+    "heading": "About TERVYX",
+    "accent": "Technologies.",
+    "description": "TERVYX Technologies brings website development, mobile apps, social media marketing and SEO together for businesses worldwide."
   },
   "story": {
     "label": "01 / THE TERVYX MINDSET",
     "lines": ["The future doesn’t", "build itself."],
     "muted": "Let’s code it together.",
     "paragraphs": [
-      "We’re TERVYX Technologies, a software house built around a simple belief: the right technology can take a great idea further.",
-      "We bring development, design, and digital strategy together to create thoughtful solutions for ambitious businesses. From your first idea to your next big chapter, we build with your future in mind."
+      "TERVYX Technologies is a software house offering business websites, web applications, mobile app development, social media marketing and search engine optimization.",
+      "We start with your audience, existing systems and project priorities. Design, features, integrations and content responsibilities are discussed before the scope is agreed, so you can choose one service or a coordinated approach."
     ]
   },
   "values": {

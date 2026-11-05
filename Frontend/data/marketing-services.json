@@ -17,21 +17,21 @@
       "offers": [
         {
           "title": "Platform & content strategy",
-          "description": "Choose appropriate platforms, content themes, and a posting calendar based on your audience and business priorities.",
+          "description": "Plan content themes and a calendar for an agreed mix of Facebook, Instagram and LinkedIn. Choose platforms based on your audience rather than publishing the same content everywhere.",
           "href": ""
         },
         {
           "title": "Post design & captions",
-          "description": "Prepare branded post designs, captions, and hashtag research within the agreed scope. Any footage, photography, or approvals needed from you are discussed up front.",
+          "description": "Prepare branded designs, captions and hashtag research for review. Agree who supplies footage or photography, who approves content and who publishes the finished posts.",
           "href": ""
         },
         {
           "title": "Reporting & next steps",
-          "description": "Review agreed platform analytics and content performance. Use those observations to refine future content rather than promise a fixed number of followers or leads.",
+          "description": "Review monthly platform analytics and content performance within the agreed scope. Use the report to decide what to adjust next; follower counts, reach and leads are not guaranteed.",
           "href": ""
         }
       ],
-      "planning": "Share your social profiles, target audience, brand guidelines, available images or footage, and posting priorities. We will discuss platforms, post quantities, approval workflows, reporting, and whether advertising is included.",
+      "planning": "Share your profiles, audience, brand guidelines and available footage. Agree the platform mix, post quantities, approval workflow, publishing and comment-handling responsibilities. Paid ad management is not assumed as part of content planning.",
       "contactHref": "/contact?service=digital-marketing",
       "image": {
         "src": "",
@@ -40,7 +40,13 @@
         "height": 240
       },
       "detailsHeading": "Social Media Marketing support.",
-      "detailsMuted": "Agreed to your priorities."
+      "detailsMuted": "Agreed to your priorities.",
+      "detailsDescription": [
+        "Plan content for the platforms your audience uses.",
+        "Agree creative work, approvals and reporting responsibilities."
+      ],
+      "planningHeading": "Plan your content.",
+      "planningMuted": "Clarify approvals and publishing."
     },
     {
       "slug": "seo-services",
@@ -59,21 +65,21 @@
       "offers": [
         {
           "title": "Keyword research & page mapping",
-          "description": "Identify relevant queries and their search intent, then map them to useful service pages and content. Search volumes and competition require appropriate tools and market-specific evidence.",
+          "description": "Map relevant search queries and their intent to useful pages. The agreed research identifies page topics and content gaps; search volume or competition figures require suitable tools and market-specific evidence.",
           "href": ""
         },
         {
           "title": "On-page & technical SEO",
-          "description": "Review titles, descriptions, headings, internal links, crawlability, indexing directives, structured data, and mobile performance. Implementation work is agreed to your website’s needs.",
+          "description": "A scoped audit identifies affected pages, technical issues and recommended priorities. Review metadata, internal links, crawlability and mobile performance. Implementation responsibilities are agreed separately from the recommendations.",
           "href": ""
         },
         {
           "title": "Content planning & reporting",
-          "description": "Plan helpful content around customer questions and review available Search Console data. Rankings and traffic depend on many factors and cannot be guaranteed.",
+          "description": "Plan content around customer questions and review available Search Console data. Reporting distinguishes completed changes from observed search performance, without promising specific rankings or traffic.",
           "href": ""
         }
       ],
-      "planning": "Share your website URL, priority services, markets, and any existing Search Console access. We will discuss audit findings, implementation scope, content responsibilities, and how progress can be measured over time.",
+      "planning": "Share your website, priority services, markets and available Search Console access. Agree which findings we will implement, which require your developer or content team, and how changes and search performance will be reported. Rankings and traffic cannot be guaranteed.",
       "contactHref": "/contact?service=digital-marketing",
       "image": {
         "src": "",
@@ -82,7 +88,13 @@
         "height": 240
       },
       "detailsHeading": "Search Engine Optimization support.",
-      "detailsMuted": "Agreed to your priorities."
+      "detailsMuted": "Agreed to your priorities.",
+      "detailsDescription": [
+        "Understand the issues affecting your website.",
+        "Separate audit recommendations from agreed implementation."
+      ],
+      "planningHeading": "Prioritize your SEO work.",
+      "planningMuted": "Agree actions and reporting."
     }
   ]
 }

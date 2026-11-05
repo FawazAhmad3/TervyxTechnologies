@@ -57,6 +57,11 @@ export function structuredData(page: SeoPage) {
     inLanguage: seo.language,
     isPartOf: { "@id": website["@id"] },
     about: { "@id": organization["@id"] },
+    publisher: { "@id": organization["@id"] },
+    ...(page.path !== "/"
+      ? { breadcrumb: { "@id": canonical + "#breadcrumbs" } }
+      : {}),
+    ...(page.service ? { mainEntity: { "@id": canonical + "#service" } } : {}),
   };
   const graph: object[] = [organization, website, webpage];
   if (page.path !== "/") {

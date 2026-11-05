@@ -394,3 +394,33 @@ footer .contact-channels {
     gap: 18px;
   }
 }
+
+/* Permanent service links reuse the existing text-link styling. */
+.home-service-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+/* Targeted mobile readability and hit-area improvements only. */
+@media (max-width: 700px) {
+  .hero-bottom a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+  main .text-link,
+  .contact-map-heading a {
+    align-items: center;
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .field input,
+  .field textarea {
+    font-size: 16px;
+    min-height: 44px;
+  }
+}

@@ -18,7 +18,7 @@ export default function Home() {
       <HomeIntroduction />
       <ProjectExplorer />
       <WorkingTogether />
-      <ProcessSteps />
+      <ProcessSteps summary />
       <FaqSection />
       <CallToAction />
     </Layout>

@@ -44,8 +44,8 @@
     "fallback": "You can also reach us directly:"
   },
   "map": {
-    "title": "Map",
-    "label": "Our location",
+    "title": "City overview",
+    "label": "Milan, Italy",
     "frameTitle": "Map of Milan, Italy",
     "embedUrl": "https://maps.google.com/maps?q=Milan%2C%20Italy&z=12&output=embed",
     "linkUrl": "https://www.google.com/maps/search/?api=1&query=Milan%2C%20Italy",

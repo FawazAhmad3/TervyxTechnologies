@@ -15,6 +15,7 @@ export default function ServiceDetails({ service }: { service: Service }) {
             ...c,
             heading: service.detailsHeading,
             muted: service.detailsMuted,
+            description: service.detailsDescription,
           }}
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -27,9 +28,9 @@ export default function ServiceDetails({ service }: { service: Service }) {
       <section className="section detail-planning">
         <Reveal className="section-label">{c.planningLabel}</Reveal>
         <Reveal as="h2">
-          {c.planningHeading}
+          {service.planningHeading}
           <br />
-          <span>{c.planningMuted}</span>
+          <span>{service.planningMuted}</span>
         </Reveal>
         <Reveal as="p">{service.planning}</Reveal>
         <Button href={service.contactHref}>{c.button}</Button>

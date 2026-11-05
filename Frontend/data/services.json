@@ -34,7 +34,7 @@
       "slug": "web-development",
       "title": "Web Development",
       "href": "/web-development",
-      "short": "Beautifully crafted websites. Purposeful digital experiences.",
+      "short": "Business websites, web apps and e-commerce for companies launching online or improving an existing site.",
       "icon": "↗",
       "tags": ["BUSINESS WEBSITES", "WEB APPS", "E-COMMERCE"],
       "description": "Your website is often the first conversation someone has with your business. Make it clear, useful, and memorable.",
@@ -47,12 +47,12 @@
       "offers": [
         {
           "title": "Business websites",
-          "description": "Responsive business websites with clear service pages, purposeful navigation, accessible content, and enquiry journeys for customers on phones, tablets, and desktops.",
+          "description": "Responsive websites for businesses that need to explain their services and receive enquiries. Agree page content, navigation and enquiry journeys, together with the browser and device checks needed before launch.",
           "href": ""
         },
         {
           "title": "Web applications",
-          "description": "Browser-based applications built around your workflows. We define user journeys, data needs, account access, and integrations before estimating the work.",
+          "description": "Browser-based applications for defined business workflows. User journeys, data, account access and third-party integrations are scoped before development and testing.",
           "href": ""
         },
         {
@@ -61,7 +61,7 @@
           "href": ""
         }
       ],
-      "planning": "Tell us about your audience, page requirements, content, existing website, and any integrations. We will discuss design, testing, deployment, and maintenance options. SEO work is scoped separately from website development.",
+      "planning": "Share your pages, content and integration needs. We discuss browser and device checks, deployment and separately scoped maintenance. Agree hosting accounts, access, ownership and handover requirements in the project scope. SEO is scoped separately.",
       "contactHref": "/contact?service=web-development",
       "image": {
         "src": "",
@@ -70,13 +70,19 @@
         "height": 240
       },
       "detailsHeading": "Website development services.",
-      "detailsMuted": "A clear plan for your site."
+      "detailsMuted": "A clear plan for your site.",
+      "detailsDescription": [
+        "Business websites, web applications and online stores.",
+        "Features and integrations are agreed before development."
+      ],
+      "planningHeading": "Plan your website.",
+      "planningMuted": "Prepare for launch."
     },
     {
       "slug": "app-development",
       "title": "App Development",
       "href": "/app-development",
-      "short": "Your business, in the palm of your customers’ hands.",
+      "short": "Android, iOS and cross-platform app planning, UI/UX and development around your users and core features.",
       "icon": "✳",
       "tags": ["iOS & ANDROID", "CROSS-PLATFORM", "UI / UX"],
       "description": "Bring your idea closer to the people who need it with a focused, intuitive mobile experience.",
@@ -89,7 +95,7 @@
       "offers": [
         {
           "title": "iOS & Android",
-          "description": "Plan mobile applications for Android and iOS around the devices your audience uses. Platform selection, testing needs, and app-store submission requirements form part of the agreed scope.",
+          "description": "Android and iOS app projects are planned around your audience and required features. Agree target devices, testing needs and store-submission responsibilities. Android projects can include Play Store submission assistance within the agreed scope.",
           "href": ""
         },
         {
@@ -103,7 +109,7 @@
           "href": ""
         }
       ],
-      "planning": "Share the problem your app should solve, target platforms, expected screens, login requirements, backend services, and API integrations. We will agree what belongs in the first release and what can follow later.",
+      "planning": "Share target platforms, screens, login and backend requirements. Define device testing, acceptance checks, store submission, source-code access and handover in the scope. Android submission assistance and post-launch maintenance are discussed to suit the project; no store approval is guaranteed.",
       "contactHref": "/contact?service=app-development",
       "image": {
         "src": "",
@@ -112,13 +118,19 @@
         "height": 240
       },
       "detailsHeading": "Mobile app development services.",
-      "detailsMuted": "Define the right first release."
+      "detailsMuted": "Define the right first release.",
+      "detailsDescription": [
+        "Choose platforms around the people using your app.",
+        "Agree the screens, data and integrations for the first release."
+      ],
+      "planningHeading": "Define your app.",
+      "planningMuted": "Agree release responsibilities."
     },
     {
       "slug": "digital-marketing",
       "title": "Digital Marketing",
       "href": "/digital-marketing",
-      "short": "Build visibility. Connect with people. Create opportunity.",
+      "short": "SEO, social media content and campaign planning for businesses coordinating their digital presence.",
       "icon": "↗",
       "tags": ["SEO", "SOCIAL MEDIA", "CAMPAIGN STRATEGY"],
       "description": "Build a digital presence that connects your business with the right audience through a clear, coordinated strategy.",
@@ -141,11 +153,11 @@
         },
         {
           "title": "Campaign strategy",
-          "description": "Connect campaign goals, messaging, channels, and measurement in a purposeful marketing plan.",
+          "description": "Agree campaign goals, messaging, channels and the measures used to review progress. A plan can coordinate SEO and social media work; any advertising execution requires a separate, confirmed scope.",
           "href": ""
         }
       ],
-      "planning": "Tell us which audiences you want to reach, the platforms you use, what content is available, and what outcomes matter. We agree deliverables and reporting before work starts; rankings, reach, and enquiries are not guaranteed.",
+      "planning": "Share your audience, existing channels and available content. We agree campaign goals, deliverables and reporting measures. Campaign planning does not by itself include paid ad management. Rankings, reach and enquiries are not guaranteed.",
       "contactHref": "/contact?service=digital-marketing",
       "image": {
         "src": "",
@@ -154,7 +166,13 @@
         "height": 240
       },
       "detailsHeading": "Digital marketing services.",
-      "detailsMuted": "Choose the support you need."
+      "detailsMuted": "Choose the support you need.",
+      "detailsDescription": [
+        "Coordinate your channels around one set of priorities.",
+        "Choose specialist SEO or social media support as needed."
+      ],
+      "planningHeading": "Connect your channels.",
+      "planningMuted": "Measure agreed outcomes."
     }
   ],
   "directoryLabel": "Explore our services",
@@ -166,6 +184,10 @@
     {
       "label": "App development",
       "href": "/app-development"
+    },
+    {
+      "label": "Digital Marketing Services",
+      "href": "/digital-marketing"
     },
     {
       "label": "Social media marketing",

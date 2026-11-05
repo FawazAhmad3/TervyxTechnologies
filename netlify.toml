@@ -30,25 +30,25 @@
 
 [[redirects]]
   from = "/about.html"
-  to = "/about/"
+  to = "/about"
   status = 301
   force = true
 
 [[redirects]]
   from = "/services.html"
-  to = "/services/"
+  to = "/services"
   status = 301
   force = true
 
 [[redirects]]
   from = "/process.html"
-  to = "/process/"
+  to = "/process"
   status = 301
   force = true
 
 [[redirects]]
   from = "/contact.html"
-  to = "/contact/"
+  to = "/contact"
   status = 301
   force = true
 
@@ -60,19 +60,19 @@
 
 [[redirects]]
   from = "/web-development.html"
-  to = "/web-development/"
+  to = "/web-development"
   status = 301
   force = true
 
 [[redirects]]
   from = "/app-development.html"
-  to = "/app-development/"
+  to = "/app-development"
   status = 301
   force = true
 
 [[redirects]]
   from = "/digital-marketing.html"
-  to = "/digital-marketing/"
+  to = "/digital-marketing"
   status = 301
   force = true
 
@@ -110,3 +110,9 @@
   for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Serve the existing manifest with its standard media type.
+[[headers]]
+  for = "/brand/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

@@ -2,11 +2,47 @@
   "title": "Our process",
   "intro": {
     "label": "HOW WE WORK",
-    "heading": "Great work starts",
-    "accent": "with a clear direction.",
-    "description": "A collaborative approach that connects your business goals to the decisions we make at every stage."
+    "heading": "Our design &",
+    "accent": "development process.",
+    "description": "From project requirements to review and launch: understand the inputs, decisions and responsibilities discussed at each stage."
   },
   "steps": {
+    "label": "03 / HOW WE MAKE IT HAPPEN",
+    "heading": "A clear path.",
+    "muted": "From idea to impact.",
+    "description": [
+      "Each stage has a purpose and a review point.",
+      "Development and marketing deliverables are agreed separately."
+    ],
+    "items": [
+      {
+        "title": "Discover",
+        "description": "Share your audience, goals, existing website or app, content and integration needs. We discuss priorities and responsibilities before agreeing the scope. For marketing work, this includes channels, available assets and reporting needs."
+      },
+      {
+        "title": "Design",
+        "description": "Review the proposed user journeys, screens and content direction. Your feedback helps refine the agreed design before development. Marketing projects instead review the content calendar, messaging or optimization priorities relevant to the service."
+      },
+      {
+        "title": "Develop",
+        "description": "Build the agreed features and review them against the requirements, including relevant device, browser and integration checks. Marketing work follows its own content or SEO scope, with reviews and approvals agreed before changes are published."
+      },
+      {
+        "title": "Launch & evolve",
+        "description": "Review launch requirements, outstanding feedback and acceptance checks together. Confirm deployment, account access and handover responsibilities in the scope. Maintenance, future releases and ongoing marketing support are discussed separately from the initial delivery."
+      }
+    ]
+  },
+  "statement": {
+    "label": "YOUR NEXT CHAPTER STARTS HERE",
+    "lines": ["Think bold.", "Build smart."],
+    "accent": "Move forward.",
+    "description": [
+      "More than a service provider.",
+      "A technology partner for the road ahead."
+    ]
+  },
+  "summary": {
     "label": "03 / HOW WE MAKE IT HAPPEN",
     "heading": "A clear path.",
     "muted": "From idea to impact.",
@@ -31,15 +67,6 @@
         "title": "Launch & evolve",
         "description": "We prepare for launch and help you plan the next steps as your business and ambitions grow."
       }
-    ]
-  },
-  "statement": {
-    "label": "YOUR NEXT CHAPTER STARTS HERE",
-    "lines": ["Think bold.", "Build smart."],
-    "accent": "Move forward.",
-    "description": [
-      "More than a service provider.",
-      "A technology partner for the road ahead."
     ]
   }
 }

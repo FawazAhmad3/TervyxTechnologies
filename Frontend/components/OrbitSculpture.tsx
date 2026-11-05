@@ -28,6 +28,12 @@ export default function OrbitSculpture() {
           className="h-full w-full object-contain"
           src={c.image.src}
           alt={c.image.alt}
+          width={c.image.width}
+          height={c.image.height}
+          srcSet={c.image.srcSet || undefined}
+          sizes={c.image.srcSet ? c.image.sizes : undefined}
+          fetchPriority="high"
+          decoding="async"
         />
       ) : (
         <>
