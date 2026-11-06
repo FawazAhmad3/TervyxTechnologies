@@ -449,12 +449,48 @@ footer .contact-channels {
   border-color: currentColor;
 }
 
-header nav .language-switch {
-  padding: 6px 10px;
+header .language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 40px;
+  padding: 0 12px;
   border: 1px solid var(--line);
-  border-radius: 30px;
-  font-size: 12px;
+  border-radius: 24px;
+  color: var(--ink);
+  background: transparent;
+  font-size: 11px;
+  line-height: 1;
   white-space: nowrap;
+  flex-shrink: 0;
+}
+header .language-switch:hover {
+  border-color: var(--lime);
+}
+header .language-switch-mobile {
+  display: none;
+}
+header nav {
+  align-items: center;
+}
+@media (max-width: 900px) {
+  header .language-switch-desktop {
+    display: none;
+  }
+  header .language-switch-mobile {
+    display: inline-flex;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  header nav {
+    gap: 14px;
+    font-size: 12px;
+  }
+  header .header-actions {
+    gap: 8px;
+  }
 }
 html[lang="it"] .hero h1 {
   font-size: clamp(36px, 5.4vw, 96px);

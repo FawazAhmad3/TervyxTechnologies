@@ -4,7 +4,7 @@ The `italian` branch adds a complete Italian version without replacing the Engli
 
 ## Using the site
 
-- Select **Italiano** in the main navigation to open the equivalent Italian page; select **English** to return. On mobile, open the navigation menu first.
+- Use the globe **IT / EN** control beside the theme button to change language on desktop. On mobile, open the menu and select **Italiano / English**.
 - English routes stay at `/`, `/about`, `/services`, etc. Italian equivalents use `/it/`, `/it/about`, `/it/services`, etc.
 - Internal links stay in the chosen language. The switch preserves the URL's service query and section anchor. Form text entered manually is not retained across a full-page language change.
 - Both themes and the existing brand identity are retained. Company names, product names, technical terms and the registered brand tagline remain unchanged.

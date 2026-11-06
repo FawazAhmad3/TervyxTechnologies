@@ -55,9 +55,10 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <LanguageSwitch />
+        <LanguageSwitch mobile />
       </nav>
       <div className="header-actions">
+        <LanguageSwitch />
         <ThemeToggle />
         <a className="nav-cta" href={site.contactLink.href}>
           {site.contactLink.label}
