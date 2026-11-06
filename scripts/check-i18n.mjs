@@ -210,3 +210,10 @@ for (const name of [
 console.log(
   `Italian checks passed: 13 prerendered routes, ${links} links, metadata, canonicals, hreflang, schema, form identifiers and translation coverage.`,
 );
+
+const hosting = await load("netlify.toml");
+assert.ok(!hosting.includes(":page.html"), "Netlify placeholders must occupy complete path segments");
+for (const [name, page] of Object.entries(seo.pages)) {
+  if (page.noindex || name === "index") continue;
+  assert.ok(hosting.includes(`from = "/it/${name}.html"\n  to = "/it/${name}"`), `Missing Italian HTML alias: ${name}`);
+}

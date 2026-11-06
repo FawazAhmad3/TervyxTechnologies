@@ -149,8 +149,62 @@
   force = true
 
 [[redirects]]
-  from = "/it/:page.html"
-  to = "/it/:page"
+  from = "/it/about.html"
+  to = "/it/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/services.html"
+  to = "/it/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/process.html"
+  to = "/it/process"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/contact.html"
+  to = "/it/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/web-development.html"
+  to = "/it/web-development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/app-development.html"
+  to = "/it/app-development"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/digital-marketing.html"
+  to = "/it/digital-marketing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/social-media-marketing.html"
+  to = "/it/social-media-marketing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/seo-services.html"
+  to = "/it/seo-services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/ui-ux-design.html"
+  to = "/it/ui-ux-design"
   status = 301
   force = true
 
