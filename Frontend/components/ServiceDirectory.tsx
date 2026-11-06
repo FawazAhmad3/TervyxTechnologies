@@ -1,5 +1,8 @@
-import services from "../data/services.json";
+import { useContent } from "../i18n/content";
+import servicesSource from "../data/services.json";
 export default function ServiceDirectory() {
+  const services = useContent(servicesSource);
+
   return (
     <nav className="service-directory" aria-label={services.directoryLabel}>
       {services.directory.map((link) => (

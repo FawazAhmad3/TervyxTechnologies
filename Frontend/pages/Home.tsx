@@ -1,3 +1,4 @@
+import { useContent } from "../i18n/content";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import AnimatedRibbon from "../components/AnimatedRibbon";
@@ -8,8 +9,10 @@ import ProjectExplorer from "../components/ProjectExplorer";
 import WorkingTogether from "../components/WorkingTogether";
 import ProcessSteps from "../components/ProcessSteps";
 import FaqSection from "../components/FaqSection";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 export default function Home() {
+  const home = useContent(homeSource);
+
   return (
     <Layout title={home.title}>
       <Hero />

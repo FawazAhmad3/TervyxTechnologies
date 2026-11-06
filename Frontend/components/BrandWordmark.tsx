@@ -1,5 +1,8 @@
-import site from "../data/site.json";
+import { useContent } from "../i18n/content";
+import siteSource from "../data/site.json";
 export default function BrandWordmark({ large = false }: { large?: boolean }) {
+  const site = useContent(siteSource);
+
   return (
     <span className={`brand-wordmark${large ? " brand-wordmark-large" : ""}`}>
       <span className="wordmark-name">{site.brand.name}</span>

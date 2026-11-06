@@ -1,8 +1,11 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
 import { useEffect, useRef } from "react";
-import process from "../data/process.json";
+import processSource from "../data/process.json";
 import Reveal from "./Reveal";
 export default function Statement() {
+  const process = useContent(processSource);
+
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;

@@ -1,3 +1,5 @@
+import { LocaleContext } from "./i18n/content";
+import { localeFromPath, basePath } from "./i18n/locale";
 import { PagePathContext } from "./context/PagePathContext";
 import { normalizePath } from "./seo/paths";
 import SocialMediaMarketing from "./pages/SocialMediaMarketing";
@@ -35,10 +37,12 @@ export default function App({
   path?: string;
 }) {
   path = normalizePath(path);
-  const Page = pages[path as keyof typeof pages] ?? NotFound;
+  const Page = pages[basePath(path) as keyof typeof pages] ?? NotFound;
   return (
-    <PagePathContext.Provider value={path}>
-      <Page />
-    </PagePathContext.Provider>
+    <LocaleContext.Provider value={localeFromPath(path)}>
+      <PagePathContext.Provider value={path}>
+        <Page />
+      </PagePathContext.Provider>
+    </LocaleContext.Provider>
   );
 }

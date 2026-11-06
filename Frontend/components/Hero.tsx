@@ -1,8 +1,11 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Button from "./Button";
 import OrbitSculpture from "./OrbitSculpture";
 export default function Hero() {
+  const home = useContent(homeSource);
+
   const c = home.hero;
   return (
     <section className="hero" id="home">

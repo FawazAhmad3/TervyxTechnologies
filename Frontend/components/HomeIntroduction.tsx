@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Reveal from "./Reveal";
 export default function HomeIntroduction() {
+  const home = useContent(homeSource);
+
   const c = home.introduction;
   return (
     <section className="section home-introduction border-t border-[#303831]">

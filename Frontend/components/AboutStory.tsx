@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import about from "../data/about.json";
+import aboutSource from "../data/about.json";
 import Reveal from "./Reveal";
 export default function AboutStory() {
+  const about = useContent(aboutSource);
+
   const c = about.story;
   return (
     <section className="about section">

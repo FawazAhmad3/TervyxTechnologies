@@ -1,7 +1,8 @@
+import { useContent } from "../i18n/content";
 import { IconText } from "./Icon";
-import services from "../data/services.json";
+import servicesSource from "../data/services.json";
 import Reveal from "./Reveal";
-export type Service = (typeof services.items)[number];
+export type Service = (typeof servicesSource.items)[number];
 export default function ServiceCard({
   service,
   index,
@@ -9,6 +10,8 @@ export default function ServiceCard({
   service: Service;
   index: number;
 }) {
+  const services = useContent(servicesSource);
+
   return (
     <Reveal className="service-card-shell">
       <article className="preview-card service-summary-card">

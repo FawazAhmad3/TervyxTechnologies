@@ -1,10 +1,16 @@
-import contact from "../data/contact.json";
+import { useContent } from "../i18n/content";
+import contactSource from "../data/contact.json";
 import Icon from "./Icon";
 
 export default function ContactMap() {
+  const contact = useContent(contactSource);
+
   const map = contact.map;
   return (
-    <section className="section contact-map" aria-labelledby="contact-map-title">
+    <section
+      className="section contact-map"
+      aria-labelledby="contact-map-title"
+    >
       <div className="contact-map-heading">
         <div>
           <p className="section-label">{map.label}</p>

@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
-import site from "../data/site.json";
+import siteSource from "../data/site.json";
 export default function NotFound() {
+  const site = useContent(siteSource);
+
   const c = site.notFound;
   return (
     <Layout title={c.title}>

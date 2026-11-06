@@ -448,3 +448,20 @@ footer .contact-channels {
 .service-tag-link:hover span {
   border-color: currentColor;
 }
+
+header nav .language-switch {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+html[lang="it"] .hero h1 {
+  font-size: clamp(36px, 5.4vw, 96px);
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  html[lang="it"] header nav {
+    gap: 16px;
+    font-size: 12px;
+  }
+}

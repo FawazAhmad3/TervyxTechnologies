@@ -22,6 +22,21 @@ export default defineConfig({
     react(),
     tailwindcss(),
     {
+      name: "tervyx-italian-development-pages",
+      configureServer(server) {
+        server.middlewares.use((req, _res, next) => {
+          if (req.url && /^\/it(?:\/|$|\?)/.test(req.url)) {
+            const url = new URL(req.url, "http://localhost");
+            const plain =
+              url.pathname.replace(/^\/it/, "").replace(/\/$/, "") || "/index";
+            req.url =
+              plain + (plain.endsWith(".html") ? "" : ".html") + url.search;
+          }
+          next();
+        });
+      },
+    },
+    {
       name: "tervyx-page-metadata",
       transformIndexHtml(html, context) {
         const page =

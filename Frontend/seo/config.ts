@@ -1,7 +1,10 @@
+import { localeFromPath, basePath } from "../i18n/locale";
+import { localize } from "../i18n/localize";
 import { normalizePath } from "./paths";
 import seo from "../data/seo.json";
 export type SeoPage = {
   path: string;
+  locale?: "en" | "it";
   title: string;
   description: string;
   label: string;
@@ -13,19 +16,23 @@ export type SeoPage = {
 export const seoConfig = seo;
 export const seoPages = seo.pages as Record<string, SeoPage>;
 export function pageForPath(path: string): SeoPage {
-  return (
-    Object.values(seoPages).find((page) => page.path === normalizePath(path)) ??
-    seoPages["404"]
-  );
+  const locale = localeFromPath(path);
+  const plain = basePath(normalizePath(path));
+  const page =
+    Object.values(seoPages).find((page) => page.path === plain) ??
+    seoPages["404"];
+  return { ...localize(page, locale), locale };
 }
 export function canonicalFor(page: SeoPage) {
-  return page.path === "/404"
+  return basePath(page.path) === "/404"
     ? null
     : seo.origin + (page.canonical ?? page.path);
 }
 export function structuredData(page: SeoPage) {
   if (page.noindex) return null;
   const origin = seo.origin;
+  const language = page.locale ?? "en";
+  const home = language === "it" ? "/it/" : "/";
   const organization = {
     "@type": "Organization",
     "@id": origin + "/#organization",
@@ -36,37 +43,37 @@ export function structuredData(page: SeoPage) {
   };
   const website = {
     "@type": "WebSite",
-    "@id": origin + "/#website",
-    url: origin + "/",
+    "@id": origin + home + "#website",
+    url: origin + home,
     name: seo.organization.name,
-    inLanguage: seo.language,
+    inLanguage: language,
     publisher: { "@id": organization["@id"] },
   };
   const canonical = canonicalFor(page)!;
   const webpage = {
     "@type":
-      page.path === "/contact"
+      basePath(page.path) === "/contact"
         ? "ContactPage"
-        : page.path === "/about"
+        : basePath(page.path) === "/about"
           ? "AboutPage"
           : "WebPage",
     "@id": canonical + "#webpage",
     url: canonical,
     name: page.title,
     description: page.description,
-    inLanguage: seo.language,
+    inLanguage: language,
     isPartOf: { "@id": website["@id"] },
     about: { "@id": organization["@id"] },
     publisher: { "@id": organization["@id"] },
-    ...(page.path !== "/"
+    ...(basePath(page.path) !== "/"
       ? { breadcrumb: { "@id": canonical + "#breadcrumbs" } }
       : {}),
     ...(page.service ? { mainEntity: { "@id": canonical + "#service" } } : {}),
   };
   const graph: object[] = [organization, website, webpage];
-  if (page.path !== "/") {
+  if (basePath(page.path) !== "/") {
     const crumbs = [
-      { "@type": "ListItem", position: 1, name: "Home", item: origin + "/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: origin + home },
     ];
     if (page.parent) {
       const parent = pageForPath(page.parent);
@@ -98,7 +105,10 @@ export function structuredData(page: SeoPage) {
       url: canonical,
       description: page.description,
       provider: { "@id": organization["@id"] },
-      areaServed: { "@type": "Place", name: "Worldwide" },
+      areaServed: {
+        "@type": "Place",
+        name: language === "it" ? "Tutto il mondo" : "Worldwide",
+      },
     });
   return { "@context": "https://schema.org", "@graph": graph };
 }
@@ -110,12 +120,15 @@ export function metadataTags(page: SeoPage) {
       ? "noindex, follow"
       : "index, follow, max-image-preview:large",
     "og:type": "website",
+    "og:locale": page.locale === "it" ? "it_IT" : "en_US",
     "og:site_name": seo.organization.name,
     "og:title": page.title,
     "og:description": page.description,
     "og:image": seo.origin + seo.socialImage,
     "og:image:alt":
-      "TERVYX Technologies — website development, apps, social media marketing and SEO",
+      page.locale === "it"
+        ? "TERVYX Technologies — sviluppo web e app, social media marketing e SEO"
+        : "TERVYX Technologies — website development, apps, social media marketing and SEO",
     "og:image:width": "1200",
     "og:image:height": "630",
     "twitter:card": "summary_large_image",

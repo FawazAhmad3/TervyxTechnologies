@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
-type Preview = (typeof home.projects.items)[number]["preview"];
+import homeSource from "../data/home.json";
+type Preview = (typeof homeSource.projects.items)[number]["preview"];
 export default function ProjectPreview({ preview }: { preview: Preview }) {
+  const home = useContent(homeSource);
+
   return (
     <div
       className={`project-preview project-preview-${preview.kind}`}

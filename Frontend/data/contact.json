@@ -1,6 +1,6 @@
 {
-  "title": "Let\u2019s talk",
-  "label": "04 / LET\u2019S START SOMETHING",
+  "title": "Let’s talk",
+  "label": "04 / LET’S START SOMETHING",
   "lines": ["Your next big idea", "deserves a"],
   "accent": "great beginning.",
   "description": [
@@ -21,10 +21,10 @@
     },
     "idea": {
       "label": "Project requirements",
-      "placeholder": "What do you need? Share your goals, features, scope, and timeline\u2026"
+      "placeholder": "What do you need? Share your goals, features, scope, and timeline…"
     },
     "button": "Send quote request",
-    "note": "Your request will be sent securely to TERVYX Technologies. We\u2019ll use your details to respond about your project.",
+    "note": "Your request will be sent securely to TERVYX Technologies. We’ll use your details to respond about your project.",
     "missingService": "Please select at least one service.",
     "success": "Thank you. Your quote request has been sent to TERVYX Technologies.",
     "downloadName": "TERVYX-project-brief.txt",
@@ -37,11 +37,12 @@
       "date": "Prepared on",
       "plan": "Selected plan"
     },
-    "sending": "Sending your request\u2026",
-    "error": "We couldn\u2019t send your request. Your details are still here. Please contact us by email below.",
-    "rateLimited": "You\u2019ve sent several requests. Please wait a minute before trying again.",
+    "sending": "Sending your request…",
+    "error": "We couldn’t send your request. Your details are still here. Please contact us by email below.",
+    "rateLimited": "You’ve sent several requests. Please wait a minute before trying again.",
     "referenceLabel": "Reference",
-    "fallback": "You can also reach us directly:"
+    "fallback": "You can also reach us directly:",
+    "honeypot": "Leave this field empty"
   },
   "map": {
     "title": "Our location",

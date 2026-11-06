@@ -1,5 +1,8 @@
-import contact from "../data/contact.json";
+import { useContent } from "../i18n/content";
+import contactSource from "../data/contact.json";
 export default function ContactChannels() {
+  const contact = useContent(contactSource);
+
   const c = contact.channels;
   return (
     <address className="contact-channels" aria-label={c.label}>

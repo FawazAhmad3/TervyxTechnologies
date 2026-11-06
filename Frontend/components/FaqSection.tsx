@@ -1,8 +1,11 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Reveal from "./Reveal";
 import FaqItem from "./FaqItem";
 export default function FaqSection() {
+  const home = useContent(homeSource);
+
   const c = home.faq;
   return (
     <section className="section home-faq">

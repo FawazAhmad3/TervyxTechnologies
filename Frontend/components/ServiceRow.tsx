@@ -1,4 +1,5 @@
-import services from "../data/services.json";
+import { useContent } from "../i18n/content";
+import servicesSource from "../data/services.json";
 import Reveal from "./Reveal";
 import ServiceIllustration from "./ServiceIllustration";
 import type { Service } from "./ServiceCard";
@@ -9,6 +10,8 @@ export default function ServiceRow({
   service: Service;
   index: number;
 }) {
+  const services = useContent(servicesSource);
+
   return (
     <Reveal>
       <article className="service service-summary-row">

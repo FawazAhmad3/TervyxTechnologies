@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
 import { useEffect, useRef } from "react";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 export default function AnimatedRibbon() {
+  const home = useContent(homeSource);
+
   const ribbon = useRef<HTMLElement>(null),
     track = useRef<HTMLDivElement>(null);
   useEffect(() => {

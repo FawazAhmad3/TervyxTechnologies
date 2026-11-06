@@ -1,10 +1,13 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
 import { useRef, useState, type KeyboardEvent } from "react";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import ProjectPreview from "./ProjectPreview";
 export default function ProjectExplorer() {
+  const home = useContent(homeSource);
+
   const c = home.projects;
   const [active, setActive] = useState(0);
   const tabs = useRef<Array<HTMLButtonElement | null>>([]);

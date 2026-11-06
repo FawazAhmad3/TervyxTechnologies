@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Reveal from "./Reveal";
 export default function CollaborationVisual() {
+  const home = useContent(homeSource);
+
   const c = home.collaboration.visual;
   return (
     <Reveal className="collaboration-visual">

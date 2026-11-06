@@ -18,6 +18,7 @@ export default function Layout({
 }) {
   const path = usePagePath();
   useEffect(() => {
+    document.documentElement.lang = path.startsWith("/it") ? "it" : "en";
     // Production pages already contain the correct head tags; only dev needs runtime updates.
     if (import.meta.env.DEV) {
       const page = pageForPath(path);

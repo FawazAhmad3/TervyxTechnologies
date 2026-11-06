@@ -12,10 +12,11 @@
     "dev:backend": "npm run dev --workspace Backend",
     "build": "npm run build --workspace Frontend && npm run build --workspace Backend",
     "typecheck": "npm run typecheck --workspaces && tsc -p netlify/tsconfig.json",
-    "test": "npm run test --workspace Backend && tsx --test Frontend/context/theme.test.ts",
+    "test": "npm run test --workspace Backend && tsx --test Frontend/context/theme.test.ts Frontend/i18n/locale.test.ts",
     "format": "prettier --write Frontend Backend Readme.md package.json",
     "test:seo": "node scripts/check-seo.mjs",
-    "test:hosting": "node scripts/check-hosting.mjs"
+    "test:hosting": "node scripts/check-hosting.mjs",
+    "test:i18n": "node scripts/check-i18n.mjs"
   },
   "devDependencies": {
     "@netlify/functions": "^6.0.3",

@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import quote from "../data/quote.json";
+import quoteSource from "../data/quote.json";
 import Reveal from "./Reveal";
 export default function WebsitePlanLink() {
+  const quote = useContent(quoteSource);
+
   const c = { ...quote, link: { href: quote.href, label: quote.button } };
   return (
     <Reveal className="website-plan-link">

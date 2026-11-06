@@ -1,8 +1,11 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import contact from "../data/contact.json";
+import contactSource from "../data/contact.json";
 import Reveal from "./Reveal";
 import ContactChannels from "./ContactChannels";
 export default function ContactIntro() {
+  const contact = useContent(contactSource);
+
   return (
     <div>
       <Reveal className="section-label">{contact.label}</Reveal>

@@ -1,9 +1,12 @@
+import { useContent } from "../i18n/content";
 import { IconText } from "./Icon";
 import FooterArtwork from "./FooterArtwork";
 import Brand from "./Brand";
 import ContactChannels from "./ContactChannels";
-import site from "../data/site.json";
+import siteSource from "../data/site.json";
 export default function Footer() {
+  const site = useContent(siteSource);
+
   return (
     <footer>
       <div className="footer-top">

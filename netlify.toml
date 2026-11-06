@@ -122,3 +122,40 @@
   to = "/ui-ux-design"
   status = 301
   force = true
+
+# Italian pages are prerendered HTML, with clean equivalents of English routes.
+[[redirects]]
+  from = "/it/index.html"
+  to = "/it/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/index"
+  to = "/it/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/pricing.html"
+  to = "/it/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/pricing"
+  to = "/it/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/it/:page.html"
+  to = "/it/:page"
+  status = 301
+  force = true
+
+# Existing static Italian pages take precedence; unknown Italian URLs stay 404s.
+[[redirects]]
+  from = "/it/*"
+  to = "/it/404.html"
+  status = 404

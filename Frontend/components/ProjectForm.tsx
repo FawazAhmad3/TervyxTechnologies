@@ -1,15 +1,19 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
 import { useEffect, useState, type FormEvent } from "react";
-import services from "../data/services.json";
-import contact from "../data/contact.json";
+import servicesSource from "../data/services.json";
+import contactSource from "../data/contact.json";
 import Reveal from "./Reveal";
 export default function ProjectForm() {
+  const services = useContent(servicesSource);
+  const contact = useContent(contactSource);
+
   const c = contact.form;
   const [selected, setSelected] = useState<string[]>([]);
   useEffect(() => {
     const initial = new URLSearchParams(location.search).get("service");
     setSelected(
-      services.items.filter((s) => s.slug === initial).map((s) => s.title),
+      servicesSource.items.filter((s) => s.slug === initial).map((s) => s.slug),
     );
   }, []);
   const [status, setStatus] = useState("");
@@ -37,7 +41,11 @@ export default function ProjectForm() {
         body: JSON.stringify({
           name: data.get("name"),
           email: data.get("email"),
-          services: selected,
+          services: selected.map(
+            (slug) =>
+              servicesSource.items.find((service) => service.slug === slug)!
+                .title,
+          ),
           idea: data.get("idea"),
           website: data.get("website"),
         }),
@@ -63,7 +71,7 @@ export default function ProjectForm() {
       <form onSubmit={submit} aria-busy={sending}>
         <div className="quote-honeypot" aria-hidden="true">
           <label>
-            Leave this field empty
+            {c.honeypot}
             <input
               name="website"
               type="text"
@@ -80,13 +88,13 @@ export default function ProjectForm() {
               <input
                 type="checkbox"
                 name="service"
-                value={service.title}
-                checked={selected.includes(service.title)}
+                value={service.slug}
+                checked={selected.includes(service.slug)}
                 onChange={(event) => {
                   setSelected((current) =>
                     event.target.checked
-                      ? [...current, service.title]
-                      : current.filter((s) => s !== service.title),
+                      ? [...current, service.slug]
+                      : current.filter((s) => s !== service.slug),
                   );
                   setStatus("");
                 }}

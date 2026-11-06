@@ -1,9 +1,13 @@
+import { useContent } from "../i18n/content";
 import { IconText } from "./Icon";
-import home from "../data/home.json";
-import services from "../data/services.json";
+import homeSource from "../data/home.json";
+import servicesSource from "../data/services.json";
 import Reveal from "./Reveal";
 import ServiceCard from "./ServiceCard";
 export default function ServicePreview() {
+  const home = useContent(homeSource);
+  const services = useContent(servicesSource);
+
   const c = home.services;
   return (
     <section className="section home-services">

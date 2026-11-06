@@ -1,10 +1,15 @@
+import { normalizePath } from "../seo/paths";
+import LanguageSwitch from "./LanguageSwitch";
+import { useContent } from "../i18n/content";
 import { usePagePath } from "../context/PagePathContext";
 import Icon from "./Icon";
 import { useEffect, useRef, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import Brand from "./Brand";
-import site from "../data/site.json";
+import siteSource from "../data/site.json";
 export default function Header() {
+  const site = useContent(siteSource);
+
   const [open, setOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -33,19 +38,24 @@ export default function Header() {
       <nav
         id="main-navigation"
         className={open ? "open" : ""}
-        aria-label="Main navigation"
+        aria-label={
+          current.startsWith("/it")
+            ? "Navigazione principale"
+            : "Main navigation"
+        }
       >
         {site.navigation.map((link) => (
           <a
             key={link.href}
             href={link.href}
             aria-current={
-              link.href.replace(/\.html$/, "") === current ? "page" : undefined
+              normalizePath(link.href) === current ? "page" : undefined
             }
           >
             {link.label}
           </a>
         ))}
+        <LanguageSwitch />
       </nav>
       <div className="header-actions">
         <ThemeToggle />

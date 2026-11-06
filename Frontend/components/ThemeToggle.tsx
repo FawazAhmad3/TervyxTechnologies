@@ -1,6 +1,9 @@
+import { useContent } from "../i18n/content";
 import { useTheme } from "../context/ThemeContext";
-import site from "../data/site.json";
+import siteSource from "../data/site.json";
 export default function ThemeToggle() {
+  const site = useContent(siteSource);
+
   const { theme, toggle } = useTheme();
   const light = theme === "light";
   const label = light ? site.theme.switchToDark : site.theme.switchToLight;

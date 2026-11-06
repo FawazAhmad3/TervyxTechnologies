@@ -1,8 +1,11 @@
+import { useContent } from "../i18n/content";
 import Icon from "./Icon";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 import Reveal from "./Reveal";
 import CollaborationVisual from "./CollaborationVisual";
 export default function WorkingTogether() {
+  const home = useContent(homeSource);
+
   const c = home.collaboration;
   return (
     <section className="section">

@@ -1,11 +1,14 @@
+import { useContent } from "../i18n/content";
 import ServiceDirectory from "./ServiceDirectory";
-import services from "../data/services.json";
+import servicesSource from "../data/services.json";
 import type { Service } from "./ServiceCard";
 import SectionHeading from "./SectionHeading";
 import DetailCard from "./DetailCard";
 import Reveal from "./Reveal";
 import Button from "./Button";
 export default function ServiceDetails({ service }: { service: Service }) {
+  const services = useContent(servicesSource);
+
   const c = services.detail;
   return (
     <>

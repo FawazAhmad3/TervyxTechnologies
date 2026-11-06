@@ -32,6 +32,14 @@ for (const [name, page] of pages)
     page.path,
     parse(await readFile(resolve(dist, name + ".html"), "utf8")),
   );
+// Language-switch destinations are also fully prerendered public documents.
+for (const [name, page] of pages) {
+  const path = "/it" + (page.path === "/" ? "" : page.path);
+  documents.set(
+    path,
+    parse(await readFile(resolve(dist, "it", name + ".html"), "utf8")),
+  );
+}
 const indexed = pages.filter(([, page]) => !page.noindex);
 assert.equal(
   new Set(indexed.map(([, page]) => page.title)).size,
@@ -243,10 +251,12 @@ const sitemap = await readFile(resolve(dist, "sitemap.xml"), "utf8");
 const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
   (m) => m[1],
 );
-assert.deepEqual(
-  locations,
-  indexed.map(([, page]) => config.origin + page.path),
-);
+assert.deepEqual(locations, [
+  ...indexed.map(([, page]) => config.origin + page.path),
+  ...indexed.map(
+    ([, page]) => config.origin + "/it" + (page.path === "/" ? "/" : page.path),
+  ),
+]);
 assert.ok(
   !locations.some(
     (u) => u.includes("pricing") || u.includes(".html") || u.includes("404"),

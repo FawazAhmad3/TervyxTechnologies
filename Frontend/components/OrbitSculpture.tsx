@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import { useEffect, useRef } from "react";
 import OrbitalGraphic from "./OrbitalGraphic";
-import home from "../data/home.json";
+import homeSource from "../data/home.json";
 export default function OrbitSculpture() {
+  const home = useContent(homeSource);
+
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;

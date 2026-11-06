@@ -1,4 +1,5 @@
-import process from "../data/process.json";
+import { useContent } from "../i18n/content";
+import processSource from "../data/process.json";
 import SectionHeading from "./SectionHeading";
 import ProcessStep from "./ProcessStep";
 export default function ProcessSteps({
@@ -6,6 +7,8 @@ export default function ProcessSteps({
 }: {
   summary?: boolean;
 }) {
+  const process = useContent(processSource);
+
   const content = summary ? process.summary : process.steps;
   return (
     <section className="process section" id="process">

@@ -1,7 +1,10 @@
+import { useContent } from "../i18n/content";
 import Reveal from "./Reveal";
 import Button from "./Button";
-import site from "../data/site.json";
+import siteSource from "../data/site.json";
 export default function CallToAction() {
+  const site = useContent(siteSource);
+
   const c = site.cta;
   return (
     <Reveal as="section" className="page-cta section">
