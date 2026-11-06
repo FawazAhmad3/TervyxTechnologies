@@ -11,20 +11,12 @@ import { resolveTheme, type Theme } from "./theme";
 const ThemeContext = createContext<{ theme: Theme; toggle: () => void } | null>(
   null,
 );
-function preference(): Theme | null {
-  try {
-    const value = localStorage.getItem(site.theme.storageKey);
-    return value === "light" || value === "dark" ? value : null;
-  } catch {
-    return null;
-  }
-}
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [choice, setChoice] = useState<Theme | null>(null);
-  // Match prerendered markup on hydration; resolve the visitor preference before paint.
+  // Match prerendered markup, then resolve the system theme before paint.
+  // A manual override lasts only for this page visit.
   const [systemDark, setSystemDark] = useState(false);
   useLayoutEffect(() => {
-    setChoice(preference());
     setSystemDark(matchMedia("(prefers-color-scheme: dark)").matches);
   }, []);
   const theme = resolveTheme(choice, systemDark);
@@ -41,16 +33,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const media = matchMedia("(prefers-color-scheme: dark)");
     const changed = () => setSystemDark(media.matches);
-    const sync = (event: StorageEvent) => {
-      if (event.key === site.theme.storageKey || event.key === null)
-        setChoice(preference());
-    };
     changed();
     media.addEventListener("change", changed);
-    addEventListener("storage", sync);
     return () => {
       media.removeEventListener("change", changed);
-      removeEventListener("storage", sync);
     };
   }, []);
   return (
@@ -60,11 +46,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         toggle: () => {
           const next = theme === "dark" ? "light" : "dark";
           setChoice(next);
-          try {
-            localStorage.setItem(site.theme.storageKey, next);
-          } catch {
-            /* Apply on this page even if storage is unavailable. */
-          }
         },
       }}
     >

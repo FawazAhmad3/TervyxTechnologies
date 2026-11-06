@@ -27,16 +27,9 @@
     <link rel="manifest" href="/brand/site.webmanifest" />
     <script>
       (function () {
-        var p = null;
-        try {
-          p = localStorage.getItem("tervyx-theme-preference");
-        } catch (e) {}
-        var t =
-          p === "light" || p === "dark"
-            ? p
-            : matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light";
+        var t = matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
         document.documentElement.dataset.theme = t;
         document.documentElement.style.colorScheme = t;
         document

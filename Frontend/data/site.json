@@ -81,7 +81,6 @@
     "dark": "Dark",
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode",
-    "storageKey": "tervyx-theme-preference",
     "lightColor": "#FFFFFF"
   }
 }

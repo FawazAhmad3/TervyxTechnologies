@@ -7,7 +7,7 @@ The `italian` branch adds a complete Italian version without replacing the Engli
 - Use the globe **IT / EN** control beside the theme button to change language on desktop. On mobile, open the menu and select **Italiano / English**.
 - English routes stay at `/`, `/about`, `/services`, etc. Italian equivalents use `/it/`, `/it/about`, `/it/services`, etc.
 - Internal links stay in the chosen language. The switch preserves the URL's service query and section anchor. Form text entered manually is not retained across a full-page language change.
-- Both themes and the existing brand identity are retained. Company names, product names, technical terms and the registered brand tagline remain unchanged.
+- Both themes and the existing brand identity are retained. Every new page visit follows the system theme; manual theme overrides last only for the current page and are not saved. Company names, product names, technical terms and the registered brand tagline remain unchanged.
 - The quote form uses translated labels, instructions and status messages. Its API payload retains the existing English service identifiers. No backend configuration or email credentials have changed.
 
 ## Editing translations
@@ -28,7 +28,7 @@ The Netlify configuration retains API handling and English redirects. It adds It
 
 - `npm run build`
 - `npm run typecheck`
-- `npm test` (14 tests, mock email delivery only)
+- `npm test` (15 tests, mock email delivery only)
 - `npm run test:seo`
 - `npm run test:i18n`
 - `npm run test:hosting`
